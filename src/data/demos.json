@@ -127,7 +127,8 @@
       "video": null,
       "presenters": "Casey Dobrowolski · Caleb Chung",
       "note": null,
-      "title": "Reclass-Intake"
+      "title": "Reclass Intake — the reclass workbook as a form that knows the rules",
+      "summary": "A reclass request today is hand-transcribed into a workbook and emailed. Paste a transaction key, it is fetched live from Power BI, check which fields change, pick new values from dropdowns where invalid targets cannot be selected. 16 business rules run as you type, each citing the document it came from, and out comes the exact Working List file accounting already consumes."
     },
     {
       "letter": "Q",
