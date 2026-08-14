@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256" role="img" aria-label="Team A, The Green Donuts">
+  <rect width="256" height="256" fill="#FAF7F0"/>
+  <defs>
+    <clipPath id="ring">
+      <path fill-rule="evenodd" d="M128 36a92 92 0 1 0 0 184 92 92 0 1 0 0-184Z M108 100h40v56h-40Z"/>
+    </clipPath>
+  </defs>
+
+  <!-- dough ring, hole shaped as a terminal cursor block -->
+  <path fill="#6E9E3A" fill-rule="evenodd" d="M128 36a92 92 0 1 0 0 184 92 92 0 1 0 0-184Z M108 100h40v56h-40Z"/>
+
+  <g clip-path="url(#ring)">
+    <!-- matcha glaze with a scalloped lower edge -->
+    <path fill="#A5D14A" d="M12 152q18 24 36 0 18 24 36 0 18 24 36 0 18 24 36 0 18 24 36 0 18 24 36 0 18 24 36 0V8H12Z"/>
+
+    <!-- darker drizzle -->
+    <g fill="none" stroke="#2F5A1E" stroke-width="7" stroke-linecap="round">
+      <path d="M34 96c20-10 24 12 44 4s18-26 38-20"/>
+      <path d="M120 46c18 8 12 26 30 32s28-8 42 2"/>
+    </g>
+
+    <!-- sprinkles -->
+    <g stroke-linecap="round" stroke-width="8">
+      <line x1="128" y1="56" x2="128" y2="72" stroke="#FFF3D6" transform="rotate(-34 128 128)"/>
+      <line x1="128" y1="56" x2="128" y2="72" stroke="#1F6E63" transform="rotate(22 128 128)"/>
+      <line x1="128" y1="56" x2="128" y2="72" stroke="#FFF3D6" transform="rotate(78 128 128)"/>
+      <line x1="128" y1="56" x2="128" y2="72" stroke="#1F6E63" transform="rotate(128 128 128)"/>
+      <line x1="128" y1="56" x2="128" y2="72" stroke="#FFF3D6" transform="rotate(172 128 128)"/>
+      <line x1="128" y1="56" x2="128" y2="72" stroke="#1F6E63" transform="rotate(214 128 128)"/>
+      <line x1="128" y1="56" x2="128" y2="72" stroke="#FFF3D6" transform="rotate(256 128 128)"/>
+      <line x1="128" y1="56" x2="128" y2="72" stroke="#1F6E63" transform="rotate(302 128 128)"/>
+    </g>
+  </g>
+
+  <!-- bite taken out of the upper right -->
+  <circle cx="212" cy="52" r="44" fill="#FAF7F0"/>
+</svg>

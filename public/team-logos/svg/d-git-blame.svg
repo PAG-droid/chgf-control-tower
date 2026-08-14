@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256" role="img" aria-label="Team D, Git Blame (It's always HR)">
+  <rect width="256" height="256" fill="#FAF7F0"/>
+
+  <!-- commit bars, the middle one guilty -->
+  <rect x="34" y="56" width="132" height="18" rx="9" fill="#B7BEC4"/>
+  <rect x="34" y="96" width="132" height="18" rx="9" fill="#D93A2B"/>
+  <rect x="34" y="136" width="132" height="18" rx="9" fill="#B7BEC4"/>
+
+  <!-- magnifying glass over the guilty commit -->
+  <circle cx="158" cy="105" r="54" fill="#FAF7F0" fill-opacity="0.25"/>
+  <circle cx="158" cy="105" r="54" fill="none" stroke="#262A2E" stroke-width="12"/>
+  <line x1="196" y1="143" x2="224" y2="171" stroke="#262A2E" stroke-width="17" stroke-linecap="round"/>
+
+  <!-- pointing cursor -->
+  <path fill="#262A2E" d="M148 92l30 16-13 3 7 13-7 4-7-13-10 8Z"/>
+
+  <text x="128" y="228" text-anchor="middle" fill="#262A2E"
+        font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace"
+        font-size="30" font-weight="700" letter-spacing="5">BLAME</text>
+</svg>

@@ -5,6 +5,7 @@ import Teams from './routes/Teams'
 import Judging from './routes/Judging'
 import Resources from './routes/Resources'
 import Monitor from './routes/Monitor'
+import Demos from './routes/Demos'
 import Gallery from './routes/Gallery'
 import Ops from './routes/Ops'
 import NotFound from './routes/NotFound'
@@ -19,6 +20,7 @@ export default function App() {
         <Route path="/resources" element={<Resources />} />
         <Route path="/monitor" element={<Monitor />} />
         {/* Unlisted, like /ops — shared by direct link, not in the nav. */}
+        <Route path="/demos" element={<Demos />} />
         <Route path="/gallery" element={<Gallery />} />
         <Route path="/ops" element={<Ops />} />
         <Route path="*" element={<NotFound />} />

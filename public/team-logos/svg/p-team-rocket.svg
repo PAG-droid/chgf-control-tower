@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256" role="img" aria-label="Team P, Team Rocket">
+  <rect width="256" height="256" fill="#FAF7F0"/>
+
+  <g transform="translate(134,110) rotate(40) scale(0.74)">
+    <!-- exhaust, one loop -->
+    <path fill="none" stroke="#D62828" stroke-width="9" stroke-linecap="round"
+          d="M0 64c24 20 40 40 20 52-16 10-26-6-14-14 14-10 30 6 24 26-4 16-26 20-38 32"/>
+
+    <!-- fins -->
+    <path fill="#D62828" stroke="#15181B" stroke-width="6" stroke-linejoin="round"
+          d="M-25 12L-56 62-25 52Z"/>
+    <path fill="#D62828" stroke="#15181B" stroke-width="6" stroke-linejoin="round"
+          d="M25 12L56 62 25 52Z"/>
+
+    <!-- body -->
+    <path fill="#FFF6E9" stroke="#15181B" stroke-width="6" stroke-linejoin="round"
+          d="M0-94c20 32 25 72 25 112v38h-50v-38C-25-22-20-62 0-94Z"/>
+
+    <!-- nose cone -->
+    <path fill="#D62828" stroke="#15181B" stroke-width="6" stroke-linejoin="round"
+          d="M0-94c14 22 20 44 20 58h-40c0-14 6-36 20-58Z"/>
+
+    <!-- porthole -->
+    <circle cx="0" cy="-4" r="16" fill="#4FA3D1" stroke="#15181B" stroke-width="6"/>
+
+    <!-- tail band -->
+    <rect x="-27" y="44" width="54" height="14" rx="4" fill="#D62828" stroke="#15181B" stroke-width="6"/>
+  </g>
+</svg>

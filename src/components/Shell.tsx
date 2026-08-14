@@ -10,6 +10,7 @@ const NAV = [
   { to: '/judging', label: 'Judging' },
   { to: '/resources', label: 'Resources' },
   { to: '/monitor', label: 'Submissions' },
+  { to: '/demos', label: 'Demos' },
   { to: '/gallery', label: 'Gallery' },
 ]
 

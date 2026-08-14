@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256" role="img" aria-label="Team O, Bleeding Edge">
+  <rect width="256" height="256" fill="#FAF7F0"/>
+
+  <!-- trailing speed lines -->
+  <g stroke="#4A545C" stroke-width="7" stroke-linecap="round" opacity="0.55">
+    <line x1="24" y1="146" x2="76" y2="94"/>
+    <line x1="26" y1="112" x2="62" y2="76"/>
+    <line x1="52" y1="62" x2="76" y2="38"/>
+  </g>
+
+  <!-- blade -->
+  <path fill="#4A545C" stroke="#15181B" stroke-width="6" stroke-linejoin="round"
+        d="M36 198L194 40l26 26L62 224Z"/>
+  <!-- honed edge -->
+  <path fill="#F5F1E8" d="M38 200L196 42l8 8L46 208Z"/>
+
+  <!-- droplets -->
+  <g fill="#C81E33">
+    <path d="M150 178c8 13 15 21 15 28a15 15 0 0 1-30 0c0-7 7-15 15-28Z"/>
+    <path d="M188 146c6 10 12 16 12 22a12 12 0 0 1-24 0c0-6 6-12 12-22Z"/>
+    <path d="M218 116c5 8 9 13 9 17a9 9 0 0 1-18 0c0-4 4-9 9-17Z"/>
+  </g>
+</svg>

@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256" role="img" aria-label="Team R, The Leftovers">
+  <rect width="256" height="256" fill="#FAF7F0"/>
+
+  <g stroke="#5E4025" stroke-width="5" stroke-linejoin="round">
+    <!-- bottom container -->
+    <g transform="translate(128,196) rotate(-2)">
+      <path fill="#B98B57" d="M-58 0h116l-8 44h-100Z"/>
+      <path fill="#8F6A3F" d="M-64-13h128l-4 13h-120Z"/>
+    </g>
+    <!-- middle container -->
+    <g transform="translate(124,146) rotate(4) scale(0.9)">
+      <path fill="#7A9A3E" d="M-58 0h116l-8 44h-100Z"/>
+      <path fill="#5E7A2C" d="M-64-13h128l-4 13h-120Z"/>
+    </g>
+    <!-- top container -->
+    <g transform="translate(132,100) rotate(-5) scale(0.8)">
+      <path fill="#E3A72F" d="M-58 0h116l-8 44h-100Z"/>
+      <path fill="#C0871A" d="M-64-13h128l-4 13h-120Z"/>
+    </g>
+  </g>
+
+  <!-- fork planted like a flag -->
+  <g stroke="#5E4025" stroke-width="6" stroke-linecap="round">
+    <line x1="164" y1="88" x2="176" y2="30"/>
+    <line x1="169" y1="58" x2="188" y2="62"/>
+    <g stroke-width="5">
+      <line x1="172" y1="44" x2="166" y2="24"/>
+      <line x1="180" y1="46" x2="180" y2="24"/>
+      <line x1="187" y1="48" x2="194" y2="28"/>
+    </g>
+  </g>
+
+  <!-- handwritten label -->
+  <g transform="translate(92,204) rotate(-8)">
+    <rect x="-33" y="-13" width="66" height="26" rx="3" fill="#FBF6EC" stroke="#5E4025" stroke-width="3"/>
+    <text x="0" y="6" text-anchor="middle" fill="#5E4025"
+          font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace"
+          font-size="15" font-weight="700" letter-spacing="1">EAT ME</text>
+  </g>
+</svg>

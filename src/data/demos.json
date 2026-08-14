@@ -1,0 +1,5 @@
+{
+  "secondsPerDemo": 120,
+  "note": "Add teams in the order they present. `deck` is a PDF filename in public/decks/, or null for a live demo with no slides.",
+  "order": []
+}

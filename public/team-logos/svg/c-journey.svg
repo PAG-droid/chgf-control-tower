@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256" role="img" aria-label="Team C, Journey">
+  <rect width="256" height="256" fill="#FAF7F0"/>
+
+  <!-- rising sun on the horizon -->
+  <path fill="#E2703A" d="M82 78a46 46 0 0 1 92 0Z"/>
+  <path fill="#EBCFA4" d="M98 78a30 30 0 0 1 60 0Z"/>
+  <line x1="48" y1="78" x2="212" y2="78" stroke="#EBCFA4" stroke-width="7" stroke-linecap="round"/>
+
+  <!-- trail -->
+  <path fill="none" stroke="#35576B" stroke-width="9" stroke-linecap="round"
+        stroke-dasharray="17 13"
+        d="M40 212c16-6 22-14 30-22 12-12 20-18 34-26 18-10 28-14 46-20 18-6 30-10 46-16"/>
+
+  <!-- waypoints -->
+  <g fill="#35576B">
+    <circle cx="40" cy="212" r="11"/>
+    <circle cx="70" cy="190" r="9"/>
+    <circle cx="104" cy="164" r="9"/>
+    <circle cx="150" cy="144" r="9"/>
+  </g>
+  <g fill="#FAF7F0">
+    <circle cx="40" cy="212" r="4"/>
+    <circle cx="70" cy="190" r="3.5"/>
+    <circle cx="104" cy="164" r="3.5"/>
+    <circle cx="150" cy="144" r="3.5"/>
+  </g>
+
+  <!-- flag at the destination -->
+  <line x1="196" y1="128" x2="196" y2="84" stroke="#35576B" stroke-width="9" stroke-linecap="round"/>
+  <path fill="#E2703A" d="M200 88l34 12-34 12Z"/>
+  <circle cx="196" cy="128" r="12" fill="#35576B"/>
+  <circle cx="196" cy="128" r="4.5" fill="#FAF7F0"/>
+</svg>
