@@ -95,6 +95,12 @@
   ],
   "openItems": [
     {
+      "item": "Aly Moosa (Team I) is now alone after Sean Wang joined Bleeding Edge. Check whether he wants to pair up.",
+      "owner": "Neil Hausmann",
+      "priority": "medium",
+      "status": "open"
+    },
+    {
       "item": "Team S (Prereq-uisites) has a 4th member whose name was not given — the person who posted is unidentified. Also confirm whether Maurice McCaulley and Althea Webber are in person or virtual (assumed in person).",
       "owner": "Philippe-Alexandre Gilbert",
       "priority": "medium",
@@ -337,6 +343,11 @@
     "The judging rubric artifact created by Xiaoxue Du on 2026-08-07 has never been filed in the project repository."
   ],
   "decisions": [
+    {
+      "date": "2026-08-14",
+      "decision": "Sean Wang and Garin Wedeking joined Bleeding Edge (Team O), now 4 people. Team B dissolved entirely once Garin left; Team I is down to Aly Moosa.",
+      "rationale": "Resolves both the open Bleeding Edge question and where Garin landed after Team B fell apart."
+    },
     {
       "date": "2026-08-14",
       "decision": "All-hands connect at 12:00, before lunch, to check where teams are.",

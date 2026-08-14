@@ -28,19 +28,6 @@
       "table": 1
     },
     {
-      "letter": "B",
-      "name": null,
-      "room": "Team B",
-      "mode": "All In-Person",
-      "memberCount": 1,
-      "members": [
-        {
-          "name": "Garin Wedeking",
-          "mode": "In-person"
-        }
-      ]
-    },
-    {
       "letter": "C",
       "name": "Journey",
       "room": "Team C",
@@ -156,12 +143,8 @@
       "name": null,
       "room": "Team I",
       "mode": "All In-Person",
-      "memberCount": 2,
+      "memberCount": 1,
       "members": [
-        {
-          "name": "Sean Wang",
-          "mode": "In-person"
-        },
         {
           "name": "Aly Moosa",
           "mode": "In-person"
@@ -271,7 +254,7 @@
       "name": "Bleeding Edge",
       "room": "Team O",
       "mode": "All In-Person",
-      "memberCount": 2,
+      "memberCount": 4,
       "members": [
         {
           "name": "Josh Bishop",
@@ -279,6 +262,14 @@
         },
         {
           "name": "Jamie Purcell",
+          "mode": "In-person"
+        },
+        {
+          "name": "Sean Wang",
+          "mode": "In-person"
+        },
+        {
+          "name": "Garin Wedeking",
           "mode": "In-person"
         }
       ]
