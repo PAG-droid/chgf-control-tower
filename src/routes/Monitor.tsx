@@ -28,7 +28,11 @@ type Status = {
   recentCommits?: Commit[]
 }
 
-const RAW_URL = 'https://raw.githubusercontent.com/pag992007/chgf-control-tower/main/public/github-status.json'
+// Set VITE_STATUS_RAW_URL at build time to follow the repo to a new owner
+// without editing this file. Falls back to the bundled copy either way.
+const RAW_URL =
+  import.meta.env.VITE_STATUS_RAW_URL ??
+  'https://raw.githubusercontent.com/pag992007/chgf-control-tower/main/public/github-status.json'
 const POLL_MS = 60_000
 
 function relativeTime(iso: string): string {
