@@ -61,17 +61,17 @@
     {
       "id": "lunch",
       "start": "12:00",
-      "end": "12:30",
-      "durationLabel": "30 min",
+      "end": "12:45",
+      "durationLabel": "45 min",
       "title": "Lunch break",
       "detail": "Quick all-hands connect at 12:00 first — virtual teams rejoin the main meeting to share where you are. Then Memphis Smokehouse buffet, available 11:45 AM – 2:00 PM outside the room. Beverages in-room all day.",
       "kind": "logistics"
     },
     {
       "id": "sprint2",
-      "start": "12:30",
+      "start": "12:45",
       "end": "14:10",
-      "durationLabel": "100 min",
+      "durationLabel": "85 min",
       "title": "Build sprint 2",
       "detail": "Keep building; final push toward submission.",
       "kind": "build"
