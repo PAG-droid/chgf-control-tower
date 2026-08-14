@@ -28,7 +28,11 @@ function LiveBadge() {
 
 export default function Shell({ children }: { children: ReactNode }) {
   const { pathname } = useLocation()
-  const isOps = pathname === '/ops'
+  const unlisted: Record<string, string> = {
+    '/ops': 'Organiser view — unlisted, not linked publicly',
+    '/gallery': 'Event gallery — unlisted, share by direct link only',
+  }
+  const unlistedNote = unlisted[pathname]
 
   return (
     <div className="relative z-10 flex min-h-dvh flex-col">
@@ -66,9 +70,9 @@ export default function Shell({ children }: { children: ReactNode }) {
           </div>
         </div>
 
-        {isOps && (
+        {unlistedNote && (
           <div className="border-t border-amber-deep/30 bg-amber-deep/10 px-5 py-1.5 text-center text-[11px] font-semibold tracking-[0.12em] text-amber-glow uppercase">
-            Organiser view — unlisted, not linked publicly
+            {unlistedNote}
           </div>
         )}
       </header>
