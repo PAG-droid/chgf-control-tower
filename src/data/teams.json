@@ -300,10 +300,14 @@
       "name": "Team Rocket",
       "room": "Team P",
       "mode": "All Virtual",
-      "memberCount": 1,
+      "memberCount": 2,
       "members": [
         {
           "name": "Casey Dobrowolski",
+          "mode": "Virtual"
+        },
+        {
+          "name": "Caleb Chung",
           "mode": "Virtual"
         }
       ]
