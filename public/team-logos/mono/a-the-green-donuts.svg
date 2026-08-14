@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256" role="img" aria-label="Team A, The Green Donuts">
+  <defs>
+    <pattern id="grid" width="24" height="24" patternUnits="userSpaceOnUse">
+      <circle cx="12" cy="12" r="1.6" fill="#16232B" fill-opacity="0.16"/>
+    </pattern>
+  </defs>
+  <rect width="256" height="256" fill="#F1EBE0"/>
+  <rect width="256" height="256" fill="url(#grid)"/>
+
+  <!-- disc with a cursor-block hole -->
+  <path fill="#16232B" fill-rule="evenodd"
+        d="M128 50a78 78 0 1 0 0 156 78 78 0 1 0 0-156Z M114 108h28v40h-28Z"/>
+
+  <!-- sprinkles, as diff additions -->
+  <g stroke="#F1EBE0" stroke-width="5" stroke-linecap="butt">
+    <path d="M70 96h16M78 88v16"/>
+    <path d="M88 168h16M96 160v16"/>
+    <path d="M142 178h16M150 170v16"/>
+    <path d="M168 140h16M176 132v16"/>
+    <path d="M76 140h16M84 132v16"/>
+  </g>
+
+  <!-- bite -->
+  <circle cx="196" cy="62" r="42" fill="#F1EBE0"/>
+</svg>

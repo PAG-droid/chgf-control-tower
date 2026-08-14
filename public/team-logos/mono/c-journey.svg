@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256" role="img" aria-label="Team C, Journey">
+  <defs>
+    <pattern id="grid" width="24" height="24" patternUnits="userSpaceOnUse">
+      <circle cx="12" cy="12" r="1.6" fill="#16232B" fill-opacity="0.16"/>
+    </pattern>
+  </defs>
+  <rect width="256" height="256" fill="#F1EBE0"/>
+  <rect width="256" height="256" fill="url(#grid)"/>
+
+  <!-- prompt -->
+  <path d="M28 186l14 14-14 14" fill="none" stroke="#16232B" stroke-width="9"
+        stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- the route, box-drawing rules ascending the grid -->
+  <path d="M56 200H96V160H136V120H176V80" fill="none" stroke="#16232B" stroke-width="14"
+        stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- terminus -->
+  <rect x="164" y="40" width="24" height="32" fill="#16232B"/>
+</svg>

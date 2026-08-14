@@ -1,111 +1,116 @@
 # Logo briefs
 
-The design brief behind each file in `svg/`. Each one is also a usable
-image-generation prompt — prepend the shared style block, and the results will
-sit in roughly the same family as the vectors already in this folder.
+The design brief behind each file in `svg/`. Each is also usable as an
+image-generation prompt — prepend the shared style block.
+
+The set shares one conceit: **every mark is built from terminal and code
+primitives** — box-drawing rules, cursor blocks, prompt carets, bracket
+checkboxes, diff markers, tree connectors. The cohesion comes from the event,
+not from each team name, which is what stops the set reading as ten unrelated
+clip-art icons.
 
 ## Shared style block
 
 ```
-Flat vector team logo, single centered emblem on a plain off-white background.
-Bold geometric shapes, thick uniform line weight, 2-3 flat colors plus one
-accent. Slight retro-tech/sticker feel, generous negative space, no gradients,
-no photorealism, no drop shadows. Must read clearly at 64px. Crisp edges,
-suitable for die-cut sticker. Square 1:1 composition.
-No text unless specified. No watermarks, no signature, no realistic faces.
+Flat vector team logo on a plain warm-bone background with a faint 24px dot
+grid. The mark is constructed only from terminal and code primitives: thick
+box-drawing rules, solid cursor blocks, prompt carets, bracket pairs, tree
+connectors. Geometry restricted to 0, 45 and 90 degree angles plus arcs of
+true circles - no freehand curves. Three stroke weights only: heavy, medium,
+fine. Two colours: near-black petrol ink on warm bone, plus exactly one
+saturated accent. Generous negative space, everything snapped to the grid,
+no gradients, no shadows, no outlines around fills. Must stay identifiable at
+64px and in one colour. Square 1:1.
 ```
 
 ## A — The Green Donuts
 
 ```
-A single donut seen straight-on, glazed in vivid matcha green with darker green
-drizzle, one bite missing from the upper-right edge. The donut hole is shaped
-like a terminal cursor block. Ring of tiny sprinkles rendered as short dashes
-in cream and deep teal. Palette: matcha green, forest green, cream, warm white.
+A solid disc with a rectangular cursor-block hole punched through its centre
+instead of a round one, and a clean circular bite removed from the upper right.
+Sprinkles rendered as small plus signs, like diff additions, scattered across
+the disc in the background colour. Accent: deep sea green.
 ```
 
 ## C — Journey
 
 ```
-A dotted path curving from bottom-left to a small flag at top-right, drawn as a
-single confident line with five circular waypoint nodes. Behind it, a simple
-arc of a rising sun on a horizon line in warm orange. Minimal, calm,
-cartographic - like a trail marker badge. Palette: burnt orange, sand,
-slate blue, cream.
+A route ascending left to right as a staircase of thick box-drawing rules,
+each step landing exactly on the grid. A prompt caret marks the origin at
+lower left; a solid cursor block floats above the final step as the
+destination. Accent: burnt vermilion.
 ```
 
 ## D — Git Blame (It's always HR)
 
 ```
-A magnifying glass held over a stack of three horizontal commit bars, one bar
-highlighted in alarm red while the others are muted grey. A tiny pointing-hand
-cursor icon aims at the red bar. Wry, detective-noir energy rendered flat and
-playful. Include the small text "BLAME" in a condensed monospace typeface along
-the bottom. Palette: charcoal, alarm red, off-white, muted grey.
+Three lines of code as thick horizontal rules of differing length, with a
+short line-number rule in a gutter to the left of each. The middle line is
+the accent colour and carries a cursor block parked at its end. A prompt
+caret at far left points straight at it. Reads as git blame output with one
+line indicted. Accent: burnt vermilion.
 ```
 
 ## E — 404: Bert Not Found
 
 ```
-A broken-image placeholder frame - dashed rectangular border with rounded
-corners - containing the silhouette of a missing avatar head that dissolves
-into pixels toward the top. Large monospace "404" set across the lower third.
-Deliberately glitchy: two-pixel RGB offset on the numerals only. Palette:
-electric blue, magenta accent, near-black, pale grey.
+A dashed rounded placeholder frame containing three character cells. The
+outer two are the digit 4, constructed from straight 45 and 90 degree strokes
+with mitred joins. The centre cell — where the 0 belongs — is a solid accent
+cursor block: the character that could not be found. Accent: burnt vermilion.
 ```
 
 ## M — Vector Borne
 
 ```
-A stylized mosquito rendered from straight vector line segments with its bezier
-handle dots visible, as if drawn in a design tool with anchor points showing.
-Slender translucent wings. Scientific-diagram precision, playful subject.
-Palette: deep indigo, cyan, chalk white, one warm coral accent on the anchor
-points.
+Three solid circles standing in a row on a thin ground rule, connected by two
+sharp 45-degree hops springing from their tangent points. A small rotated
+square rides the apex of each hop: the payload being carried between hosts.
+Transmission, not an insect. Accent: deep sea green.
 ```
 
 ## O — Bleeding Edge
 
 ```
-A razor-thin blade edge slicing diagonally across the frame, with three
-angular red droplets falling from its lower edge. The blade's cut leaves
-trailing chevron speed lines. Sharp, confident, high-contrast, slightly
-dangerous. Palette: gunmetal grey, crimson, black, bone white.
+One very heavy 45-degree rule slicing corner to corner, with a solid accent
+square rotated 45 degrees at its leading tip. Three progressively smaller
+accent squares fall away from its lower-right flank. Two faint parallel rules
+trail behind it upper-left. Accent: burnt vermilion.
 ```
 
 ## P — Team Rocket
 
 ```
-A chunky retro cartoon rocket angled 45 degrees upward, with a porthole
-window, three fins, and a looping exhaust trail that spirals once behind it.
-Bold outline, 1960s ray-gun-gothic styling. Do NOT reference any existing
-franchise, character, or trademarked logo - original design only. Palette:
-cherry red, cream, sky blue, black outline.
+A rocket assembled from primitives: a caret triangle for the nose, a heavy
+outlined rectangle for the body, a cursor block for the porthole, two
+45-degree triangles for fins, and three shortening horizontal rules beneath
+for exhaust. Strictly axis-aligned, pointing straight up. Do NOT reference any
+existing franchise or trademarked logo. Accent: burnt vermilion.
 ```
 
 ## Q — KB Queens
 
 ```
-A five-point crown whose points are formed from keyboard keycaps, the center
-keycap embossed with a lowercase "kb". Beneath it, a single horizontal
-underline bar like a text caret. Regal but geeky. Palette: royal purple,
-gold, ivory, deep plum.
+Five square keycaps of stepped heights standing on a solid base bar, forming a
+crown. The tallest centre cap carries a lowercase "kb" in monospace, knocked
+out in the background colour. A short caret rule sits beneath the base like a
+text cursor. Accent: deep plum.
 ```
 
 ## R — The Leftovers
 
 ```
-A stacked food-container tower - three mismatched takeaway boxes with lids
-slightly askew - topped by a single fork planted like a flag. One box has a
-handwritten label sticker reading "EAT ME". Warm, scrappy, endearing.
-Palette: kraft brown, mustard yellow, avocado green, off-white.
+Three heavy horizontal blocks stacked into a tower, each with its upper-right
+corner chamfered at 45 degrees and each narrower than the one below. A single
+small accent block sits above the top of the stack, overhanging the right
+edge: the one that did not fit. Accent: warm ochre.
 ```
 
 ## S — Prereq-uisites
 
 ```
-Three checkbox squares in a vertical stack: the top two ticked with bold
-checkmarks, the bottom one empty with a small spinning-loader arc inside it.
-A dependency arrow curves from the top box down to the bottom. Clean, orderly,
-faintly self-aware. Palette: teal, slate, lime green tick, paper white.
+Three bracket-pair checkboxes stacked vertically, wired to a box-drawing
+dependency tree on the left that elbows into the bottom row. The top two
+brackets hold check marks in green; the bottom holds a solid vermilion cursor
+block, still pending. Accents: sea green for resolved, vermilion for pending.
 ```

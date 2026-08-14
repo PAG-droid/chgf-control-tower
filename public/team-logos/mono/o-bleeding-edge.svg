@@ -17,10 +17,10 @@
   <path d="M48 208L200 56" stroke="#16232B" stroke-width="24" stroke-linecap="butt"/>
 
   <!-- leading tip -->
-  <rect x="196" y="32" width="28" height="28" fill="#E4572E" transform="rotate(45 210 46)"/>
+  <rect x="196" y="32" width="28" height="28" fill="#16232B" transform="rotate(45 210 46)"/>
 
   <!-- bleeding off -->
-  <g fill="#E4572E">
+  <g fill="#16232B">
     <rect x="142" y="154" width="20" height="20" transform="rotate(45 152 164)"/>
     <rect x="179" y="123" width="14" height="14" transform="rotate(45 186 130)"/>
     <rect x="207" y="99" width="10" height="10" transform="rotate(45 212 104)"/>

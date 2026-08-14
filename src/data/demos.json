@@ -1,5 +1,150 @@
 {
   "secondsPerDemo": 120,
-  "note": "Add teams in the order they present. `deck` is a PDF filename in public/decks/, or null for a live demo with no slides.",
-  "order": []
+  "note": "Running order. Set deck to a PDF filename in public/decks/, repo/video to URLs. null = not received yet.",
+  "order": [
+    {
+      "letter": "A",
+      "deck": null,
+      "repo": null,
+      "video": null,
+      "presenters": null,
+      "note": null
+    },
+    {
+      "letter": "C",
+      "deck": null,
+      "repo": null,
+      "video": null,
+      "presenters": null,
+      "note": null
+    },
+    {
+      "letter": "D",
+      "deck": null,
+      "repo": null,
+      "video": null,
+      "presenters": null,
+      "note": null
+    },
+    {
+      "letter": "E",
+      "deck": null,
+      "repo": null,
+      "video": null,
+      "presenters": null,
+      "note": null
+    },
+    {
+      "letter": "F",
+      "deck": null,
+      "repo": null,
+      "video": null,
+      "presenters": null,
+      "note": null
+    },
+    {
+      "letter": "G",
+      "deck": null,
+      "repo": null,
+      "video": null,
+      "presenters": null,
+      "note": null
+    },
+    {
+      "letter": "H",
+      "deck": null,
+      "repo": null,
+      "video": null,
+      "presenters": null,
+      "note": null
+    },
+    {
+      "letter": "I",
+      "deck": null,
+      "repo": null,
+      "video": null,
+      "presenters": null,
+      "note": null
+    },
+    {
+      "letter": "J",
+      "deck": null,
+      "repo": null,
+      "video": null,
+      "presenters": null,
+      "note": null
+    },
+    {
+      "letter": "K",
+      "deck": null,
+      "repo": null,
+      "video": null,
+      "presenters": null,
+      "note": null
+    },
+    {
+      "letter": "L",
+      "deck": null,
+      "repo": null,
+      "video": null,
+      "presenters": null,
+      "note": null
+    },
+    {
+      "letter": "M",
+      "deck": null,
+      "repo": null,
+      "video": null,
+      "presenters": null,
+      "note": null
+    },
+    {
+      "letter": "N",
+      "deck": null,
+      "repo": null,
+      "video": null,
+      "presenters": null,
+      "note": null
+    },
+    {
+      "letter": "O",
+      "deck": null,
+      "repo": null,
+      "video": null,
+      "presenters": null,
+      "note": null
+    },
+    {
+      "letter": "P",
+      "deck": null,
+      "repo": null,
+      "video": null,
+      "presenters": null,
+      "note": null
+    },
+    {
+      "letter": "Q",
+      "deck": null,
+      "repo": null,
+      "video": null,
+      "presenters": null,
+      "note": null
+    },
+    {
+      "letter": "R",
+      "deck": null,
+      "repo": null,
+      "video": null,
+      "presenters": null,
+      "note": null
+    },
+    {
+      "letter": "S",
+      "deck": null,
+      "repo": null,
+      "video": null,
+      "presenters": null,
+      "note": null
+    }
+  ]
 }

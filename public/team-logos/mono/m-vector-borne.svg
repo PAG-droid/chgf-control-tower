@@ -24,7 +24,7 @@
   <path d="M24 158H232" stroke="#16232B" stroke-width="9" stroke-linecap="round"/>
 
   <!-- what is carried -->
-  <g fill="#2F7D74">
+  <g fill="#16232B">
     <rect x="78" y="84" width="20" height="20" transform="rotate(45 88 94)"/>
     <rect x="158" y="84" width="20" height="20" transform="rotate(45 168 94)"/>
   </g>

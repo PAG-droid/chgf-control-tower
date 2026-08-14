@@ -6,8 +6,26 @@ type Slot = {
   letter?: string
   team?: string
   deck?: string | null
-  presenters?: string
-  note?: string
+  repo?: string | null
+  video?: string | null
+  presenters?: string | null
+  note?: string | null
+}
+
+/** Green when the team has handed it over, muted grey while we are still waiting. */
+function Pill({ label, got }: { label: string; got: boolean }) {
+  return (
+    <span
+      className={[
+        'rounded-md border px-2 py-0.5 text-[10px] font-semibold tracking-wide uppercase',
+        got
+          ? 'border-emerald-400/30 bg-emerald-400/10 text-emerald-300'
+          : 'border-navy-700 bg-navy-800/60 text-ink-500',
+      ].join(' ')}
+    >
+      {got ? label : `${label} –`}
+    </span>
+  )
 }
 
 const order: Slot[] = Array.isArray(demos.order) ? demos.order : []
@@ -139,11 +157,35 @@ function Presenter({ index, onClose, onJump }: { index: number; onClose: () => v
         {slot.deck ? (
           <iframe src={deckUrl(slot.deck)} title={`${teamLabel(slot)} deck`} className="h-full w-full border-0" />
         ) : (
-          <div className="flex h-full flex-col items-center justify-center gap-3 text-center">
+          <div className="flex h-full flex-col items-center justify-center gap-4 text-center">
             <p className="text-3xl font-bold text-ink-200">Live demo</p>
             <p className="max-w-md text-ink-500">
-              {slot.note ?? 'No slides for this team — they are presenting from their screen.'}
+              {slot.note ?? 'No slides for this team — they are presenting from their own screen.'}
             </p>
+            {(slot.repo || slot.video) && (
+              <div className="flex gap-3">
+                {slot.repo && (
+                  <a
+                    href={slot.repo}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="rounded-lg bg-navy-700 px-4 py-2 text-sm font-semibold hover:bg-navy-600"
+                  >
+                    Open repo →
+                  </a>
+                )}
+                {slot.video && (
+                  <a
+                    href={slot.video}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="rounded-lg bg-navy-700 px-4 py-2 text-sm font-semibold hover:bg-navy-600"
+                  >
+                    Play video →
+                  </a>
+                )}
+              </div>
+            )}
           </div>
         )}
       </div>
@@ -185,6 +227,10 @@ export default function Demos() {
           <p className="mt-2 text-ink-400">
             {order.length} teams · {TOTAL / 60} minutes each · gong-timed
           </p>
+          <p className="mt-1 text-sm text-ink-500">
+            {order.filter((s) => s.deck).length} decks · {order.filter((s) => s.repo).length} repos ·{' '}
+            {order.filter((s) => s.video).length} videos received
+          </p>
         </div>
         <button
           type="button"
@@ -215,15 +261,10 @@ export default function Demos() {
                 <span className="block truncate font-semibold text-ink-100">{teamLabel(slot)}</span>
                 {slot.presenters && <span className="block truncate text-xs text-ink-500">{slot.presenters}</span>}
               </span>
-              <span
-                className={[
-                  'shrink-0 rounded-md border px-2 py-0.5 text-[10px] font-semibold tracking-wide uppercase',
-                  slot.deck
-                    ? 'border-emerald-400/30 bg-emerald-400/10 text-emerald-300'
-                    : 'border-sky-400/30 bg-sky-400/10 text-sky-300',
-                ].join(' ')}
-              >
-                {slot.deck ? 'Deck ready' : 'Live demo'}
+              <span className="flex shrink-0 gap-1.5">
+                <Pill label="Deck" got={Boolean(slot.deck)} />
+                <Pill label="Repo" got={Boolean(slot.repo)} />
+                <Pill label="Video" got={Boolean(slot.video)} />
               </span>
             </button>
           </li>

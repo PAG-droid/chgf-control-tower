@@ -8,7 +8,7 @@
   <rect width="256" height="256" fill="url(#grid)"/>
 
   <!-- crown points, keycaps stepped on the grid -->
-  <g fill="#6B4A7A">
+  <g fill="#16232B">
     <rect x="48" y="136" width="24" height="40"/>
     <rect x="80" y="112" width="24" height="64"/>
     <rect x="112" y="80" width="32" height="96"/>

@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256" role="img" aria-label="Team D, Git Blame (It's always HR)">
+  <defs>
+    <pattern id="grid" width="24" height="24" patternUnits="userSpaceOnUse">
+      <circle cx="12" cy="12" r="1.6" fill="#16232B" fill-opacity="0.16"/>
+    </pattern>
+  </defs>
+  <rect width="256" height="256" fill="#F1EBE0"/>
+  <rect width="256" height="256" fill="url(#grid)"/>
+
+  <!-- the accusation -->
+  <path d="M32 116l14 14-14 14" fill="none" stroke="#16232B" stroke-width="9"
+        stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- blame gutter -->
+  <g stroke="#16232B" stroke-width="9" stroke-linecap="round">
+    <path d="M60 80h16"/>
+    <path d="M60 128h16"/>
+    <path d="M60 176h16"/>
+  </g>
+
+  <!-- innocent lines -->
+  <g stroke="#16232B" stroke-width="14" stroke-linecap="round">
+    <path d="M92 80h112"/>
+    <path d="M92 176h120"/>
+  </g>
+
+  <!-- the guilty line -->
+  <path d="M92 128h80" stroke="#16232B" stroke-width="14" stroke-linecap="round"/>
+  <rect x="182" y="114" width="20" height="28" fill="#16232B"/>
+</svg>

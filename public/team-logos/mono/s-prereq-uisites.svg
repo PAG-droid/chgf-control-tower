@@ -22,11 +22,11 @@
   </g>
 
   <!-- resolved -->
-  <g fill="none" stroke="#2F7D74" stroke-width="9" stroke-linecap="round" stroke-linejoin="round">
+  <g fill="none" stroke="#16232B" stroke-width="9" stroke-linecap="round" stroke-linejoin="round">
     <path d="M126 72l8 10 18-22"/>
     <path d="M126 128l8 10 18-22"/>
   </g>
 
   <!-- pending -->
-  <rect x="129" y="171" width="18" height="26" fill="#E4572E"/>
+  <rect x="129" y="171" width="18" height="26" fill="#16232B"/>
 </svg>

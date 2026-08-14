@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256" role="img" aria-label="Team E, 404 Bert Not Found">
+  <defs>
+    <pattern id="grid" width="24" height="24" patternUnits="userSpaceOnUse">
+      <circle cx="12" cy="12" r="1.6" fill="#16232B" fill-opacity="0.16"/>
+    </pattern>
+  </defs>
+  <rect width="256" height="256" fill="#F1EBE0"/>
+  <rect width="256" height="256" fill="url(#grid)"/>
+
+  <!-- placeholder frame -->
+  <rect x="28" y="60" width="200" height="136" rx="8" fill="none" stroke="#16232B"
+        stroke-opacity="0.45" stroke-width="9" stroke-dasharray="14 12" stroke-linecap="round"/>
+
+  <!-- 4, constructed from 45 and 90 degree strokes -->
+  <g fill="none" stroke="#16232B" stroke-width="12" stroke-linecap="butt" stroke-linejoin="miter">
+    <g transform="translate(60,100)">
+      <path d="M26 0L0 38h40"/>
+      <path d="M26 0v56"/>
+    </g>
+    <g transform="translate(156,100)">
+      <path d="M26 0L0 38h40"/>
+      <path d="M26 0v56"/>
+    </g>
+  </g>
+
+  <!-- the missing character -->
+  <rect x="114" y="100" width="26" height="56" fill="#16232B"/>
+</svg>
