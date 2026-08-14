@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256" role="img" aria-label="Prereq-uisites, type-led direction">
+  <rect width="256" height="256" fill="#F1EBE0"/>
+
+  <g font-family="Arial Black, Arial Bold, Helvetica, sans-serif" font-size="38"
+     font-weight="900" fill="#16232B" letter-spacing="-1">
+    <text x="34" y="108">PREREQ</text>
+    <text x="34" y="196">UISITES</text>
+  </g>
+
+  <!-- the hyphen, as a dependency the second line waits on -->
+  <path d="M206 108C234 108 234 148 204 148H62" fill="none" stroke="#E4572E" stroke-width="9"
+        stroke-linecap="round"/>
+  <path d="M52 148l16-9v18Z" fill="#E4572E"/>
+</svg>

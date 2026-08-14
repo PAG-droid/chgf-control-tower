@@ -1,20 +1,30 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256" role="img" aria-label="Team D, Git Blame (It's always HR)">
-  <rect width="256" height="256" fill="#FAF7F0"/>
+  <defs>
+    <pattern id="grid" width="24" height="24" patternUnits="userSpaceOnUse">
+      <circle cx="12" cy="12" r="1.6" fill="#16232B" fill-opacity="0.16"/>
+    </pattern>
+  </defs>
+  <rect width="256" height="256" fill="#F1EBE0"/>
+  <rect width="256" height="256" fill="url(#grid)"/>
 
-  <!-- commit bars, the middle one guilty -->
-  <rect x="34" y="56" width="132" height="18" rx="9" fill="#B7BEC4"/>
-  <rect x="34" y="96" width="132" height="18" rx="9" fill="#D93A2B"/>
-  <rect x="34" y="136" width="132" height="18" rx="9" fill="#B7BEC4"/>
+  <!-- the accusation -->
+  <path d="M32 116l14 14-14 14" fill="none" stroke="#E4572E" stroke-width="9"
+        stroke-linecap="round" stroke-linejoin="round"/>
 
-  <!-- magnifying glass over the guilty commit -->
-  <circle cx="158" cy="105" r="54" fill="#FAF7F0" fill-opacity="0.25"/>
-  <circle cx="158" cy="105" r="54" fill="none" stroke="#262A2E" stroke-width="12"/>
-  <line x1="196" y1="143" x2="224" y2="171" stroke="#262A2E" stroke-width="17" stroke-linecap="round"/>
+  <!-- blame gutter -->
+  <g stroke="#16232B" stroke-width="9" stroke-linecap="round">
+    <path d="M60 80h16"/>
+    <path d="M60 128h16"/>
+    <path d="M60 176h16"/>
+  </g>
 
-  <!-- pointing cursor -->
-  <path fill="#262A2E" d="M148 92l30 16-13 3 7 13-7 4-7-13-10 8Z"/>
+  <!-- innocent lines -->
+  <g stroke="#16232B" stroke-width="14" stroke-linecap="round">
+    <path d="M92 80h112"/>
+    <path d="M92 176h120"/>
+  </g>
 
-  <text x="128" y="228" text-anchor="middle" fill="#262A2E"
-        font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace"
-        font-size="30" font-weight="700" letter-spacing="5">BLAME</text>
+  <!-- the guilty line -->
+  <path d="M92 128h80" stroke="#E4572E" stroke-width="14" stroke-linecap="round"/>
+  <rect x="182" y="114" width="20" height="28" fill="#E4572E"/>
 </svg>

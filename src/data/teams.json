@@ -25,7 +25,8 @@
           "mode": "In-person"
         }
       ],
-      "table": 1
+      "table": 1,
+      "logo": "team-logos/svg/a-the-green-donuts.svg"
     },
     {
       "letter": "C",
@@ -51,7 +52,8 @@
           "mode": "In-person"
         }
       ],
-      "table": 4
+      "table": 4,
+      "logo": "team-logos/svg/c-journey.svg"
     },
     {
       "letter": "D",
@@ -72,7 +74,8 @@
           "name": "Sadia Sleweon",
           "mode": "Virtual"
         }
-      ]
+      ],
+      "logo": "team-logos/svg/d-git-blame.svg"
     },
     {
       "letter": "E",
@@ -93,7 +96,8 @@
           "name": "Gihani Dissanayake",
           "mode": "Virtual"
         }
-      ]
+      ],
+      "logo": "team-logos/svg/e-404-bert-not-found.svg"
     },
     {
       "letter": "F",
@@ -230,7 +234,8 @@
           "mode": "In-person"
         }
       ],
-      "table": 8
+      "table": 8,
+      "logo": "team-logos/svg/m-vector-borne.svg"
     },
     {
       "letter": "N",
@@ -272,7 +277,8 @@
           "name": "Garin Wedeking",
           "mode": "In-person"
         }
-      ]
+      ],
+      "logo": "team-logos/svg/o-bleeding-edge.svg"
     },
     {
       "letter": "P",
@@ -289,7 +295,8 @@
           "name": "Caleb Chung",
           "mode": "Virtual"
         }
-      ]
+      ],
+      "logo": "team-logos/svg/p-team-rocket.svg"
     },
     {
       "letter": "Q",
@@ -306,7 +313,8 @@
           "name": "Cody Benedict",
           "mode": "Virtual"
         }
-      ]
+      ],
+      "logo": "team-logos/svg/q-kb-queens.svg"
     },
     {
       "letter": "R",
@@ -327,7 +335,8 @@
           "name": "Zeyad Taqiaddin",
           "mode": "Virtual"
         }
-      ]
+      ],
+      "logo": "team-logos/svg/r-the-leftovers.svg"
     },
     {
       "letter": "S",
@@ -348,7 +357,8 @@
           "name": "Xiaoxue Du",
           "mode": "In-person"
         }
-      ]
+      ],
+      "logo": "team-logos/svg/s-prereq-uisites.svg"
     }
   ]
 }

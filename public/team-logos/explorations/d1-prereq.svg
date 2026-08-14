@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256" role="img" aria-label="Prereq-uisites, terminal-built direction">
+  <defs>
+    <pattern id="grid" width="24" height="24" patternUnits="userSpaceOnUse">
+      <circle cx="12" cy="12" r="1.6" fill="#16232B" fill-opacity="0.16"/>
+    </pattern>
+  </defs>
+  <rect width="256" height="256" fill="#F1EBE0"/>
+  <rect width="256" height="256" fill="url(#grid)"/>
+
+  <!-- dependency tree, box-drawing -->
+  <g fill="none" stroke="#16232B" stroke-width="10" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M60 72V184H96"/>
+    <path d="M60 72H96"/>
+    <path d="M60 128H96"/>
+  </g>
+
+  <!-- bracketed checkboxes -->
+  <g fill="none" stroke="#16232B" stroke-width="10" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M120 50H108V94H120"/><path d="M156 50H168V94H156"/>
+    <path d="M120 106H108V150H120"/><path d="M156 106H168V150H156"/>
+    <path d="M120 162H108V206H120"/><path d="M156 162H168V206H156"/>
+  </g>
+
+  <!-- resolved -->
+  <g fill="none" stroke="#2F7D74" stroke-width="9" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M126 72l8 9 16-19"/>
+    <path d="M126 128l8 9 16-19"/>
+  </g>
+
+  <!-- pending -->
+  <rect x="131" y="172" width="14" height="24" fill="#E4572E"/>
+</svg>

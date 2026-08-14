@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256" role="img" aria-label="Prereq-uisites, constructed pictogram direction">
+  <rect width="256" height="256" fill="#F1EBE0"/>
+
+  <!-- chain -->
+  <line x1="60" y1="128" x2="196" y2="128" stroke="#16232B" stroke-width="10"/>
+
+  <!-- satisfied -->
+  <circle cx="60" cy="128" r="27" fill="#16232B"/>
+  <circle cx="128" cy="128" r="27" fill="#16232B"/>
+  <g fill="none" stroke="#F1EBE0" stroke-width="8" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M49 128l8 9 15-19"/>
+    <path d="M117 128l8 9 15-19"/>
+  </g>
+
+  <!-- unresolved: the circle does not close -->
+  <circle cx="196" cy="128" r="27" fill="#F1EBE0"/>
+  <path d="M196 101A27 27 0 1 1 171 119" fill="none" stroke="#E4572E" stroke-width="10"
+        stroke-linecap="round"/>
+</svg>

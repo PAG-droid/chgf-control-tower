@@ -1,37 +1,25 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256" role="img" aria-label="Team A, The Green Donuts">
-  <rect width="256" height="256" fill="#FAF7F0"/>
   <defs>
-    <clipPath id="ring">
-      <path fill-rule="evenodd" d="M128 36a92 92 0 1 0 0 184 92 92 0 1 0 0-184Z M108 100h40v56h-40Z"/>
-    </clipPath>
+    <pattern id="grid" width="24" height="24" patternUnits="userSpaceOnUse">
+      <circle cx="12" cy="12" r="1.6" fill="#16232B" fill-opacity="0.16"/>
+    </pattern>
   </defs>
+  <rect width="256" height="256" fill="#F1EBE0"/>
+  <rect width="256" height="256" fill="url(#grid)"/>
 
-  <!-- dough ring, hole shaped as a terminal cursor block -->
-  <path fill="#6E9E3A" fill-rule="evenodd" d="M128 36a92 92 0 1 0 0 184 92 92 0 1 0 0-184Z M108 100h40v56h-40Z"/>
+  <!-- disc with a cursor-block hole -->
+  <path fill="#2F7D74" fill-rule="evenodd"
+        d="M128 50a78 78 0 1 0 0 156 78 78 0 1 0 0-156Z M114 108h28v40h-28Z"/>
 
-  <g clip-path="url(#ring)">
-    <!-- matcha glaze with a scalloped lower edge -->
-    <path fill="#A5D14A" d="M12 152q18 24 36 0 18 24 36 0 18 24 36 0 18 24 36 0 18 24 36 0 18 24 36 0 18 24 36 0V8H12Z"/>
-
-    <!-- darker drizzle -->
-    <g fill="none" stroke="#2F5A1E" stroke-width="7" stroke-linecap="round">
-      <path d="M34 96c20-10 24 12 44 4s18-26 38-20"/>
-      <path d="M120 46c18 8 12 26 30 32s28-8 42 2"/>
-    </g>
-
-    <!-- sprinkles -->
-    <g stroke-linecap="round" stroke-width="8">
-      <line x1="128" y1="56" x2="128" y2="72" stroke="#FFF3D6" transform="rotate(-34 128 128)"/>
-      <line x1="128" y1="56" x2="128" y2="72" stroke="#1F6E63" transform="rotate(22 128 128)"/>
-      <line x1="128" y1="56" x2="128" y2="72" stroke="#FFF3D6" transform="rotate(78 128 128)"/>
-      <line x1="128" y1="56" x2="128" y2="72" stroke="#1F6E63" transform="rotate(128 128 128)"/>
-      <line x1="128" y1="56" x2="128" y2="72" stroke="#FFF3D6" transform="rotate(172 128 128)"/>
-      <line x1="128" y1="56" x2="128" y2="72" stroke="#1F6E63" transform="rotate(214 128 128)"/>
-      <line x1="128" y1="56" x2="128" y2="72" stroke="#FFF3D6" transform="rotate(256 128 128)"/>
-      <line x1="128" y1="56" x2="128" y2="72" stroke="#1F6E63" transform="rotate(302 128 128)"/>
-    </g>
+  <!-- sprinkles, as diff additions -->
+  <g stroke="#F1EBE0" stroke-width="5" stroke-linecap="butt">
+    <path d="M70 96h16M78 88v16"/>
+    <path d="M88 168h16M96 160v16"/>
+    <path d="M142 178h16M150 170v16"/>
+    <path d="M168 140h16M176 132v16"/>
+    <path d="M76 140h16M84 132v16"/>
   </g>
 
-  <!-- bite taken out of the upper right -->
-  <circle cx="212" cy="52" r="44" fill="#FAF7F0"/>
+  <!-- bite -->
+  <circle cx="196" cy="62" r="42" fill="#F1EBE0"/>
 </svg>

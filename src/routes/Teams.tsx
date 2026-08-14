@@ -72,16 +72,26 @@ export default function Teams() {
         <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {visible.map((t) => (
             <li key={t.letter} className="rounded-xl border border-navy-800 bg-navy-900/50 p-5 transition-colors hover:border-navy-600">
-              <div className="flex items-start justify-between gap-3">
-                <div className="min-w-0">
-                  <div className="flex items-baseline gap-2.5">
-                    <span className="text-2xl font-bold text-amber-glow">{t.letter}</span>
-                    <span className="truncate text-base font-semibold text-ink-100">
-                      {t.name ?? <span className="text-ink-500 italic">not yet named</span>}
-                    </span>
+              <div className="flex items-start gap-3">
+                {/* Named teams have a logo; the rest fall back to the letter tile. */}
+                {'logo' in t && typeof t.logo === 'string' ? (
+                  <img
+                    src={`${import.meta.env.BASE_URL}${t.logo}`}
+                    alt=""
+                    className="size-12 shrink-0 rounded-lg ring-1 ring-navy-700"
+                  />
+                ) : (
+                  <span className="flex size-12 shrink-0 items-center justify-center rounded-lg bg-navy-800 text-xl font-bold text-amber-glow">
+                    {t.letter}
+                  </span>
+                )}
+
+                <div className="min-w-0 flex-1">
+                  <div className="truncate text-base font-semibold text-ink-100">
+                    {t.name ?? <span className="text-ink-500 italic">not yet named</span>}
                   </div>
                   <div className="mt-1 text-xs text-ink-500">
-                    Breakout room: {t.room} · {t.members.length} members
+                    {t.room} · {t.members.length} members
                     {/* Only some in-person teams have told us a table number. */}
                     {'table' in t && typeof t.table === 'number' ? ` · Table ${t.table}` : ''}
                   </div>
