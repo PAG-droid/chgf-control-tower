@@ -16,19 +16,25 @@ type Slot = {
   note?: string | null
 }
 
-/** Green when the team has handed it over, muted grey while we are still waiting. */
-function Pill({ label, got }: { label: string; got: boolean }) {
+/**
+ * Green and clickable once the team has handed something over, muted grey
+ * while we are still waiting. Anchors sit outside the row button so they stay
+ * independently clickable.
+ */
+function Pill({ label, href }: { label: string; href?: string | null }) {
+  const base = 'rounded-md border px-2 py-0.5 text-[10px] font-semibold tracking-wide uppercase'
+  if (!href) return <span className={`${base} border-navy-700 bg-navy-800/60 text-ink-500`}>{label} –</span>
   return (
-    <span
-      className={[
-        'rounded-md border px-2 py-0.5 text-[10px] font-semibold tracking-wide uppercase',
-        got
-          ? 'border-emerald-400/30 bg-emerald-400/10 text-emerald-300'
-          : 'border-navy-700 bg-navy-800/60 text-ink-500',
-      ].join(' ')}
+    <a
+      href={href}
+      target="_blank"
+      rel="noreferrer"
+      onClick={(e) => e.stopPropagation()}
+      className={`${base} border-emerald-400/40 bg-emerald-400/15 text-emerald-300 transition-colors hover:bg-emerald-400/30 hover:text-emerald-200`}
+      title={`Open ${label.toLowerCase()}`}
     >
-      {got ? label : `${label} –`}
-    </span>
+      {label} ↗
+    </a>
   )
 }
 
@@ -268,11 +274,14 @@ export default function Demos() {
 
       <ul className="space-y-2">
         {order.map((slot, i) => (
-          <li key={`${slot.letter ?? i}-${i}`}>
+          <li
+            key={`${slot.letter ?? i}-${i}`}
+            className="flex items-center gap-4 rounded-xl border border-navy-800 bg-navy-900/50 px-4 py-3.5 transition-colors hover:border-amber-glow/50 hover:bg-navy-800/60"
+          >
             <button
               type="button"
               onClick={() => setActive(i)}
-              className="flex w-full items-center gap-4 rounded-xl border border-navy-800 bg-navy-900/50 px-4 py-3.5 text-left transition-colors hover:border-amber-glow/50 hover:bg-navy-800/60"
+              className="flex min-w-0 flex-1 items-center gap-4 text-left"
             >
               <span className="tnum w-7 shrink-0 text-lg font-bold text-ink-500">{i + 1}</span>
               {teamLogo(slot) ? (
@@ -292,13 +301,14 @@ export default function Demos() {
                 </span>
                 {slot.title && <span className="mt-1 block text-sm text-sky-300">{slot.title}</span>}
               </span>
-              <span className="flex shrink-0 gap-1.5">
-                <Pill label="Deck" got={Boolean(slot.deck)} />
-                <Pill label="Files" got={Boolean(slot.share)} />
-                <Pill label="Repo" got={Boolean(slot.repo)} />
-                <Pill label="Video" got={Boolean(slot.video)} />
-              </span>
             </button>
+
+            <span className="flex shrink-0 flex-wrap justify-end gap-1.5">
+              <Pill label="Deck" href={slot.deck ? `${import.meta.env.BASE_URL}decks/${slot.deck}` : null} />
+              <Pill label="Files" href={slot.share} />
+              <Pill label="Repo" href={slot.repo} />
+              <Pill label="Video" href={slot.video} />
+            </span>
           </li>
         ))}
       </ul>
