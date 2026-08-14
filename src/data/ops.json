@@ -95,6 +95,18 @@
   ],
   "openItems": [
     {
+      "item": "An external participant could not join the Teams meeting (Andy Stetzler at table 4 flagged it at 11:10). Kevin Middleton responding.",
+      "owner": "Kevin Middleton",
+      "priority": "high",
+      "status": "open"
+    },
+    {
+      "item": "Virtual attendees cannot see the room camera or the whiteboard (raised by Emily White at 10:38). Switch the room camera or share the whiteboard digitally.",
+      "owner": "Kevin Middleton",
+      "priority": "high",
+      "status": "open"
+    },
+    {
       "item": "Garin Wedeking (Team B) is now a solo participant — pair him with another team or point him at the solo-friendly task list. Neil owns that backup plan, and no floor helper has been named.",
       "owner": "Neil Hausmann",
       "priority": "high",
@@ -289,6 +301,16 @@
     "The judging rubric artifact created by Xiaoxue Du on 2026-08-07 has never been filed in the project repository."
   ],
   "decisions": [
+    {
+      "date": "2026-08-14",
+      "decision": "All-hands connect at 12:00, before lunch, to check where teams are.",
+      "rationale": "PAG at 10:53. Virtual teams asked when to return."
+    },
+    {
+      "date": "2026-08-14",
+      "decision": "Breakout rooms abandoned; virtual teams create their own Teams meetings and rejoin the main meeting for checkpoints.",
+      "rationale": "PAG at 10:51 — managing multiple simultaneous sessions was too complex. Roster and FAQ updated to match."
+    },
     {
       "date": "2026-08-14",
       "decision": "Team B dissolved on the day; Garin Wedeking attends as its only representative and now runs as a solo team.",

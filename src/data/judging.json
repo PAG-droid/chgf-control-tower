@@ -4,25 +4,25 @@
       "id": "impact-in-action",
       "name": "Impact in Action",
       "tagline": "Real-World Impact",
-      "description": "Awarded for the strongest real-world impact. The project solves a real problem at your organization and fits a problem statement, addressing an important need with clear, significant value."
+      "description": "Solves a meaningful problem and demonstrates clear value for learners, educators, or the broader education ecosystem."
     },
     {
       "id": "built-to-last",
       "name": "Built to Last",
       "tagline": "Staying Power",
-      "description": "Awarded for the greatest staying power and potential to scale. The team and their colleagues will keep using it, with a clear path to ongoing use, adoption, or scale as a reusable skill, agent, MCP integration, or workflow."
+      "description": "Goes beyond a demo with a thoughtful, scalable foundation and a credible path to continued use or development."
     },
     {
       "id": "claude-code-wizardry",
       "name": "Claude Code Wizardry",
       "tagline": "Claude Code Craft",
-      "description": "Awarded for the most inventive and skillful use of Claude Code. Creative, unique use that goes beyond a single prompt and meaningfully improves the solution."
+      "description": "Makes especially creative, ambitious, or technically impressive use of Claude Code."
     },
     {
       "id": "best-in-show",
       "name": "Best in Show",
       "tagline": "Execution & Demo",
-      "description": "Awarded for the strongest execution and live demo. Sound engineering, refined past the first idea, and a polished, functional solution with a compelling demo that holds up live."
+      "description": "The strongest overall project, bringing together impact, execution, creativity, and technical quality."
     }
   ],
   "criteria": [
@@ -68,10 +68,26 @@
     }
   ],
   "judges": [
-    { "name": "Xiaoxue Du", "org": "Gates Foundation", "role": "Principal judge" },
-    { "name": "Neil Hausmann", "org": "Gates Foundation", "role": "Judge" },
-    { "name": "Matt Gee", "org": "Gates Foundation", "role": "Judge" },
-    { "name": "Li-Tal Mashiach", "org": "Anthropic", "role": "Judge (in person)" }
+    {
+      "name": "Xiaoxue Du",
+      "org": "Gates Foundation",
+      "role": "Principal judge"
+    },
+    {
+      "name": "Neil Hausmann",
+      "org": "Gates Foundation",
+      "role": "Judge"
+    },
+    {
+      "name": "Matt Gee",
+      "org": "Gates Foundation",
+      "role": "Judge"
+    },
+    {
+      "name": "Li-Tal Mashiach",
+      "org": "Anthropic",
+      "role": "Judge (in person)"
+    }
   ],
   "scoring": {
     "scale": "1-10 per criterion (maximum 40)",

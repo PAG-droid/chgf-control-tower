@@ -1,5 +1,5 @@
 {
-  "breakoutRoomNote": "Breakout rooms in the Teams webinar are named to match these team letters.",
+  "breakoutRoomNote": "Virtual teams run their own Teams meeting — the pre-created breakout rooms are not being used. Start a call with your team, and ping the main chat if you need help.",
   "teams": [
     {
       "letter": "A",
@@ -63,7 +63,8 @@
           "name": "Kevin Mackey",
           "mode": "In-person"
         }
-      ]
+      ],
+      "table": 4
     },
     {
       "letter": "D",

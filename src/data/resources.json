@@ -18,103 +18,163 @@
       "title": "Investment-data benchmark harness",
       "summary": "A fixed set of portfolio questions with agreed-upon correct answers, plus a scoring skill that runs any Claude-based tool against it and reports accuracy.",
       "difficulty": "Ambitious",
-      "tags": ["Eval / infrastructure", "Neil Hausmann", "multi-day scale - expect to demo a fragment"]
+      "tags": [
+        "Eval / infrastructure",
+        "Neil Hausmann",
+        "multi-day scale - expect to demo a fragment"
+      ]
     },
     {
       "title": "Prompt variance injector",
       "summary": "Generates realistic paraphrases and perturbations of a single prompt (reordered clauses, synonym swaps, added or dropped constraints) to test whether a skill's output is stable under wording changes. Designed to feed the investment-data benchmark harness as its input generator.",
       "difficulty": "Moderate",
-      "tags": ["Eval / infrastructure", "Neil Hausmann", "good fit for the build window"]
+      "tags": [
+        "Eval / infrastructure",
+        "Neil Hausmann",
+        "good fit for the build window"
+      ]
     },
     {
       "title": "Prompting personas",
       "summary": "Generates virtual \"digital twin\" personas of Gates Foundation employees (newbie, tech bro, GF OG and so on) that produce representative prompts and prompting styles, injecting variation into prompts for tool testing and evaluation.",
       "difficulty": null,
-      "tags": ["Eval / infrastructure", "Neil Hausmann"]
+      "tags": [
+        "Eval / infrastructure",
+        "Neil Hausmann"
+      ]
     },
     {
       "title": "Personal knowledge graph to SWOT prompts",
       "summary": "Builds a graph from a user's own documents and correspondence, then surfaces strengths, weaknesses, opportunities, and threats that the graph implies but the user hasn't articulated.",
       "difficulty": "Ambitious",
-      "tags": ["Personal / knowledge", "Neil Hausmann", "multi-day scale - expect to demo a fragment"]
+      "tags": [
+        "Personal / knowledge",
+        "Neil Hausmann",
+        "multi-day scale - expect to demo a fragment"
+      ]
     },
     {
       "title": "End-of-day inbox analyzer",
       "summary": "Reads the day's mail, produces a ranked to-do list with owners and due dates, and flags threads awaiting the user's reply.",
       "difficulty": null,
-      "tags": ["Personal / knowledge", "Neil Hausmann"]
+      "tags": [
+        "Personal / knowledge",
+        "Neil Hausmann"
+      ]
     },
     {
       "title": "Colleague emoji assigner",
       "summary": "Assigns one emoji per frequent correspondent based on Teams and email patterns, with a written rationale and a confidence score. A novelty demo for graph-over-communications plumbing, floated alongside the question of whether an M365 connector exists for it.",
       "difficulty": null,
-      "tags": ["Personal / knowledge", "Neil Hausmann", "check data-handling with an organizer before using real colleague data"]
+      "tags": [
+        "Personal / knowledge",
+        "Neil Hausmann",
+        "check data-handling with an organizer before using real colleague data"
+      ]
     },
     {
       "title": "Cowork onboarding podcast series",
       "summary": "Short generated audio episodes that walk a new user through Cowork concepts and their first workflows.",
       "difficulty": null,
-      "tags": ["Personal / knowledge", "Neil Hausmann"]
+      "tags": [
+        "Personal / knowledge",
+        "Neil Hausmann"
+      ]
     },
     {
       "title": "Agreement-readiness checklist tool",
       "summary": "Evaluates a proposal against the requirements for submission to create an agreement, returning a pass/fail checklist with the specific gap and the source requirement for each item.",
       "difficulty": "Moderate",
-      "tags": ["Grant / proposal workflow", "Neil Hausmann", "good fit for the build window"]
+      "tags": [
+        "Grant / proposal workflow",
+        "Neil Hausmann",
+        "good fit for the build window"
+      ]
     },
     {
       "title": "Proposal and budget review workflow (Cowork plugin)",
       "summary": "A guided multi-step check of a proposal against its budget: internal consistency, arithmetic, missing sections, and flagged variances.",
       "difficulty": null,
-      "tags": ["Grant / proposal workflow", "Neil Hausmann"]
+      "tags": [
+        "Grant / proposal workflow",
+        "Neil Hausmann"
+      ]
     },
     {
       "title": "Strategic fit drafting skill",
       "summary": "Drafts the strategic-fit narrative for an investment from portfolio context, prior approved language, and the relevant strategy documents.",
       "difficulty": "Moderate",
-      "tags": ["Grant / proposal workflow", "Neil Hausmann", "good fit for the build window"]
+      "tags": [
+        "Grant / proposal workflow",
+        "Neil Hausmann",
+        "good fit for the build window"
+      ]
     },
     {
       "title": "Convening email template customizer",
       "summary": "Adapts a base invitation or logistics template to a specific convening: audience, dates, venue, agenda, and tone.",
       "difficulty": "Moderate",
-      "tags": ["Grant / proposal workflow", "Neil Hausmann", "good fit for the build window", "overlaps with Convening-in-a-box assistant"]
+      "tags": [
+        "Grant / proposal workflow",
+        "Neil Hausmann",
+        "good fit for the build window",
+        "overlaps with Convening-in-a-box assistant"
+      ]
     },
     {
       "title": "RoB planning assistant",
       "summary": "Given a team's upcoming milestones, produces the required review calendar and a per-role prep checklist.",
       "difficulty": null,
-      "tags": ["Planning cadence", "Neil Hausmann"]
+      "tags": [
+        "Planning cadence",
+        "Neil Hausmann"
+      ]
     },
     {
       "title": "In-process pipeline vs. deadlines",
       "summary": "Compares in-process investments against RoB dates, identifies at-risk items, and writes the results back to the tracking spreadsheet in place, preserving formatting and formulas.",
       "difficulty": null,
-      "tags": ["Planning cadence", "Neil Hausmann"]
+      "tags": [
+        "Planning cadence",
+        "Neil Hausmann"
+      ]
     },
     {
       "title": "ERG Calendar",
       "summary": "Makes custom calendars for Employee Resource Groups built around the special days and dates ERG members may want to know about.",
       "difficulty": null,
-      "tags": ["Planning cadence", "Neil Hausmann"]
+      "tags": [
+        "Planning cadence",
+        "Neil Hausmann"
+      ]
     },
     {
       "title": "Community connector / coffee chat matchmaker",
       "summary": "Recommends colleagues to meet based on shared interests and projects, with suggested conversation starters.",
       "difficulty": null,
-      "tags": ["Community Building", "Xiaoxue Du"]
+      "tags": [
+        "Community Building",
+        "Xiaoxue Du"
+      ]
     },
     {
       "title": "Post-meeting action tracker",
       "summary": "Converts notes and transcripts into decisions, owners, deadlines, and personalized follow-up messages, while tracking what remains unresolved.",
       "difficulty": null,
-      "tags": ["Community Building", "Xiaoxue Du"]
+      "tags": [
+        "Community Building",
+        "Xiaoxue Du"
+      ]
     },
     {
       "title": "Convening-in-a-box assistant",
       "summary": "Generates an agenda, participant mix, run-of-show, invitation, moderator brief, Know Before You Go, and follow-up survey from a convening goal and audience.",
       "difficulty": null,
-      "tags": ["Community Building", "Xiaoxue Du", "overlaps with Convening email template customizer"]
+      "tags": [
+        "Community Building",
+        "Xiaoxue Du",
+        "overlaps with Convening email template customizer"
+      ]
     }
   ],
   "quickstart": [
@@ -145,6 +205,14 @@
     "note": "Shown during Awards & wrap"
   },
   "faq": [
+    {
+      "q": "My team is virtual — is there a breakout room for us?",
+      "a": "No. Start your own Teams meeting with your team and drop back into the main meeting for the checkpoints. The pre-created breakout rooms are not being used. Ping the main chat any time you need help — support is monitoring it."
+    },
+    {
+      "q": "I have no audio in the Teams meeting — what do I do?",
+      "a": "Join from Chrome instead. Several people hit this at kickoff and switching browsers fixed it immediately."
+    },
     {
       "q": "How big should a team be?",
       "a": "Two people is the default. Three or four is fine if that is what your group wants - just be honest about whether four people can stay busy in a short build window. Solo is allowed but pairing is strongly encouraged: put an experienced Claude Code user with a newcomer."
