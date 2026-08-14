@@ -37,6 +37,12 @@ function teamLabel(slot: Slot): string {
   return match?.name ?? (slot.letter ? `Team ${slot.letter}` : 'Unnamed team')
 }
 
+/** Who is on the team, straight from the roster, so it tracks every reshuffle. */
+function teamMembers(slot: Slot): string {
+  const match = teams.teams.find((t) => t.letter === slot.letter)
+  return match ? match.members.map((m) => m.name).join(' · ') : ''
+}
+
 function teamLogo(slot: Slot): string | null {
   const match = teams.teams.find((t) => t.letter === slot.letter)
   if (match && 'logo' in match && typeof match.logo === 'string') return `${import.meta.env.BASE_URL}${match.logo}`
@@ -118,6 +124,7 @@ function Presenter({ index, onClose, onJump }: { index: number; onClose: () => v
             {slot.letter && <span className="mr-2 text-amber-glow">{slot.letter}</span>}
             {teamLabel(slot)}
           </div>
+          <div className="truncate text-sm text-ink-400">{slot.presenters ?? teamMembers(slot)}</div>
         </div>
 
         <div
@@ -258,8 +265,13 @@ export default function Demos() {
                 </span>
               )}
               <span className="min-w-0 flex-1">
-                <span className="block truncate font-semibold text-ink-100">{teamLabel(slot)}</span>
-                {slot.presenters && <span className="block truncate text-xs text-ink-500">{slot.presenters}</span>}
+                <span className="block truncate font-semibold text-ink-100">
+                  <span className="mr-2 text-amber-glow">{slot.letter}</span>
+                  {teamLabel(slot)}
+                </span>
+                <span className="mt-0.5 block text-xs leading-snug text-ink-500">
+                  {slot.presenters ?? teamMembers(slot) ?? ''}
+                </span>
               </span>
               <span className="flex shrink-0 gap-1.5">
                 <Pill label="Deck" got={Boolean(slot.deck)} />
