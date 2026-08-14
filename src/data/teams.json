@@ -8,10 +8,22 @@
       "mode": "Mixed",
       "memberCount": 4,
       "members": [
-        { "name": "Andy Jimenez", "mode": "In-person" },
-        { "name": "Blake Johnston", "mode": "In-person" },
-        { "name": "Trevor Gill", "mode": "Virtual" },
-        { "name": "Carter Yeh", "mode": "In-person" }
+        {
+          "name": "Andy Jimenez",
+          "mode": "In-person"
+        },
+        {
+          "name": "Blake Johnston",
+          "mode": "In-person"
+        },
+        {
+          "name": "Trevor Gill",
+          "mode": "Virtual"
+        },
+        {
+          "name": "Carter Yeh",
+          "mode": "In-person"
+        }
       ]
     },
     {
@@ -21,10 +33,22 @@
       "mode": "Mixed",
       "memberCount": 4,
       "members": [
-        { "name": "Mackenzie Zimmerman", "mode": "In-person" },
-        { "name": "Kim Mehta", "mode": "Virtual" },
-        { "name": "Brian Munn", "mode": "In-person" },
-        { "name": "Garin Wedeking", "mode": "In-person" }
+        {
+          "name": "Mackenzie Zimmerman",
+          "mode": "In-person"
+        },
+        {
+          "name": "Kim Mehta",
+          "mode": "Virtual"
+        },
+        {
+          "name": "Brian Munn",
+          "mode": "In-person"
+        },
+        {
+          "name": "Garin Wedeking",
+          "mode": "In-person"
+        }
       ]
     },
     {
@@ -34,10 +58,22 @@
       "mode": "All In-Person",
       "memberCount": 4,
       "members": [
-        { "name": "Andy Stetzler", "mode": "In-person" },
-        { "name": "Carli Anderson", "mode": "In-person" },
-        { "name": "Audrey Gatta", "mode": "In-person" },
-        { "name": "Kevin Mackey", "mode": "In-person" }
+        {
+          "name": "Andy Stetzler",
+          "mode": "In-person"
+        },
+        {
+          "name": "Carli Anderson",
+          "mode": "In-person"
+        },
+        {
+          "name": "Audrey Gatta",
+          "mode": "In-person"
+        },
+        {
+          "name": "Kevin Mackey",
+          "mode": "In-person"
+        }
       ]
     },
     {
@@ -47,21 +83,43 @@
       "mode": "Mixed",
       "memberCount": 4,
       "members": [
-        { "name": "Reese McGillie", "mode": "In-person" },
-        { "name": "Aaron Greenlee", "mode": "Virtual" },
-        { "name": "Lamar Foster", "mode": "In-person" },
-        { "name": "Sadia Sleweon", "mode": "Virtual" }
+        {
+          "name": "Reese McGillie",
+          "mode": "In-person"
+        },
+        {
+          "name": "Aaron Greenlee",
+          "mode": "Virtual"
+        },
+        {
+          "name": "Lamar Foster",
+          "mode": "In-person"
+        },
+        {
+          "name": "Sadia Sleweon",
+          "mode": "Virtual"
+        }
       ]
     },
     {
       "letter": "E",
-      "name": null,
+      "name": "404: bert not found",
       "room": "Team E",
       "mode": "All Virtual",
-      "memberCount": 2,
+      "memberCount": 3,
       "members": [
-        { "name": "Lisbee Mumford", "mode": "Virtual" },
-        { "name": "Anna Joshi", "mode": "Virtual" }
+        {
+          "name": "Lisbee Mumford",
+          "mode": "Virtual"
+        },
+        {
+          "name": "Anna Joshi",
+          "mode": "Virtual"
+        },
+        {
+          "name": "Gihani Dissanayake",
+          "mode": "Virtual"
+        }
       ]
     },
     {
@@ -69,11 +127,16 @@
       "name": null,
       "room": "Team F",
       "mode": "All Virtual",
-      "memberCount": 3,
+      "memberCount": 2,
       "members": [
-        { "name": "Aaron Brown", "mode": "Virtual" },
-        { "name": "Gihani Dissanayake", "mode": "Virtual" },
-        { "name": "Dana Sutliffe", "mode": "Virtual" }
+        {
+          "name": "Aaron Brown",
+          "mode": "Virtual"
+        },
+        {
+          "name": "Dana Sutliffe",
+          "mode": "Virtual"
+        }
       ]
     },
     {
@@ -83,8 +146,14 @@
       "mode": "All Virtual",
       "memberCount": 2,
       "members": [
-        { "name": "Mahlet Woldetsadik", "mode": "Virtual" },
-        { "name": "Stephen Pope", "mode": "Virtual" }
+        {
+          "name": "Mahlet Woldetsadik",
+          "mode": "Virtual"
+        },
+        {
+          "name": "Stephen Pope",
+          "mode": "Virtual"
+        }
       ]
     },
     {
@@ -94,8 +163,14 @@
       "mode": "All Virtual",
       "memberCount": 2,
       "members": [
-        { "name": "Satish Choudhury", "mode": "Virtual" },
-        { "name": "Simi Odetola", "mode": "Virtual" }
+        {
+          "name": "Satish Choudhury",
+          "mode": "Virtual"
+        },
+        {
+          "name": "Simi Odetola",
+          "mode": "Virtual"
+        }
       ]
     },
     {
@@ -105,8 +180,14 @@
       "mode": "All In-Person",
       "memberCount": 2,
       "members": [
-        { "name": "Sean Wang", "mode": "In-person" },
-        { "name": "Aly Moosa", "mode": "In-person" }
+        {
+          "name": "Sean Wang",
+          "mode": "In-person"
+        },
+        {
+          "name": "Aly Moosa",
+          "mode": "In-person"
+        }
       ]
     },
     {
@@ -116,10 +197,22 @@
       "mode": "All Virtual",
       "memberCount": 4,
       "members": [
-        { "name": "Samantha Galvin", "mode": "Virtual" },
-        { "name": "Casey Dobrowolski", "mode": "Virtual" },
-        { "name": "Zeyad Taqiaddin", "mode": "Virtual" },
-        { "name": "Tim Herron", "mode": "Virtual" }
+        {
+          "name": "Samantha Galvin",
+          "mode": "Virtual"
+        },
+        {
+          "name": "Casey Dobrowolski",
+          "mode": "Virtual"
+        },
+        {
+          "name": "Zeyad Taqiaddin",
+          "mode": "Virtual"
+        },
+        {
+          "name": "Tim Herron",
+          "mode": "Virtual"
+        }
       ]
     },
     {
@@ -129,10 +222,22 @@
       "mode": "All In-Person",
       "memberCount": 4,
       "members": [
-        { "name": "Jamie McKee", "mode": "In-person" },
-        { "name": "Kathleen Walsh", "mode": "In-person" },
-        { "name": "Isa Ellis", "mode": "In-person" },
-        { "name": "Carrie Douglass", "mode": "In-person" }
+        {
+          "name": "Jamie McKee",
+          "mode": "In-person"
+        },
+        {
+          "name": "Kathleen Walsh",
+          "mode": "In-person"
+        },
+        {
+          "name": "Isa Ellis",
+          "mode": "In-person"
+        },
+        {
+          "name": "Carrie Douglass",
+          "mode": "In-person"
+        }
       ]
     },
     {
@@ -142,9 +247,18 @@
       "mode": "All In-Person",
       "memberCount": 3,
       "members": [
-        { "name": "Matt Gee", "mode": "In-person" },
-        { "name": "David Fruchter", "mode": "In-person" },
-        { "name": "Opokua Oduro", "mode": "In-person" }
+        {
+          "name": "Matt Gee",
+          "mode": "In-person"
+        },
+        {
+          "name": "David Fruchter",
+          "mode": "In-person"
+        },
+        {
+          "name": "Opokua Oduro",
+          "mode": "In-person"
+        }
       ]
     },
     {
@@ -154,9 +268,18 @@
       "mode": "All In-Person",
       "memberCount": 3,
       "members": [
-        { "name": "Angela Bahng", "mode": "In-person" },
-        { "name": "Keiko Valente", "mode": "In-person" },
-        { "name": "Jason Chau", "mode": "In-person" }
+        {
+          "name": "Angela Bahng",
+          "mode": "In-person"
+        },
+        {
+          "name": "Keiko Valente",
+          "mode": "In-person"
+        },
+        {
+          "name": "Jason Chau",
+          "mode": "In-person"
+        }
       ]
     },
     {
@@ -166,8 +289,14 @@
       "mode": "All In-Person",
       "memberCount": 2,
       "members": [
-        { "name": "Roy Burstein", "mode": "In-person" },
-        { "name": "Stewart Collis", "mode": "In-person" }
+        {
+          "name": "Roy Burstein",
+          "mode": "In-person"
+        },
+        {
+          "name": "Stewart Collis",
+          "mode": "In-person"
+        }
       ]
     },
     {
@@ -177,8 +306,14 @@
       "mode": "All In-Person",
       "memberCount": 2,
       "members": [
-        { "name": "Josh Bishop", "mode": "In-person" },
-        { "name": "Jamie Purcell", "mode": "In-person" }
+        {
+          "name": "Josh Bishop",
+          "mode": "In-person"
+        },
+        {
+          "name": "Jamie Purcell",
+          "mode": "In-person"
+        }
       ]
     }
   ]
