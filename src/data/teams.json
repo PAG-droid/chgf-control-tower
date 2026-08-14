@@ -337,6 +337,27 @@
           "mode": "Virtual"
         }
       ]
+    },
+    {
+      "letter": "S",
+      "name": "Prereq-uisites",
+      "room": "Team S",
+      "mode": "All In-Person",
+      "memberCount": 3,
+      "members": [
+        {
+          "name": "Maurice McCaulley",
+          "mode": "In-person"
+        },
+        {
+          "name": "Althea Webber",
+          "mode": "In-person"
+        },
+        {
+          "name": "Xiaoxue Du",
+          "mode": "In-person"
+        }
+      ]
     }
   ]
 }

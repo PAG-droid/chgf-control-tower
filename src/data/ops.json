@@ -95,6 +95,24 @@
   ],
   "openItems": [
     {
+      "item": "Team S (Prereq-uisites) has a 4th member whose name was not given — the person who posted is unidentified. Also confirm whether Maurice McCaulley and Althea Webber are in person or virtual (assumed in person).",
+      "owner": "Philippe-Alexandre Gilbert",
+      "priority": "medium",
+      "status": "open"
+    },
+    {
+      "item": "A participant hit a Claude usage limit and asked for help in the chat. Confirm who, and whether the shared credit pool or a per-user cap is the constraint — if it is the pool, more teams will hit it as the afternoon goes on.",
+      "owner": "Andy Stetzler",
+      "priority": "high",
+      "status": "open"
+    },
+    {
+      "item": "JUDGING CONFLICT: Xiaoxue Du is principal judge AND now competing on Team S (Prereq-uisites). Matt Gee is a judge AND on Team L. Decide before the 2:45 huddle whether they recuse from scoring their own team, or step off the panel.",
+      "owner": "Philippe-Alexandre Gilbert",
+      "priority": "high",
+      "status": "open"
+    },
+    {
       "item": "Mahlet Woldetsadik (Team G) is now the only person on their team after this morning's reshuffling — confirm they are still participating and pair them up if they want.",
       "owner": "Neil Hausmann",
       "priority": "medium",
