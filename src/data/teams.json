@@ -113,12 +113,8 @@
       "name": null,
       "room": "Team F",
       "mode": "All Virtual",
-      "memberCount": 2,
+      "memberCount": 1,
       "members": [
-        {
-          "name": "Aaron Brown",
-          "mode": "Virtual"
-        },
         {
           "name": "Dana Sutliffe",
           "mode": "Virtual"
@@ -130,14 +126,10 @@
       "name": null,
       "room": "Team G",
       "mode": "All Virtual",
-      "memberCount": 2,
+      "memberCount": 1,
       "members": [
         {
           "name": "Mahlet Woldetsadik",
-          "mode": "Virtual"
-        },
-        {
-          "name": "Stephen Pope",
           "mode": "Virtual"
         }
       ]
@@ -181,14 +173,10 @@
       "name": null,
       "room": "Team J",
       "mode": "All Virtual",
-      "memberCount": 3,
+      "memberCount": 2,
       "members": [
         {
           "name": "Samantha Galvin",
-          "mode": "Virtual"
-        },
-        {
-          "name": "Zeyad Taqiaddin",
           "mode": "Virtual"
         },
         {
@@ -325,6 +313,27 @@
         },
         {
           "name": "Cody Benedict",
+          "mode": "Virtual"
+        }
+      ]
+    },
+    {
+      "letter": "R",
+      "name": "The Leftovers",
+      "room": "Team R",
+      "mode": "All Virtual",
+      "memberCount": 3,
+      "members": [
+        {
+          "name": "Aaron Brown",
+          "mode": "Virtual"
+        },
+        {
+          "name": "Stephen Pope",
+          "mode": "Virtual"
+        },
+        {
+          "name": "Zeyad Taqiaddin",
           "mode": "Virtual"
         }
       ]
