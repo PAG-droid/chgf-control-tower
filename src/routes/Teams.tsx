@@ -73,15 +73,17 @@ export default function Teams() {
           {visible.map((t) => (
             <li key={t.letter} className="rounded-xl border border-navy-800 bg-navy-900/50 p-5 transition-colors hover:border-navy-600">
               <div className="flex items-start gap-3">
-                {/* Named teams have a logo; the rest fall back to the letter tile. */}
+                {/* Named teams have a logo; the rest fall back to the letter tile.
+                    The logos are circular marks on a cream ground, so they get
+                    masked to a circle — square tiles leave cream corners. */}
                 {'logo' in t && typeof t.logo === 'string' ? (
                   <img
                     src={`${import.meta.env.BASE_URL}${t.logo}`}
                     alt=""
-                    className="size-12 shrink-0 rounded-lg ring-1 ring-navy-700"
+                    className="size-12 shrink-0 rounded-full ring-1 ring-navy-700"
                   />
                 ) : (
-                  <span className="flex size-12 shrink-0 items-center justify-center rounded-lg bg-navy-800 text-xl font-bold text-amber-glow">
+                  <span className="flex size-12 shrink-0 items-center justify-center rounded-full bg-navy-800 text-xl font-bold text-amber-glow">
                     {t.letter}
                   </span>
                 )}

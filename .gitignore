@@ -6,3 +6,8 @@ dist/
 .DS_Store
 Thumbs.db
 .vite/
+
+# Scratch files from logo generation — not part of the site
+*.tmp.png
+*.tmp.mjs
+public/gallery/*.html

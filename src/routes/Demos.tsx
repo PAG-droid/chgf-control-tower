@@ -118,7 +118,7 @@ function Presenter({ index, onClose, onJump }: { index: number; onClose: () => v
     <div className="fixed inset-0 z-50 flex flex-col bg-navy-950">
       <div className="flex shrink-0 flex-wrap items-center gap-4 border-b border-navy-800 px-5 py-3">
         {teamLogo(slot) && (
-          <img src={teamLogo(slot)!} alt="" className="size-14 shrink-0 rounded-lg ring-1 ring-navy-700" />
+          <img src={teamLogo(slot)!} alt="" className="size-14 shrink-0 rounded-full ring-1 ring-navy-700" />
         )}
         <div className="min-w-0">
           <div className="text-[11px] tracking-[0.14em] text-ink-500 uppercase">
@@ -276,9 +276,9 @@ export default function Demos() {
             >
               <span className="tnum w-7 shrink-0 text-lg font-bold text-ink-500">{i + 1}</span>
               {teamLogo(slot) ? (
-                <img src={teamLogo(slot)!} alt="" className="size-10 shrink-0 rounded-lg ring-1 ring-navy-700" />
+                <img src={teamLogo(slot)!} alt="" className="size-10 shrink-0 rounded-full ring-1 ring-navy-700" />
               ) : (
-                <span className="flex size-10 shrink-0 items-center justify-center rounded-lg bg-navy-800 text-lg font-bold text-amber-glow">
+                <span className="flex size-10 shrink-0 items-center justify-center rounded-full bg-navy-800 text-lg font-bold text-amber-glow">
                   {slot.letter}
                 </span>
               )}

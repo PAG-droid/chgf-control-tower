@@ -22,14 +22,40 @@ Name them, add a brief to `PROMPTS.md`, draw an SVG into `svg/`, re-render.
 
 ## Two sets
 
-There are two parallel sets in here. Pick one for the site rather than mixing
-them — their background creams differ (`#F1EBE0` vs `#FCF9F0`).
+There are two parallel sets in here. **`illustrated/web/` is the one the site
+uses** — `src/data/teams.json` points every named team's `logo` at it. Don't
+mix the two; their background creams differ (`#F1EBE0` vs `#FCF9F0`).
 
 - **`illustrated/`** — raster, cut out of an image-model sheet generated from
   the first-generation briefs. Warmer and more characterful, but PNG only, so
   it won't scale like the vectors, and four of the ten have clipped borders
   (see below).
 - **everything else** — the hand-authored vector system described further down.
+  Currently unreferenced by the app; kept for print, one-colour output, and as
+  a fallback.
+
+### Wiring
+
+`teams.json` carries a `logo` path per named team, relative to `public/`:
+
+```json
+"logo": "team-logos/illustrated/web/a-the-green-donuts.png"
+```
+
+Consumed by [`Teams.tsx`](../../src/routes/Teams.tsx) and
+[`Demos.tsx`](../../src/routes/Demos.tsx) as
+`` `${import.meta.env.BASE_URL}${t.logo}` `` — so **no leading slash**, or it
+breaks the GitHub Pages build, which serves from a sub-path. Teams without a
+`logo` field fall back to a letter tile automatically; adding a logo is purely
+a data change.
+
+Both routes mask logos with `rounded-full`, because these marks are circular on
+a cream ground and square tiles leave cream corners showing against the dark
+UI. The masking also tidies the four clipped borders. If you switch back to the
+square vector set, change those to `rounded-lg`.
+
+Cards render at 40–56px, so the site loads the 160px `web/` copies (~105 kB for
+all ten) rather than the 640px originals (~4.7 MB).
 
 ### illustrated/
 

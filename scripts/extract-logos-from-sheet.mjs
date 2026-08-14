@@ -35,7 +35,8 @@ const NAMES = [
   's-prereq-uisites',
 ];
 
-const OUT = 640;
+const OUT = 640; // full-size crop, for print and stickers
+const WEB = 160; // what the site actually loads; cards render at 56px max
 const TOL = 18; // channel distance from background that counts as ink
 const MIN_RUN = 60; // ignore specks
 const PAD = 10; // breathing room inside the square
@@ -154,6 +155,7 @@ if (boxes.length !== NAMES.length) {
 }
 
 await mkdir(outDir, { recursive: true });
+await mkdir(path.join(outDir, 'web'), { recursive: true });
 const hex = `#${bg.map((c) => c.toString(16).padStart(2, '0')).join('')}`;
 
 const tiles = [];
@@ -181,8 +183,17 @@ for (let i = 0; i < boxes.length; i++) {
 
   const cell = await sharp(padded).resize(OUT, OUT).png().toBuffer();
   await writeFile(path.join(outDir, `${name}.png`), cell);
+
+  // Quantised copy for the site — these are decorative thumbnails, and ten
+  // full-size crops would be several megabytes of page weight.
+  const web = await sharp(padded)
+    .resize(WEB, WEB)
+    .png({ palette: true, quality: 80, compressionLevel: 9 })
+    .toBuffer();
+  await writeFile(path.join(outDir, 'web', `${name}.png`), web);
+
   tiles.push(await sharp(cell).resize(220, 220).png().toBuffer());
-  console.log(`${name}  ${w}x${h} at ${left},${top}`);
+  console.log(`${name}  ${w}x${h} at ${left},${top}  (web ${(web.length / 1024).toFixed(1)} kB)`);
 }
 
 const COLS = 5;
