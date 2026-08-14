@@ -14,6 +14,7 @@ Friday 14 August 2026.
 | Award categories, criteria, judges | `src/data/judging.json` |
 | Submission steps, idea bank, links, FAQ | `src/data/resources.json` |
 | Ops board: roles, open items, gaps | `src/data/ops.json` |
+| Banner announcements | `src/data/announcements.json` — flip `active` to `true` |
 
 Then:
 
@@ -31,6 +32,7 @@ Both deployments rebuild automatically. Live in about 60–90 seconds.
 | `/teams` | Everyone | 15 teams, searchable by name, filterable by mode |
 | `/judging` | Everyone | Award categories, criteria, judge panel, afternoon timeline |
 | `/resources` | Everyone | How to submit, idea bank, quickstart links, FAQ, feedback survey |
+| `/monitor` | Everyone | Live GitHub submission activity — see [docs/MONITORING.md](docs/MONITORING.md) |
 | `/ops` | Organisers | Unlisted. Open items, unconfirmed roles, escalation matrix, decisions |
 
 `/ops` is unlisted, not secret. It ships in the public bundle, so it contains

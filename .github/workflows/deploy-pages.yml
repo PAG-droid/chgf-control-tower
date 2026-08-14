@@ -3,6 +3,11 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches: [main]
+    # The status poller commits this file every 5 minutes. The Monitor page
+    # reads it live from raw.githubusercontent.com, so a rebuild would buy
+    # nothing and cost 12 deploys an hour.
+    paths-ignore:
+      - 'public/github-status.json'
   workflow_dispatch:
 
 permissions:

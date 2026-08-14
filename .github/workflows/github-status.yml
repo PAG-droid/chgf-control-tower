@@ -1,0 +1,62 @@
+name: Refresh GitHub Status
+
+on:
+  schedule:
+    # Every 5 minutes during the event. GitHub may throttle scheduled runs when
+    # Actions is busy, so treat the cadence as best-effort, not a guarantee.
+    - cron: '*/5 * * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+# Two pollers must never race to commit the same file.
+concurrency:
+  group: github-status
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      # Zero dependencies by design — nothing to install.
+      - name: Fetch submission repo status
+        run: node scripts/fetch-github-status.mjs
+        env:
+          # GH_MONITOR_TOKEN is the organiser-supplied PAT used when the target
+          # repo is private; GITHUB_TOKEN is the built-in fallback.
+          GH_MONITOR_TOKEN: ${{ secrets.GH_MONITOR_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          TARGET_REPO: ${{ vars.TARGET_REPO }}
+
+      - name: Commit status file if it changed
+        run: |
+          set -euo pipefail
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          if git diff --quiet -- public/github-status.json; then
+            echo "No change to public/github-status.json — nothing to commit."
+            exit 0
+          fi
+
+          git add public/github-status.json
+          git commit -m "chore: refresh github status [skip pages]"
+
+          # A concurrent content edit on main would otherwise reject the push.
+          for attempt in 1 2 3; do
+            git pull --rebase origin main && git push origin HEAD:main && exit 0
+            echo "Push attempt $attempt failed; retrying."
+            sleep 5
+          done
+
+          echo "Could not push the refreshed status file; will retry next run."
+          exit 0

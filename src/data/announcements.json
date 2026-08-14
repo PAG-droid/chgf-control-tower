@@ -1,0 +1,32 @@
+{
+  "announcements": [
+    {
+      "id": "lunch-open",
+      "level": "info",
+      "message": "Lunch is open on the 3rd floor terrace. Grab a plate and keep building.",
+      "active": false,
+      "since": "2026-08-14T12:00:00-07:00"
+    },
+    {
+      "id": "submissions-30-min",
+      "level": "warning",
+      "message": "30 minutes to submission. Push your repo and paste the link in the submission form now.",
+      "active": false,
+      "since": "2026-08-14T15:30:00-07:00"
+    },
+    {
+      "id": "deadline-extended",
+      "level": "success",
+      "message": "Submission deadline extended to 4:30 PM PT. Same form, same link.",
+      "active": false,
+      "since": "2026-08-14T15:45:00-07:00"
+    },
+    {
+      "id": "demo-room-change",
+      "level": "urgent",
+      "message": "Room change: demos move to Rainier Hall, ground floor. Head over now.",
+      "active": false,
+      "since": "2026-08-14T16:15:00-07:00"
+    }
+  ]
+}

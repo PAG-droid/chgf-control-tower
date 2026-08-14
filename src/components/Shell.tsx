@@ -2,12 +2,14 @@ import type { ReactNode } from 'react'
 import { NavLink, useLocation } from 'react-router-dom'
 import agenda from '../data/agenda.json'
 import { useClock } from '../lib/clock'
+import AnnouncementBanner from './AnnouncementBanner'
 
 const NAV = [
   { to: '/', label: 'Live', end: true },
   { to: '/teams', label: 'Teams' },
   { to: '/judging', label: 'Judging' },
   { to: '/resources', label: 'Resources' },
+  { to: '/monitor', label: 'Submissions' },
 ]
 
 function LiveBadge() {
@@ -71,7 +73,10 @@ export default function Shell({ children }: { children: ReactNode }) {
         )}
       </header>
 
-      <main className="mx-auto w-full max-w-7xl flex-1 px-5 py-8">{children}</main>
+      <main className="mx-auto w-full max-w-7xl flex-1 px-5 py-8">
+        <AnnouncementBanner />
+        {children}
+      </main>
 
       <footer className="border-t border-navy-800 px-5 py-5">
         <div className="mx-auto flex max-w-7xl flex-col gap-1.5 text-xs text-ink-500 sm:flex-row sm:justify-between">
