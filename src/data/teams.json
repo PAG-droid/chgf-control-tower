@@ -3,7 +3,7 @@
   "teams": [
     {
       "letter": "A",
-      "name": null,
+      "name": "The Green Donuts",
       "room": "Team A",
       "mode": "Mixed",
       "memberCount": 4,
@@ -24,7 +24,8 @@
           "name": "Carter Yeh",
           "mode": "In-person"
         }
-      ]
+      ],
+      "table": 1
     },
     {
       "letter": "B",
@@ -66,18 +67,14 @@
     },
     {
       "letter": "D",
-      "name": null,
+      "name": "Git Blame (It's always HR)",
       "room": "Team D",
       "mode": "Mixed",
-      "memberCount": 4,
+      "memberCount": 3,
       "members": [
         {
           "name": "Reese McGillie",
           "mode": "In-person"
-        },
-        {
-          "name": "Aaron Greenlee",
-          "mode": "Virtual"
         },
         {
           "name": "Lamar Foster",
@@ -91,7 +88,7 @@
     },
     {
       "letter": "E",
-      "name": "404: bert not found",
+      "name": "404: Bert Not Found",
       "room": "Team E",
       "mode": "All Virtual",
       "memberCount": 3,
@@ -183,14 +180,10 @@
       "name": null,
       "room": "Team J",
       "mode": "All Virtual",
-      "memberCount": 4,
+      "memberCount": 3,
       "members": [
         {
           "name": "Samantha Galvin",
-          "mode": "Virtual"
-        },
-        {
-          "name": "Casey Dobrowolski",
           "mode": "Virtual"
         },
         {
@@ -247,7 +240,7 @@
     },
     {
       "letter": "M",
-      "name": null,
+      "name": "Vector Borne",
       "room": "Team M",
       "mode": "All In-Person",
       "memberCount": 3,
@@ -264,7 +257,8 @@
           "name": "Jason Chau",
           "mode": "In-person"
         }
-      ]
+      ],
+      "table": 8
     },
     {
       "letter": "N",
@@ -297,6 +291,19 @@
         {
           "name": "Jamie Purcell",
           "mode": "In-person"
+        }
+      ]
+    },
+    {
+      "letter": "P",
+      "name": "Team Rocket",
+      "room": "Team P",
+      "mode": "All Virtual",
+      "memberCount": 1,
+      "members": [
+        {
+          "name": "Casey Dobrowolski",
+          "mode": "Virtual"
         }
       ]
     }

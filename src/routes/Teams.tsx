@@ -82,6 +82,8 @@ export default function Teams() {
                   </div>
                   <div className="mt-1 text-xs text-ink-500">
                     Breakout room: {t.room} · {t.members.length} members
+                    {/* Only some in-person teams have told us a table number. */}
+                    {'table' in t && typeof t.table === 'number' ? ` · Table ${t.table}` : ''}
                   </div>
                 </div>
                 <span
