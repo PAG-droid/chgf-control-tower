@@ -110,10 +110,12 @@
     {
       "letter": "O",
       "deck": null,
-      "repo": null,
+      "repo": "https://github.com/gatesfoundation/814-Testing-EDGE",
       "video": null,
       "presenters": null,
-      "note": null
+      "note": null,
+      "share": "https://bmgf-my.sharepoint.com/:p:/r/personal/garin_wedeking_gatesfoundation_org/Documents/Stakeholder%20reporting%20and%20data%20updating%20redesign.pptx?d=wb3f312bb03a041bf89568969982d0be2&e=4%3a05e19ef917824dfd8b67d6474374415f&sharingv2=true&fromShare=true&at=9",
+      "title": "Stakeholder reporting and data updating redesign"
     },
     {
       "letter": "P",

@@ -73,6 +73,12 @@
       "caption": "Claude Code Hackathon",
       "credit": "Promo",
       "time": "2:00 PM"
+    },
+    {
+      "file": "project-whiteboard-to-sprint.webp",
+      "caption": "whiteboard → sprint — turns whiteboard photos and meeting transcripts into Jira tickets, and refuses to write the vague ones",
+      "credit": "Team project one-pager",
+      "time": "2:15 PM"
     }
   ]
 }
