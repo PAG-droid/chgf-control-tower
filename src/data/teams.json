@@ -220,7 +220,7 @@
       "name": null,
       "room": "Team K",
       "mode": "All In-Person",
-      "memberCount": 4,
+      "memberCount": 3,
       "members": [
         {
           "name": "Jamie McKee",
@@ -228,10 +228,6 @@
         },
         {
           "name": "Kathleen Walsh",
-          "mode": "In-person"
-        },
-        {
-          "name": "Isa Ellis",
           "mode": "In-person"
         },
         {

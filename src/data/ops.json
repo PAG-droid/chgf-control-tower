@@ -1,58 +1,276 @@
 {
   "roles": [
-    { "name": "Philippe-Alexandre Gilbert", "role": "Host — welcome & kickoff, awards & wrap-up", "status": "confirmed" },
-    { "name": "Li-Tal Mashiach (Anthropic)", "role": "Claude Code quickstart primer; judge", "status": "confirmed" },
-    { "name": "Xiaoxue Du", "role": "Principal judge; Anthropic guest liaison (VMS/hosting); co-building the scoring tool", "status": "confirmed" },
-    { "name": "Neil Hausmann", "role": "Judge; swag lead; owns the no-team backup plan; co-building the scoring tool", "status": "confirmed" },
-    { "name": "Matt Gee", "role": "Judge", "status": "confirmed" },
-    { "name": "Kevin Middleton", "role": "AV/IT technical support, on call — not in-room all day", "status": "confirmed" },
-    { "name": "Andy Stetzler", "role": "In-person Claude platform support and escalation; remote team management; in-person backup for Sachi", "status": "confirmed" },
-    { "name": "Carli Anderson", "role": "In-person Claude platform support and escalation; remote team management", "status": "confirmed" },
-    { "name": "Kyle Bacon", "role": "Remote Teams support standby", "status": "confirmed" },
-    { "name": "Kashyap Murali (Anthropic)", "role": "Confirmed attendee — role not yet defined (floating mentor vs. observer)", "status": "confirmed" },
-    { "name": "Ashley Palmer", "role": "AV / room lead — coordinates the 9:30 AM AV setup", "status": "proposed" },
-    { "name": "Debbie Farrar", "role": "MC", "status": "proposed" },
-    { "name": "Chris McCullough", "role": "Timekeeper", "status": "proposed" },
-    { "name": "Apoorva Sharma", "role": "Registration desk", "status": "proposed" }
+    {
+      "name": "Philippe-Alexandre Gilbert",
+      "role": "Host — welcome & kickoff, awards & wrap-up",
+      "status": "confirmed"
+    },
+    {
+      "name": "Li-Tal Mashiach (Anthropic)",
+      "role": "Claude Code quickstart primer; judge",
+      "status": "confirmed"
+    },
+    {
+      "name": "Xiaoxue Du",
+      "role": "Principal judge; Anthropic guest liaison (VMS/hosting); co-building the scoring tool",
+      "status": "confirmed"
+    },
+    {
+      "name": "Neil Hausmann",
+      "role": "Judge; swag lead; owns the no-team backup plan; co-building the scoring tool",
+      "status": "confirmed"
+    },
+    {
+      "name": "Matt Gee",
+      "role": "Judge",
+      "status": "confirmed"
+    },
+    {
+      "name": "Kevin Middleton",
+      "role": "AV/IT technical support, on call — not in-room all day",
+      "status": "confirmed"
+    },
+    {
+      "name": "Andy Stetzler",
+      "role": "In-person Claude platform support and escalation; remote team management; in-person backup for Sachi",
+      "status": "confirmed"
+    },
+    {
+      "name": "Carli Anderson",
+      "role": "In-person Claude platform support and escalation; remote team management",
+      "status": "confirmed"
+    },
+    {
+      "name": "Kyle Bacon",
+      "role": "Remote Teams support standby",
+      "status": "confirmed"
+    },
+    {
+      "name": "Kashyap Murali (Anthropic)",
+      "role": "Confirmed attendee — role not yet defined (floating mentor vs. observer)",
+      "status": "confirmed"
+    },
+    {
+      "name": "Ashley Palmer",
+      "role": "AV / room lead — coordinates the 9:30 AM AV setup",
+      "status": "proposed"
+    },
+    {
+      "name": "Debbie Farrar",
+      "role": "MC",
+      "status": "proposed"
+    },
+    {
+      "name": "Chris McCullough",
+      "role": "Timekeeper",
+      "status": "proposed"
+    },
+    {
+      "name": "Apoorva Sharma",
+      "role": "Registration desk",
+      "status": "proposed"
+    }
   ],
   "escalation": [
-    { "issue": "Internal Claude platform / org issues", "contact": "Chris Nearman (Sirrus7)", "channel": "Teams" },
-    { "issue": "External Claude platform issues / account escalation", "contact": "Alisa Feng, Innae Park (Anthropic)", "channel": "Teams" },
-    { "issue": "In-person Claude triage / SIP", "contact": "Andy Stetzler, Carli Anderson", "channel": "Teams / in person" },
-    { "issue": "AV support", "contact": "Kevin Middleton", "channel": "Teams" }
+    {
+      "issue": "Internal Claude platform / org issues",
+      "contact": "Chris Nearman (Sirrus7)",
+      "channel": "Teams"
+    },
+    {
+      "issue": "External Claude platform issues / account escalation",
+      "contact": "Alisa Feng, Innae Park (Anthropic)",
+      "channel": "Teams"
+    },
+    {
+      "issue": "In-person Claude triage / SIP",
+      "contact": "Andy Stetzler, Carli Anderson",
+      "channel": "Teams / in person"
+    },
+    {
+      "issue": "AV support",
+      "contact": "Kevin Middleton",
+      "channel": "Teams"
+    }
   ],
   "openItems": [
-    { "item": "Confirm the four proposed day-of roles (AV/room lead, MC, timekeeper, registration desk) and name a floor helper", "owner": "Philippe-Alexandre Gilbert", "priority": "high", "status": "open" },
-    { "item": "9:30 AM dry-run with Li-Tal Mashiach — building entry, AV and in-room prep before her 10:05 quickstart", "owner": "Xiaoxue Du", "priority": "high", "status": "open" },
-    { "item": "Complete Visitor Management System entry for both external Anthropic guests (Li-Tal Mashiach, Kashyap Murali) — not yet confirmed done", "owner": "Xiaoxue Du", "priority": "high", "status": "open" },
-    { "item": "Enter the breakout-room roster (rooms A–N) into the Teams Webinar UI — must be done manually, Kevin Middleton can help", "owner": "Philippe-Alexandre Gilbert", "priority": "high", "status": "open" },
-    { "item": "Adjust breakout-room / group assignments day-of to account for no-shows", "owner": "Philippe-Alexandre Gilbert", "priority": "high", "status": "open" },
-    { "item": "Build the automated scoring tool (Claude + GitHub CLI over submitted repos) — needed at the 2:45 PM judging huddle, untested when first used", "owner": "Neil Hausmann, Xiaoxue Du", "priority": "high", "status": "at-risk" },
-    { "item": "Decide the judging-huddle fallback if the automated scoring tool is not ready, and whether it counts as an entry or as event infrastructure", "owner": "Philippe-Alexandre Gilbert, Xiaoxue Du, Neil Hausmann", "priority": "high", "status": "open" },
-    { "item": "Document the back-up plan for participants not on a team, including a short list of solo-friendly shovel-ready tasks", "owner": "Neil Hausmann", "priority": "high", "status": "open" },
-    { "item": "Confirm day-of backup coverage given Sachi Williamson is OOO on event day — Andy Stetzler named as in-person backup, scope not defined", "owner": "Philippe-Alexandre Gilbert", "priority": "high", "status": "open" },
-    { "item": "Confirm with Ashley Palmer that the room can hold to 3:15 PM (15-minute overrun on the booked 10:00 AM–3:00 PM window)", "owner": "Philippe-Alexandre Gilbert", "priority": "high", "status": "open" },
-    { "item": "Redistribute the current agenda (3h build time, ends 3:15 PM) to the ~50 registrants and the hackathon Teams channel", "owner": "Philippe-Alexandre Gilbert", "priority": "high", "status": "open" },
-    { "item": "Decide and communicate the submission fallback for registrants not in the GitHub org — make GitHub push optional, offer a zip via Teams", "owner": "Philippe-Alexandre Gilbert, Neil Hausmann", "priority": "high", "status": "open" },
-    { "item": "Follow up on Claude Code role-group access for three registrants not yet in the role group (Kathleen Walsh, Jamie McKee, Isa Ellis)", "owner": "Sachi Williamson, Philippe-Alexandre Gilbert", "priority": "high", "status": "open" },
-    { "item": "Close the loop in writing on the participant environment — ~40–50 people building agentically in the production Enterprise org; RBAC-off is not the same as read-only prod", "owner": "Philippe-Alexandre Gilbert", "priority": "high", "status": "open" },
-    { "item": "Decide the hybrid plan for 25–50 virtual attendees (build/team/demo vs. observe)", "owner": "Philippe-Alexandre Gilbert", "priority": "high", "status": "open" },
-    { "item": "Define the online Claude Code support and online project support strategy for remote attendees", "owner": "Neil Hausmann, Andy Stetzler", "priority": "medium", "status": "open" },
-    { "item": "Resolve the \"Johan De Vadder\" roster discrepancy with Sachi Williamson — listed as a 5th member of breakout Group C but absent from the registration export", "owner": "Philippe-Alexandre Gilbert", "priority": "medium", "status": "open" },
-    { "item": "Ask Jason Bigman whether Kashyap Murali should be a floating mentor or an observer", "owner": "Philippe-Alexandre Gilbert", "priority": "medium", "status": "open" },
-    { "item": "Flash the Anthropic feedback survey QR code during Awards & wrap — not yet built into the slide deck", "owner": "Philippe-Alexandre Gilbert", "priority": "medium", "status": "open" },
-    { "item": "Set up the swag table (~43 items) — judges and top teams pick first, then one item each for remaining participants", "owner": "Neil Hausmann", "priority": "medium", "status": "open" },
-    { "item": "Hand the swag box to Neil Hausmann with final counts across the four award categories", "owner": "Philippe-Alexandre Gilbert", "priority": "medium", "status": "open" },
-    { "item": "Post in the hackathon Teams General channel that Andy Stetzler and team are on-site before the event for Claude Code and GitHub install help", "owner": "Neil Hausmann", "priority": "medium", "status": "open" },
-    { "item": "Obtain the judging rubric and scoring categories from Xiaoxue Du and file them — judges and participants both work from this", "owner": "Philippe-Alexandre Gilbert", "priority": "medium", "status": "open" },
-    { "item": "Add Jamie Purcell to the registration list and Teams team and confirm Claude Code + GitHub access (late in-person add)", "owner": "Sachi Williamson, Philippe-Alexandre Gilbert", "priority": "medium", "status": "open" },
-    { "item": "Run the install/auth dry-run on a sample machine and have a contingency plan", "owner": "Sachi Williamson", "priority": "medium", "status": "open" },
-    { "item": "Reply to Jason Bigman confirming build time has been extended to a full 3 hours", "owner": "Philippe-Alexandre Gilbert", "priority": "low", "status": "open" },
-    { "item": "Confirm who covers the IT/AV support cost — no source on record", "owner": "Ashley Palmer", "priority": "low", "status": "open" },
-    { "item": "Give Neil Hausmann the cost centre, event code and cost type for swag purchases", "owner": "Ashley Palmer", "priority": "low", "status": "open" },
-    { "item": "Decide whether Neil's idea bank and the problem statements are one list or two, and whether to publish to participants — plus scope guidance that real build time is only ~3 hours", "owner": "Philippe-Alexandre Gilbert", "priority": "low", "status": "open" }
+    {
+      "item": "Confirm the four proposed day-of roles (AV/room lead, MC, timekeeper, registration desk) and name a floor helper",
+      "owner": "Philippe-Alexandre Gilbert",
+      "priority": "high",
+      "status": "open"
+    },
+    {
+      "item": "9:30 AM dry-run with Li-Tal Mashiach — building entry, AV and in-room prep before her 10:05 quickstart",
+      "owner": "Xiaoxue Du",
+      "priority": "high",
+      "status": "open"
+    },
+    {
+      "item": "Complete Visitor Management System entry for both external Anthropic guests (Li-Tal Mashiach, Kashyap Murali) — not yet confirmed done",
+      "owner": "Xiaoxue Du",
+      "priority": "high",
+      "status": "open"
+    },
+    {
+      "item": "Enter the breakout-room roster (rooms A–N) into the Teams Webinar UI — must be done manually, Kevin Middleton can help",
+      "owner": "Philippe-Alexandre Gilbert",
+      "priority": "high",
+      "status": "open"
+    },
+    {
+      "item": "Adjust breakout-room / group assignments day-of to account for no-shows",
+      "owner": "Philippe-Alexandre Gilbert",
+      "priority": "high",
+      "status": "open"
+    },
+    {
+      "item": "Build the automated scoring tool (Claude + GitHub CLI over submitted repos) — needed at the 2:45 PM judging huddle, untested when first used",
+      "owner": "Neil Hausmann, Xiaoxue Du",
+      "priority": "high",
+      "status": "at-risk"
+    },
+    {
+      "item": "Decide the judging-huddle fallback if the automated scoring tool is not ready, and whether it counts as an entry or as event infrastructure",
+      "owner": "Philippe-Alexandre Gilbert, Xiaoxue Du, Neil Hausmann",
+      "priority": "high",
+      "status": "open"
+    },
+    {
+      "item": "Document the back-up plan for participants not on a team, including a short list of solo-friendly shovel-ready tasks",
+      "owner": "Neil Hausmann",
+      "priority": "high",
+      "status": "open"
+    },
+    {
+      "item": "Confirm day-of backup coverage given Sachi Williamson is OOO on event day — Andy Stetzler named as in-person backup, scope not defined",
+      "owner": "Philippe-Alexandre Gilbert",
+      "priority": "high",
+      "status": "open"
+    },
+    {
+      "item": "Confirm with Ashley Palmer that the room can hold to 3:15 PM (15-minute overrun on the booked 10:00 AM–3:00 PM window)",
+      "owner": "Philippe-Alexandre Gilbert",
+      "priority": "high",
+      "status": "open"
+    },
+    {
+      "item": "Redistribute the current agenda (3h build time, ends 3:15 PM) to the ~50 registrants and the hackathon Teams channel",
+      "owner": "Philippe-Alexandre Gilbert",
+      "priority": "high",
+      "status": "open"
+    },
+    {
+      "item": "Decide and communicate the submission fallback for registrants not in the GitHub org — make GitHub push optional, offer a zip via Teams",
+      "owner": "Philippe-Alexandre Gilbert, Neil Hausmann",
+      "priority": "high",
+      "status": "open"
+    },
+    {
+      "item": "Follow up on Claude Code role-group access for three registrants not yet in the role group (Kathleen Walsh, Jamie McKee, Isa Ellis)",
+      "owner": "Sachi Williamson, Philippe-Alexandre Gilbert",
+      "priority": "high",
+      "status": "open"
+    },
+    {
+      "item": "Close the loop in writing on the participant environment — ~40–50 people building agentically in the production Enterprise org; RBAC-off is not the same as read-only prod",
+      "owner": "Philippe-Alexandre Gilbert",
+      "priority": "high",
+      "status": "open"
+    },
+    {
+      "item": "Decide the hybrid plan for 25–50 virtual attendees (build/team/demo vs. observe)",
+      "owner": "Philippe-Alexandre Gilbert",
+      "priority": "high",
+      "status": "open"
+    },
+    {
+      "item": "Define the online Claude Code support and online project support strategy for remote attendees",
+      "owner": "Neil Hausmann, Andy Stetzler",
+      "priority": "medium",
+      "status": "open"
+    },
+    {
+      "item": "Resolve the \"Johan De Vadder\" roster discrepancy with Sachi Williamson — listed as a 5th member of breakout Group C but absent from the registration export",
+      "owner": "Philippe-Alexandre Gilbert",
+      "priority": "medium",
+      "status": "open"
+    },
+    {
+      "item": "Ask Jason Bigman whether Kashyap Murali should be a floating mentor or an observer",
+      "owner": "Philippe-Alexandre Gilbert",
+      "priority": "medium",
+      "status": "open"
+    },
+    {
+      "item": "Flash the Anthropic feedback survey QR code during Awards & wrap — not yet built into the slide deck",
+      "owner": "Philippe-Alexandre Gilbert",
+      "priority": "medium",
+      "status": "open"
+    },
+    {
+      "item": "Set up the swag table (~43 items) — judges and top teams pick first, then one item each for remaining participants",
+      "owner": "Neil Hausmann",
+      "priority": "medium",
+      "status": "open"
+    },
+    {
+      "item": "Hand the swag box to Neil Hausmann with final counts across the four award categories",
+      "owner": "Philippe-Alexandre Gilbert",
+      "priority": "medium",
+      "status": "open"
+    },
+    {
+      "item": "Post in the hackathon Teams General channel that Andy Stetzler and team are on-site before the event for Claude Code and GitHub install help",
+      "owner": "Neil Hausmann",
+      "priority": "medium",
+      "status": "open"
+    },
+    {
+      "item": "Obtain the judging rubric and scoring categories from Xiaoxue Du and file them — judges and participants both work from this",
+      "owner": "Philippe-Alexandre Gilbert",
+      "priority": "medium",
+      "status": "open"
+    },
+    {
+      "item": "Add Jamie Purcell to the registration list and Teams team and confirm Claude Code + GitHub access (late in-person add)",
+      "owner": "Sachi Williamson, Philippe-Alexandre Gilbert",
+      "priority": "medium",
+      "status": "open"
+    },
+    {
+      "item": "Run the install/auth dry-run on a sample machine and have a contingency plan",
+      "owner": "Sachi Williamson",
+      "priority": "medium",
+      "status": "open"
+    },
+    {
+      "item": "Reply to Jason Bigman confirming build time has been extended to a full 3 hours",
+      "owner": "Philippe-Alexandre Gilbert",
+      "priority": "low",
+      "status": "open"
+    },
+    {
+      "item": "Confirm who covers the IT/AV support cost — no source on record",
+      "owner": "Ashley Palmer",
+      "priority": "low",
+      "status": "open"
+    },
+    {
+      "item": "Give Neil Hausmann the cost centre, event code and cost type for swag purchases",
+      "owner": "Ashley Palmer",
+      "priority": "low",
+      "status": "open"
+    },
+    {
+      "item": "Decide whether Neil's idea bank and the problem statements are one list or two, and whether to publish to participants — plus scope guidance that real build time is only ~3 hours",
+      "owner": "Philippe-Alexandre Gilbert",
+      "priority": "low",
+      "status": "open"
+    }
   ],
   "gaps": [
+    "Team K is now 3, and 2 of the 3 (Jamie McKee, Kathleen Walsh) are among those flagged as not in the Claude Code role group — check they can actually run Claude Code before build time is lost.",
     "No floor helper is named for solo / no-team participants, although the agenda promises one — Debbie Farrar, Chris McCullough, Apoorva Sharma or Ashley Palmer could rotate in between their slots.",
     "Kashyap Murali (Anthropic) is a confirmed attendee but his role is undefined — floating mentor or observer has not been settled with Jason Bigman.",
     "The automated scoring tool is being built during the event and is needed by the 2:45 PM judging huddle; it will be untested when first used, and both builders are also judges. No fallback judging process has been decided.",
@@ -65,10 +283,35 @@
     "The judging rubric artifact created by Xiaoxue Du on 2026-08-07 has never been filed in the project repository."
   ],
   "decisions": [
-    { "date": "2026-08-11", "decision": "Build time extended from 2h40m to a full 3h00m via Option B — trim Team check-in and Submissions close from 10 to 5 minutes each and add the recovered 10 minutes plus the pre-approved 10-minute buffer to Build sprint 2 (80 to 100 min). Event now ends 3:15 PM.", "rationale": "Jason Bigman (Anthropic) flagged the run-of-show as too tight; Option B stays inside the already-approved 3:15 PM ceiling, so no fresh room-time negotiation is needed." },
-    { "date": "2026-08-10", "decision": "Li-Tal Mashiach's Claude Code quickstart kept at the full 30 minutes; Welcome & kickoff trimmed from 15 to 5 minutes to absorb it.", "rationale": "Keep the full talk (intro, history of agents, demo) rather than the trimmed 15-minute version, without pushing the day past the 3:15 PM ceiling." },
-    { "date": "2026-08-07", "decision": "Headcount locked at 50 participants; event compressed to a 5-hour run-of-show in the 10:00 AM–3:00 PM room window.", "rationale": "Nine hours was judged too long; 50 matches the locked catering count and sits inside Anthropic's 50–75 sizing assumption." },
-    { "date": "2026-08-07", "decision": "Anthropic credits confirmed at $7,500 applied to the existing production Enterprise org, with a custom spending limit against the synced M365 hackathon group.", "rationale": "Regular Enterprise org (not Console, not a separate org) was Anthropic's recommendation; the spending limit caps exposure." },
-    { "date": "2026-08-07", "decision": "Demos run as a lightning session — roughly 10 teams at 2 minutes each, work hosted on GitHub, gong-timed.", "rationale": "Fits 50 participants into the compressed schedule and reconciles with the four award categories." }
+    {
+      "date": "2026-08-14",
+      "decision": "Isa Ellis withdrew on the morning of the event; Team K reduced to 3 (Jamie McKee, Kathleen Walsh, Carrie Douglass).",
+      "rationale": "Last-minute deliverables. Notified Sachi and PAG by message before kickoff. Roster updated live."
+    },
+    {
+      "date": "2026-08-11",
+      "decision": "Build time extended from 2h40m to a full 3h00m via Option B — trim Team check-in and Submissions close from 10 to 5 minutes each and add the recovered 10 minutes plus the pre-approved 10-minute buffer to Build sprint 2 (80 to 100 min). Event now ends 3:15 PM.",
+      "rationale": "Jason Bigman (Anthropic) flagged the run-of-show as too tight; Option B stays inside the already-approved 3:15 PM ceiling, so no fresh room-time negotiation is needed."
+    },
+    {
+      "date": "2026-08-10",
+      "decision": "Li-Tal Mashiach's Claude Code quickstart kept at the full 30 minutes; Welcome & kickoff trimmed from 15 to 5 minutes to absorb it.",
+      "rationale": "Keep the full talk (intro, history of agents, demo) rather than the trimmed 15-minute version, without pushing the day past the 3:15 PM ceiling."
+    },
+    {
+      "date": "2026-08-07",
+      "decision": "Headcount locked at 50 participants; event compressed to a 5-hour run-of-show in the 10:00 AM–3:00 PM room window.",
+      "rationale": "Nine hours was judged too long; 50 matches the locked catering count and sits inside Anthropic's 50–75 sizing assumption."
+    },
+    {
+      "date": "2026-08-07",
+      "decision": "Anthropic credits confirmed at $7,500 applied to the existing production Enterprise org, with a custom spending limit against the synced M365 hackathon group.",
+      "rationale": "Regular Enterprise org (not Console, not a separate org) was Anthropic's recommendation; the spending limit caps exposure."
+    },
+    {
+      "date": "2026-08-07",
+      "decision": "Demos run as a lightning session — roughly 10 teams at 2 minutes each, work hosted on GitHub, gong-timed.",
+      "rationale": "Fits 50 participants into the compressed schedule and reconciles with the four award categories."
+    }
   ]
 }
