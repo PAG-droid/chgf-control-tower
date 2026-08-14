@@ -10,6 +10,8 @@ type Slot = {
   video?: string | null
   /** SharePoint / OneDrive folder a team shared instead of a file. */
   share?: string | null
+  title?: string | null
+  summary?: string | null
   presenters?: string | null
   note?: string | null
 }
@@ -167,10 +169,14 @@ function Presenter({ index, onClose, onJump }: { index: number; onClose: () => v
           <iframe src={deckUrl(slot.deck)} title={`${teamLabel(slot)} deck`} className="h-full w-full border-0" />
         ) : (
           <div className="flex h-full flex-col items-center justify-center gap-4 text-center">
-            <p className="text-3xl font-bold text-ink-200">Live demo</p>
-            <p className="max-w-md text-ink-500">
-              {slot.note ?? 'No slides for this team — they are presenting from their own screen.'}
-            </p>
+            <p className="text-3xl font-bold text-ink-200">{slot.title ?? 'Live demo'}</p>
+            {slot.summary ? (
+              <p className="max-w-3xl text-lg leading-relaxed text-ink-300">{slot.summary}</p>
+            ) : (
+              <p className="max-w-md text-ink-500">
+                {slot.note ?? 'No slides for this team — they are presenting from their own screen.'}
+              </p>
+            )}
             {(slot.repo || slot.video || slot.share) && (
               <div className="flex flex-wrap justify-center gap-3">
                 {slot.share && (
@@ -284,6 +290,7 @@ export default function Demos() {
                 <span className="mt-0.5 block text-xs leading-snug text-ink-500">
                   {slot.presenters ?? teamMembers(slot) ?? ''}
                 </span>
+                {slot.title && <span className="mt-1 block text-sm text-sky-300">{slot.title}</span>}
               </span>
               <span className="flex shrink-0 gap-1.5">
                 <Pill label="Deck" got={Boolean(slot.deck)} />

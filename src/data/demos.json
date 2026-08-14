@@ -127,9 +127,11 @@
       "deck": null,
       "repo": null,
       "video": null,
-      "presenters": null,
-      "note": "SharePoint folder: kb-article-generator",
-      "share": "https://bmgf-my.sharepoint.com/shared?listurl=https%3A%2F%2Fbmgf%2Dmy%2Esharepoint%2Ecom%2Fpersonal%2Fkylee%5Fdurant%5Fgatesfoundation%5Forg%2FDocuments&id=%2Fpersonal%2Fkylee%5Fdurant%5Fgatesfoundation%5Forg%2FDocuments%2FDocuments%2Fkb%2Darticle%2Dgenerator&ct=1786740478559&or=Teams%2DHL&shareLink=1&ga=1"
+      "presenters": "Kylee Durant · Cody Benedict",
+      "note": "Deck: KB_Queens_presentation 8.14.26.pptx — in Teams chat files, needs saving into public/decks/q-kb-queens/",
+      "share": "https://bmgf-my.sharepoint.com/shared?listurl=https%3A%2F%2Fbmgf%2Dmy%2Esharepoint%2Ecom%2Fpersonal%2Fkylee%5Fdurant%5Fgatesfoundation%5Forg%2FDocuments&id=%2Fpersonal%2Fkylee%5Fdurant%5Fgatesfoundation%5Forg%2FDocuments%2FDocuments%2Fkb%2Darticle%2Dgenerator&ct=1786740478559&or=Teams%2DHL&shareLink=1&ga=1",
+      "title": "KB Queens — an AI Knowledge-Base generator for INVEST and Salesforce Support",
+      "summary": "Support teams sit on a goldmine of failure data — Jira stories, linked bugs, QA defects, Salesforce metadata. Writing KB articles from it by hand takes hours per feature and quality depends on who wrote it. This mines that evidence automatically and drafts articles in a consistent format in minutes, walking a 14-category failure taxonomy and citing a Jira key or metadata component for every step. Draft only: everything goes to SME review before an agent sees it."
     },
     {
       "letter": "R",
