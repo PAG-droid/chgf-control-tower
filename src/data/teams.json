@@ -1,0 +1,185 @@
+{
+  "breakoutRoomNote": "Breakout rooms in the Teams webinar are named to match these team letters.",
+  "teams": [
+    {
+      "letter": "A",
+      "name": null,
+      "room": "Team A",
+      "mode": "Mixed",
+      "memberCount": 4,
+      "members": [
+        { "name": "Andy Jimenez", "mode": "In-person" },
+        { "name": "Blake Johnston", "mode": "In-person" },
+        { "name": "Trevor Gill", "mode": "Virtual" },
+        { "name": "Carter Yeh", "mode": "In-person" }
+      ]
+    },
+    {
+      "letter": "B",
+      "name": null,
+      "room": "Team B",
+      "mode": "Mixed",
+      "memberCount": 4,
+      "members": [
+        { "name": "Mackenzie Zimmerman", "mode": "In-person" },
+        { "name": "Kim Mehta", "mode": "Virtual" },
+        { "name": "Brian Munn", "mode": "In-person" },
+        { "name": "Garin Wedeking", "mode": "In-person" }
+      ]
+    },
+    {
+      "letter": "C",
+      "name": null,
+      "room": "Team C",
+      "mode": "All In-Person",
+      "memberCount": 4,
+      "members": [
+        { "name": "Andy Stetzler", "mode": "In-person" },
+        { "name": "Carli Anderson", "mode": "In-person" },
+        { "name": "Audrey Gatta", "mode": "In-person" },
+        { "name": "Kevin Mackey", "mode": "In-person" }
+      ]
+    },
+    {
+      "letter": "D",
+      "name": null,
+      "room": "Team D",
+      "mode": "Mixed",
+      "memberCount": 4,
+      "members": [
+        { "name": "Reese McGillie", "mode": "In-person" },
+        { "name": "Aaron Greenlee", "mode": "Virtual" },
+        { "name": "Lamar Foster", "mode": "In-person" },
+        { "name": "Sadia Sleweon", "mode": "Virtual" }
+      ]
+    },
+    {
+      "letter": "E",
+      "name": null,
+      "room": "Team E",
+      "mode": "All Virtual",
+      "memberCount": 2,
+      "members": [
+        { "name": "Lisbee Mumford", "mode": "Virtual" },
+        { "name": "Anna Joshi", "mode": "Virtual" }
+      ]
+    },
+    {
+      "letter": "F",
+      "name": null,
+      "room": "Team F",
+      "mode": "All Virtual",
+      "memberCount": 3,
+      "members": [
+        { "name": "Aaron Brown", "mode": "Virtual" },
+        { "name": "Gihani Dissanayake", "mode": "Virtual" },
+        { "name": "Dana Sutliffe", "mode": "Virtual" }
+      ]
+    },
+    {
+      "letter": "G",
+      "name": null,
+      "room": "Team G",
+      "mode": "All Virtual",
+      "memberCount": 2,
+      "members": [
+        { "name": "Mahlet Woldetsadik", "mode": "Virtual" },
+        { "name": "Stephen Pope", "mode": "Virtual" }
+      ]
+    },
+    {
+      "letter": "H",
+      "name": null,
+      "room": "Team H",
+      "mode": "All Virtual",
+      "memberCount": 2,
+      "members": [
+        { "name": "Satish Choudhury", "mode": "Virtual" },
+        { "name": "Simi Odetola", "mode": "Virtual" }
+      ]
+    },
+    {
+      "letter": "I",
+      "name": null,
+      "room": "Team I",
+      "mode": "All In-Person",
+      "memberCount": 2,
+      "members": [
+        { "name": "Sean Wang", "mode": "In-person" },
+        { "name": "Aly Moosa", "mode": "In-person" }
+      ]
+    },
+    {
+      "letter": "J",
+      "name": null,
+      "room": "Team J",
+      "mode": "All Virtual",
+      "memberCount": 4,
+      "members": [
+        { "name": "Samantha Galvin", "mode": "Virtual" },
+        { "name": "Casey Dobrowolski", "mode": "Virtual" },
+        { "name": "Zeyad Taqiaddin", "mode": "Virtual" },
+        { "name": "Tim Herron", "mode": "Virtual" }
+      ]
+    },
+    {
+      "letter": "K",
+      "name": null,
+      "room": "Team K",
+      "mode": "All In-Person",
+      "memberCount": 4,
+      "members": [
+        { "name": "Jamie McKee", "mode": "In-person" },
+        { "name": "Kathleen Walsh", "mode": "In-person" },
+        { "name": "Isa Ellis", "mode": "In-person" },
+        { "name": "Carrie Douglass", "mode": "In-person" }
+      ]
+    },
+    {
+      "letter": "L",
+      "name": null,
+      "room": "Team L",
+      "mode": "All In-Person",
+      "memberCount": 3,
+      "members": [
+        { "name": "Matt Gee", "mode": "In-person" },
+        { "name": "David Fruchter", "mode": "In-person" },
+        { "name": "Opokua Oduro", "mode": "In-person" }
+      ]
+    },
+    {
+      "letter": "M",
+      "name": null,
+      "room": "Team M",
+      "mode": "All In-Person",
+      "memberCount": 3,
+      "members": [
+        { "name": "Angela Bahng", "mode": "In-person" },
+        { "name": "Keiko Valente", "mode": "In-person" },
+        { "name": "Jason Chau", "mode": "In-person" }
+      ]
+    },
+    {
+      "letter": "N",
+      "name": null,
+      "room": "Team N",
+      "mode": "All In-Person",
+      "memberCount": 2,
+      "members": [
+        { "name": "Roy Burstein", "mode": "In-person" },
+        { "name": "Stewart Collis", "mode": "In-person" }
+      ]
+    },
+    {
+      "letter": "O",
+      "name": "Bleeding Edge",
+      "room": "Team O",
+      "mode": "All In-Person",
+      "memberCount": 2,
+      "members": [
+        { "name": "Josh Bishop", "mode": "In-person" },
+        { "name": "Jamie Purcell", "mode": "In-person" }
+      ]
+    }
+  ]
+}

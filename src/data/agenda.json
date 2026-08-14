@@ -1,0 +1,128 @@
+{
+  "event": {
+    "title": "Claude Code Hackathon",
+    "subtitle": "CC Foundations for Champions",
+    "orgs": "Gates Foundation × Anthropic",
+    "date": "2026-08-14",
+    "dateLabel": "Friday, August 14, 2026",
+    "timeLabel": "10:00 AM – 3:15 PM PT",
+    "location": "Gates Foundation, Seattle — Lake Washington / Lake Union Rooms",
+    "format": "In-person + hybrid via Teams",
+    "timezone": "America/Los_Angeles",
+    "host": "Philippe-Alexandre Gilbert",
+    "questionsChannel": "Hackathon Teams channel"
+  },
+  "sessions": [
+    {
+      "id": "doors",
+      "start": "09:30",
+      "end": "09:45",
+      "durationLabel": "15 min",
+      "title": "Doors open & check-in",
+      "detail": "Beverages available. Virtual attendees admitted to the Teams webinar.",
+      "kind": "logistics"
+    },
+    {
+      "id": "welcome",
+      "start": "10:00",
+      "end": "10:05",
+      "durationLabel": "5 min",
+      "title": "Welcome & kickoff",
+      "detail": "Opening remarks (Philippe-Alexandre Gilbert), event format, judging criteria & award categories.",
+      "kind": "plenary"
+    },
+    {
+      "id": "quickstart",
+      "start": "10:05",
+      "end": "10:35",
+      "durationLabel": "30 min",
+      "title": "Claude Code quickstart",
+      "detail": "Condensed live primer led by Li-Tal Mashiach (Anthropic, in person).",
+      "kind": "plenary"
+    },
+    {
+      "id": "checkin",
+      "start": "10:35",
+      "end": "10:40",
+      "durationLabel": "5 min",
+      "title": "Team check-in",
+      "detail": "Confirm your pre-assigned team / breakout room and problem statement.",
+      "kind": "teams"
+    },
+    {
+      "id": "sprint1",
+      "start": "10:40",
+      "end": "12:00",
+      "durationLabel": "80 min",
+      "title": "Build sprint 1",
+      "detail": "Floating in-room support + monitored Teams channel for virtual teams.",
+      "kind": "build"
+    },
+    {
+      "id": "lunch",
+      "start": "12:00",
+      "end": "12:30",
+      "durationLabel": "30 min",
+      "title": "Lunch break",
+      "detail": "Memphis Smokehouse buffet available 11:45 AM – 2:00 PM outside the room. Beverages in-room all day.",
+      "kind": "logistics"
+    },
+    {
+      "id": "sprint2",
+      "start": "12:30",
+      "end": "14:10",
+      "durationLabel": "100 min",
+      "title": "Build sprint 2",
+      "detail": "Keep building; final push toward submission.",
+      "kind": "build"
+    },
+    {
+      "id": "submissions",
+      "start": "14:10",
+      "end": "14:15",
+      "durationLabel": "5 min",
+      "title": "Submissions close",
+      "detail": "Push your repo to github.com/gatesfoundation/gf-claude-hackathon-2026",
+      "kind": "deadline"
+    },
+    {
+      "id": "demos",
+      "start": "14:15",
+      "end": "14:45",
+      "durationLabel": "30 min",
+      "title": "Lightning demos",
+      "detail": "Up to 10 teams, 2 minutes each, gong-timed. Remote teams demo over Teams.",
+      "kind": "plenary"
+    },
+    {
+      "id": "judging",
+      "start": "14:45",
+      "end": "15:05",
+      "durationLabel": "20 min",
+      "title": "Judging huddle & scoring",
+      "detail": "Panel scores against the published rubric.",
+      "kind": "judging"
+    },
+    {
+      "id": "awards",
+      "start": "15:05",
+      "end": "15:15",
+      "durationLabel": "10 min",
+      "title": "Awards & wrap",
+      "detail": "Winners announced across all four categories. Keep-building call to action, then the Anthropic feedback survey.",
+      "kind": "plenary"
+    }
+  ],
+  "beforeYouArrive": [
+    "Install & authenticate Claude Code on your laptop",
+    "Join the hackathon Teams team and GitHub org (claude-code-hackathon-08-14-team)",
+    "Review your team assignment and problem statement",
+    "External guests: bring photo ID for building check-in"
+  ],
+  "howTeamsWork": [
+    "Default team size: 2, flexible to 3–4",
+    "Aim for at least one experienced / GitHub-linked member per team",
+    "Not on a team? Ask a floor helper — solo-friendly tasks are available",
+    "Submit via the shared GitHub repo before the 2:10 PM deadline"
+  ]
+}

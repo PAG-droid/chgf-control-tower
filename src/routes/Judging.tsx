@@ -1,0 +1,103 @@
+import judging from '../data/judging.json'
+
+const LEVEL_ACCENT = ['border-ink-500/40', 'border-sky-400/40', 'border-amber-glow/50']
+
+export default function Judging() {
+  return (
+    <div className="space-y-10">
+      <header>
+        <h1 className="text-3xl font-bold tracking-tight text-ink-100">Judging</h1>
+        <p className="mt-2 max-w-3xl text-ink-400">
+          Four criteria, weighted equally. {judging.scoring.scale}.
+        </p>
+      </header>
+
+      <section>
+        <h2 className="mb-4 text-xs font-semibold tracking-[0.14em] text-amber-glow uppercase">Award categories</h2>
+        <ul className="grid gap-4 sm:grid-cols-2">
+          {judging.categories.map((c) => (
+            <li key={c.id} className="rounded-xl border border-navy-800 bg-navy-900/50 p-5">
+              <h3 className="text-lg font-bold text-ink-100">{c.name}</h3>
+              <div className="mt-0.5 text-xs font-semibold tracking-[0.1em] text-amber-glow uppercase">{c.tagline}</div>
+              <p className="mt-3 text-sm leading-relaxed text-ink-400">{c.description}</p>
+            </li>
+          ))}
+        </ul>
+      </section>
+
+      <section>
+        <h2 className="mb-4 text-xs font-semibold tracking-[0.14em] text-amber-glow uppercase">What judges score</h2>
+        <ul className="space-y-4">
+          {judging.criteria.map((c) => (
+            <li key={c.name} className="rounded-xl border border-navy-800 bg-navy-900/50 p-5">
+              <div className="flex flex-wrap items-baseline justify-between gap-3">
+                <h3 className="text-base font-bold text-ink-100">{c.name}</h3>
+                {c.weight && (
+                  <span className="rounded-md border border-navy-600 bg-navy-800 px-2 py-0.5 text-xs font-semibold text-ink-300">
+                    {c.weight}
+                  </span>
+                )}
+              </div>
+              <p className="mt-2 text-sm text-ink-400">{c.description}</p>
+
+              {c.levels?.length > 0 && (
+                <div className="mt-4 grid gap-2 sm:grid-cols-3">
+                  {c.levels.map((lvl, i) => {
+                    const [label, ...rest] = lvl.split(':')
+                    return (
+                      <div key={lvl} className={['rounded-lg border-l-2 bg-navy-950/50 px-3 py-2', LEVEL_ACCENT[i] ?? LEVEL_ACCENT[0]].join(' ')}>
+                        <div className="text-[11px] font-bold tracking-wide text-ink-300 uppercase">{label}</div>
+                        <div className="mt-0.5 text-xs leading-relaxed text-ink-500">{rest.join(':').trim()}</div>
+                      </div>
+                    )
+                  })}
+                </div>
+              )}
+            </li>
+          ))}
+        </ul>
+      </section>
+
+      <section className="grid gap-4 lg:grid-cols-2">
+        <div className="rounded-xl border border-navy-800 bg-navy-900/50 p-5">
+          <h2 className="text-xs font-semibold tracking-[0.14em] text-amber-glow uppercase">Judging panel</h2>
+          <ul className="mt-3 space-y-2.5">
+            {judging.judges.map((j) => (
+              <li key={j.name} className="flex flex-wrap items-baseline justify-between gap-2 border-b border-navy-800 pb-2.5 last:border-0 last:pb-0">
+                <span className="font-semibold text-ink-100">{j.name}</span>
+                <span className="text-xs text-ink-500">
+                  {j.org}
+                  {j.role ? ` · ${j.role}` : ''}
+                </span>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <div className="rounded-xl border border-navy-800 bg-navy-900/50 p-5">
+          <h2 className="text-xs font-semibold tracking-[0.14em] text-amber-glow uppercase">Afternoon timeline</h2>
+          <ul className="mt-3 space-y-2.5">
+            {[
+              ['Submissions close', judging.timeline.submissionsClose],
+              ['Lightning demos', judging.timeline.demos],
+              ['Judging huddle', judging.timeline.judgingHuddle],
+              ['Awards', judging.timeline.awards],
+            ].map(([label, time]) => (
+              <li key={label} className="flex items-baseline justify-between gap-3 border-b border-navy-800 pb-2.5 text-sm last:border-0 last:pb-0">
+                <span className="text-ink-300">{label}</span>
+                <span className="tnum font-semibold text-amber-glow">{time}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
+
+      <details className="rounded-xl border border-navy-800 bg-navy-900/50 p-5">
+        <summary className="cursor-pointer text-xs font-semibold tracking-[0.14em] text-amber-glow uppercase">
+          How scoring works — full detail
+        </summary>
+        <p className="mt-3 text-sm leading-relaxed text-ink-400">{judging.scoring.notes}</p>
+      </details>
+    </div>
+  )
+}

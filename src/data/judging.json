@@ -1,0 +1,86 @@
+{
+  "categories": [
+    {
+      "id": "impact-in-action",
+      "name": "Impact in Action",
+      "tagline": "Real-World Impact",
+      "description": "Awarded for the strongest real-world impact. The project solves a real problem at your organization and fits a problem statement, addressing an important need with clear, significant value."
+    },
+    {
+      "id": "built-to-last",
+      "name": "Built to Last",
+      "tagline": "Staying Power",
+      "description": "Awarded for the greatest staying power and potential to scale. The team and their colleagues will keep using it, with a clear path to ongoing use, adoption, or scale as a reusable skill, agent, MCP integration, or workflow."
+    },
+    {
+      "id": "claude-code-wizardry",
+      "name": "Claude Code Wizardry",
+      "tagline": "Claude Code Craft",
+      "description": "Awarded for the most inventive and skillful use of Claude Code. Creative, unique use that goes beyond a single prompt and meaningfully improves the solution."
+    },
+    {
+      "id": "best-in-show",
+      "name": "Best in Show",
+      "tagline": "Execution & Demo",
+      "description": "Awarded for the strongest execution and live demo. Sound engineering, refined past the first idea, and a polished, functional solution with a compelling demo that holds up live."
+    }
+  ],
+  "criteria": [
+    {
+      "name": "Real-World Impact",
+      "weight": "25%",
+      "description": "Solves a real problem at your organization and fits a problem statement.",
+      "levels": [
+        "Emerging: Problem or value is not yet clear.",
+        "Strong: Solves a meaningful real-world need.",
+        "Standout: Addresses an important need with clear, significant value."
+      ]
+    },
+    {
+      "name": "Staying Power",
+      "weight": "25%",
+      "description": "The team and their colleagues will keep using it; a reusable skill, agent, MCP integration, or workflow.",
+      "levels": [
+        "Emerging: Mostly a one-time prototype.",
+        "Strong: Has potential to continue with additional development.",
+        "Standout: Clear path to ongoing use, adoption, or scale."
+      ]
+    },
+    {
+      "name": "Claude Code Craft",
+      "weight": "25%",
+      "description": "Creative, unique use of Claude Code beyond a single prompt.",
+      "levels": [
+        "Emerging: Basic use of Claude Code.",
+        "Strong: Claude Code is used effectively to build the solution.",
+        "Standout: Creative and thoughtful use of Claude Code that meaningfully improves the solution."
+      ]
+    },
+    {
+      "name": "Execution & Demo",
+      "weight": "25%",
+      "description": "Sound engineering, refined past the first idea, and a working demo that holds up live.",
+      "levels": [
+        "Emerging: Early or incomplete; difficult to assess.",
+        "Strong: Working solution with a clear demo.",
+        "Standout: Polished, functional solution with a compelling demo."
+      ]
+    }
+  ],
+  "judges": [
+    { "name": "Xiaoxue Du", "org": "Gates Foundation", "role": "Principal judge" },
+    { "name": "Neil Hausmann", "org": "Gates Foundation", "role": "Judge" },
+    { "name": "Matt Gee", "org": "Gates Foundation", "role": "Judge" },
+    { "name": "Li-Tal Mashiach", "org": "Anthropic", "role": "Judge (in person)" }
+  ],
+  "scoring": {
+    "scale": "1-10 per criterion (maximum 40)",
+    "notes": "Judge Scorecard (primary): each judge scores every project from 1 (weak) to 10 (exceptional) on all four criteria. The four categories are weighted equally at 25%, so a project's final score is the simple sum of the four (maximum 40). Scoring guide: 1-3 Limited (little evidence of the criterion; concept stage or non-functional); 4-6 Solid (meets the criterion; works as shown with room to grow); 7-8 Strong (clearly exceeds expectations; polished and convincing); 9-10 Exceptional (best-in-show caliber; you would champion this project yourself). Judges enter project names in the order they demo, total each row in the Final Score column, and hand the completed scorecard to the organizer for tallying across judges. The earlier Hackathon Judging Rubric document uses a simpler 1-3 scale per category (Emerging / Strong / Standout, maximum 12) with a judge note field; the Judge Scorecard supersedes it for tallying. Tie-breaks are resolved in a judging huddle: for close calls, judges discuss which project delivers the strongest combination of real-world value, potential to continue beyond the hackathon, thoughtful use of Claude Code, and demonstrated execution. The rubric also lists three optional huddle call-outs: Best Real-World Scenario (most compelling or unexpected use case), Boldest Idea (most creative or ambitious concept), and Most Likely to Ship (solution people could imagine using soon). Neil and Xiaoxue plan to build an automated scoring system during the event to help synthesize submissions; the paper scorecard is the fallback."
+  },
+  "timeline": {
+    "submissionsClose": "2:10 PM",
+    "demos": "2:15 PM",
+    "judgingHuddle": "2:45 PM",
+    "awards": "3:05 PM"
+  }
+}

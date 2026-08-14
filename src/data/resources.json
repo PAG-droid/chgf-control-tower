@@ -1,0 +1,181 @@
+{
+  "submission": {
+    "repoUrl": "https://github.com/gatesfoundation/gf-claude-hackathon-2026",
+    "deadline": "2:10 PM PT",
+    "steps": [
+      "Pick a team name and create a folder named after it at the top level of the hackathon repo.",
+      "Add a README.md with what you built, what problem it solves, and how you built it with Claude Code.",
+      "Commit your working code, skill, plugin, or MCP config into that folder.",
+      "Record a short screen-capture demo (about 2-3 minutes) and link it from your README.",
+      "Push to github.com/gatesfoundation/gf-claude-hackathon-2026 before the 2:10 PM PT deadline.",
+      "Confirm your push landed by reloading the repo in a browser, then take the break.",
+      "If you are shortlisted as a finalist, be ready to demo live for about 4 minutes."
+    ],
+    "fallback": "If you cannot push to GitHub (no repo access, non-technical registrant, or a virtual participant hitting auth issues), do not spend build time fighting it. Zip your project folder plus your README and screen capture, and ask a floor helper how to get it in before 2:10 PM PT. Sharing the zip over Teams was raised as a likely fallback route but is not confirmed policy, so check with a helper or the MC rather than assuming."
+  },
+  "ideaBank": [
+    {
+      "title": "Investment-data benchmark harness",
+      "summary": "A fixed set of portfolio questions with agreed-upon correct answers, plus a scoring skill that runs any Claude-based tool against it and reports accuracy.",
+      "difficulty": "Ambitious",
+      "tags": ["Eval / infrastructure", "Neil Hausmann", "multi-day scale - expect to demo a fragment"]
+    },
+    {
+      "title": "Prompt variance injector",
+      "summary": "Generates realistic paraphrases and perturbations of a single prompt (reordered clauses, synonym swaps, added or dropped constraints) to test whether a skill's output is stable under wording changes. Designed to feed the investment-data benchmark harness as its input generator.",
+      "difficulty": "Moderate",
+      "tags": ["Eval / infrastructure", "Neil Hausmann", "good fit for the build window"]
+    },
+    {
+      "title": "Prompting personas",
+      "summary": "Generates virtual \"digital twin\" personas of Gates Foundation employees (newbie, tech bro, GF OG and so on) that produce representative prompts and prompting styles, injecting variation into prompts for tool testing and evaluation.",
+      "difficulty": null,
+      "tags": ["Eval / infrastructure", "Neil Hausmann"]
+    },
+    {
+      "title": "Personal knowledge graph to SWOT prompts",
+      "summary": "Builds a graph from a user's own documents and correspondence, then surfaces strengths, weaknesses, opportunities, and threats that the graph implies but the user hasn't articulated.",
+      "difficulty": "Ambitious",
+      "tags": ["Personal / knowledge", "Neil Hausmann", "multi-day scale - expect to demo a fragment"]
+    },
+    {
+      "title": "End-of-day inbox analyzer",
+      "summary": "Reads the day's mail, produces a ranked to-do list with owners and due dates, and flags threads awaiting the user's reply.",
+      "difficulty": null,
+      "tags": ["Personal / knowledge", "Neil Hausmann"]
+    },
+    {
+      "title": "Colleague emoji assigner",
+      "summary": "Assigns one emoji per frequent correspondent based on Teams and email patterns, with a written rationale and a confidence score. A novelty demo for graph-over-communications plumbing, floated alongside the question of whether an M365 connector exists for it.",
+      "difficulty": null,
+      "tags": ["Personal / knowledge", "Neil Hausmann", "check data-handling with an organizer before using real colleague data"]
+    },
+    {
+      "title": "Cowork onboarding podcast series",
+      "summary": "Short generated audio episodes that walk a new user through Cowork concepts and their first workflows.",
+      "difficulty": null,
+      "tags": ["Personal / knowledge", "Neil Hausmann"]
+    },
+    {
+      "title": "Agreement-readiness checklist tool",
+      "summary": "Evaluates a proposal against the requirements for submission to create an agreement, returning a pass/fail checklist with the specific gap and the source requirement for each item.",
+      "difficulty": "Moderate",
+      "tags": ["Grant / proposal workflow", "Neil Hausmann", "good fit for the build window"]
+    },
+    {
+      "title": "Proposal and budget review workflow (Cowork plugin)",
+      "summary": "A guided multi-step check of a proposal against its budget: internal consistency, arithmetic, missing sections, and flagged variances.",
+      "difficulty": null,
+      "tags": ["Grant / proposal workflow", "Neil Hausmann"]
+    },
+    {
+      "title": "Strategic fit drafting skill",
+      "summary": "Drafts the strategic-fit narrative for an investment from portfolio context, prior approved language, and the relevant strategy documents.",
+      "difficulty": "Moderate",
+      "tags": ["Grant / proposal workflow", "Neil Hausmann", "good fit for the build window"]
+    },
+    {
+      "title": "Convening email template customizer",
+      "summary": "Adapts a base invitation or logistics template to a specific convening: audience, dates, venue, agenda, and tone.",
+      "difficulty": "Moderate",
+      "tags": ["Grant / proposal workflow", "Neil Hausmann", "good fit for the build window", "overlaps with Convening-in-a-box assistant"]
+    },
+    {
+      "title": "RoB planning assistant",
+      "summary": "Given a team's upcoming milestones, produces the required review calendar and a per-role prep checklist.",
+      "difficulty": null,
+      "tags": ["Planning cadence", "Neil Hausmann"]
+    },
+    {
+      "title": "In-process pipeline vs. deadlines",
+      "summary": "Compares in-process investments against RoB dates, identifies at-risk items, and writes the results back to the tracking spreadsheet in place, preserving formatting and formulas.",
+      "difficulty": null,
+      "tags": ["Planning cadence", "Neil Hausmann"]
+    },
+    {
+      "title": "ERG Calendar",
+      "summary": "Makes custom calendars for Employee Resource Groups built around the special days and dates ERG members may want to know about.",
+      "difficulty": null,
+      "tags": ["Planning cadence", "Neil Hausmann"]
+    },
+    {
+      "title": "Community connector / coffee chat matchmaker",
+      "summary": "Recommends colleagues to meet based on shared interests and projects, with suggested conversation starters.",
+      "difficulty": null,
+      "tags": ["Community Building", "Xiaoxue Du"]
+    },
+    {
+      "title": "Post-meeting action tracker",
+      "summary": "Converts notes and transcripts into decisions, owners, deadlines, and personalized follow-up messages, while tracking what remains unresolved.",
+      "difficulty": null,
+      "tags": ["Community Building", "Xiaoxue Du"]
+    },
+    {
+      "title": "Convening-in-a-box assistant",
+      "summary": "Generates an agenda, participant mix, run-of-show, invitation, moderator brief, Know Before You Go, and follow-up survey from a convening goal and audience.",
+      "difficulty": null,
+      "tags": ["Community Building", "Xiaoxue Du", "overlaps with Convening email template customizer"]
+    }
+  ],
+  "quickstart": [
+    {
+      "label": "Claude Code docs",
+      "url": "https://docs.claude.com/en/docs/claude-code",
+      "description": "The main documentation hub for Claude Code."
+    },
+    {
+      "label": "Claude Code quickstart",
+      "url": "https://docs.claude.com/en/docs/claude-code/quickstart",
+      "description": "Install, authenticate, and run your first session in a few minutes."
+    },
+    {
+      "label": "Agent Skills",
+      "url": "https://docs.claude.com/en/docs/claude-code/skills",
+      "description": "How to package repeatable expertise as a reusable Skill - the format most likely to outlive the day."
+    },
+    {
+      "label": "MCP connectors",
+      "url": "https://docs.claude.com/en/docs/claude-code/mcp",
+      "description": "Connect Claude Code to real systems and data through Model Context Protocol servers."
+    }
+  ],
+  "survey": {
+    "label": "Post-event feedback survey (Anthropic)",
+    "url": "https://form.typeform.com/to/KM2zkCSy",
+    "note": "Shown during Awards & wrap"
+  },
+  "faq": [
+    {
+      "q": "How big should a team be?",
+      "a": "Two people is the default. Three or four is fine if that is what your group wants - just be honest about whether four people can stay busy in a short build window. Solo is allowed but pairing is strongly encouraged: put an experienced Claude Code user with a newcomer."
+    },
+    {
+      "q": "I do not have a team. What do I do?",
+      "a": "Come to the team formation and scoping block and say so - the MC will pair you up, and pods are assigned by table stand. Virtual participants should say the same in the Teams channel and a helper will match you. Nobody needs to arrive with a team."
+    },
+    {
+      "q": "How do I submit my project?",
+      "a": "Push to github.com/gatesfoundation/gf-claude-hackathon-2026 by 2:10 PM PT: a folder named for your team, a README describing what you built and what it solves, your code or skill or MCP config, and a link to a short screen-capture demo. Written submissions plus the screen capture are what the judges shortlist from - only 6 to 8 finalists demo live."
+    },
+    {
+      "q": "What if I cannot push to GitHub?",
+      "a": "Do not burn build time on it. Zip your project folder with your README and screen capture, and ask a floor helper how to get it submitted before the deadline. Sharing it over Teams was discussed as a likely fallback for non-technical registrants but is not confirmed policy, so check with a helper rather than assuming."
+    },
+    {
+      "q": "Where is lunch and when?",
+      "a": "Memphis Smokehouse buffet, served outside the room, open from 11:45 AM to 2:00 PM. Beverages are inside the room. You can grab food and keep building - the buffet stays open through most of the build window."
+    },
+    {
+      "q": "Who do I ask for help?",
+      "a": "Floor helpers are circulating all day for build, install, and auth questions - flag one down rather than getting stuck. Virtual participants should post in the monitored Teams channel. For registration, AV, or room logistics, go to the registration desk or the MC."
+    },
+    {
+      "q": "How will projects be judged?",
+      "a": "Four equally weighted criteria, 25% each: Real-Work Impact (solves a real problem here and fits a problem statement), Staying Power (you and your colleagues will actually keep using it - a reusable skill, agent, MCP integration, or workflow), Claude Code Craft (creative use of Claude Code beyond a single prompt), and Execution and Demo (sound engineering, refined past the first idea, a demo that holds up live). Finalist demos are hard-stopped by a timer, so rehearse the short version."
+    },
+    {
+      "q": "The idea I want to build looks too big for the time. Should I still try?",
+      "a": "Scope it down deliberately. Real build time is under two hours, so the ideas that finish are skills and plugins - the email template customizer, agreement-readiness checklist, strategic-fit drafting skill, prompt variance injector. The knowledge-graph and benchmark-harness ideas are multi-day projects and will demo as a fragment. A narrow working thing beats a broad broken one on this rubric."
+    }
+  ]
+}
