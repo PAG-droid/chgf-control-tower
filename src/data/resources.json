@@ -206,6 +206,10 @@
   },
   "faq": [
     {
+      "q": "Claude Desktop will not reinstall from the company portal",
+      "a": "A known issue today — isDesktopExtensionEnabled stays at 0. Ask Andy Stetzler at table 4 or Brian Munn at table 6 rather than burning build time on it."
+    },
+    {
       "q": "My team is virtual — is there a breakout room for us?",
       "a": "No. Start your own Teams meeting with your team and drop back into the main meeting for the checkpoints. The pre-created breakout rooms are not being used. Ping the main chat any time you need help — support is monitoring it."
     },
@@ -244,6 +248,72 @@
     {
       "q": "The idea I want to build looks too big for the time. Should I still try?",
       "a": "Scope it down deliberately. Real build time is under two hours, so the ideas that finish are skills and plugins - the email template customizer, agreement-readiness checklist, strategic-fit drafting skill, prompt variance injector. The knowledge-graph and benchmark-harness ideas are multi-day projects and will demo as a fragment. A narrow working thing beats a broad broken one on this rubric."
+    }
+  ],
+  "helpDesk": [
+    {
+      "name": "Andy Stetzler",
+      "where": "Table 4",
+      "helpsWith": "Claude Code install and platform issues, in-person triage"
+    },
+    {
+      "name": "Brian Munn",
+      "where": "Table 6",
+      "helpsWith": "General Claude, desktop app install, prompt engineering, Claude Chat and Cowork"
+    },
+    {
+      "name": "Neil Hausmann",
+      "where": "Roaming — invite him to your call",
+      "helpsWith": "Ideation. He has a set of ideation starters if your team is stuck"
+    },
+    {
+      "name": "Kevin Middleton",
+      "where": "On call",
+      "helpsWith": "AV and IT, meeting join problems"
+    },
+    {
+      "name": "Kyle Bacon",
+      "where": "Virtual",
+      "helpsWith": "Remote Teams support"
+    },
+    {
+      "name": "Main Teams chat",
+      "where": "Monitored all day",
+      "helpsWith": "Anything — drop a question and someone will pick it up"
+    }
+  ],
+  "tips": [
+    {
+      "tip": "Never skip Plan Mode",
+      "detail": "Ask Claude to interview you for intent before it writes anything. Plan first, then auto mode."
+    },
+    {
+      "tip": "Watch for context drift",
+      "detail": "Around 30–40% of the context window Claude starts getting confused. Run /compact or hand off to a fresh session at that point rather than pushing through."
+    },
+    {
+      "tip": "/clear means clear",
+      "detail": "No carryover at all — you rely entirely on memory and CLAUDE.md. The scratchpad goes too."
+    },
+    {
+      "tip": "Run /init after your first build",
+      "detail": "It self-documents the project. Then tell Claude to record important changes and architectural shifts as you go."
+    },
+    {
+      "tip": "Treat CLAUDE.md like onboarding a new hire",
+      "detail": "How to get started, decisions made, look and feel, standing rules — \"always make pull requests\", \"keep a changelog\", \"never do X\"."
+    },
+    {
+      "tip": "Make Claude verify its own work",
+      "detail": "/review is useful. Ask it to test what it built and loop until it passes, then test it yourself as a human."
+    },
+    {
+      "tip": "Split big work into multiple plans",
+      "detail": "A fresh session with a tight context window beats one long confused one."
+    },
+    {
+      "tip": "Upload a whiteboard photo",
+      "detail": "Give Claude a picture of your architecture sketch and ask for a design plan."
     }
   ]
 }

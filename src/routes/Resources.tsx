@@ -150,6 +150,41 @@ export default function Resources() {
       </section>
 
       <section>
+        <div className="mb-4 flex flex-wrap items-baseline justify-between gap-3">
+          <h2 className="text-xl font-bold text-ink-100">Stuck? Ask one of these people</h2>
+          <span className="text-xs text-ink-500">Support is monitoring the main Teams chat all day</span>
+        </div>
+        <ul className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+          {resources.helpDesk?.map((h) => (
+            <li key={h.name} className="rounded-xl border border-navy-800 bg-navy-900/50 p-4">
+              <div className="flex items-baseline justify-between gap-2">
+                <span className="font-bold text-ink-100">{h.name}</span>
+                <span className="shrink-0 rounded-md border border-emerald-400/30 bg-emerald-400/10 px-2 py-0.5 text-[10px] font-semibold text-emerald-300">
+                  {h.where}
+                </span>
+              </div>
+              <p className="mt-2 text-sm leading-relaxed text-ink-400">{h.helpsWith}</p>
+            </li>
+          ))}
+        </ul>
+      </section>
+
+      <section>
+        <div className="mb-4 flex flex-wrap items-baseline justify-between gap-3">
+          <h2 className="text-xl font-bold text-ink-100">Tips from the floor</h2>
+          <span className="text-xs text-ink-500">Shared in the Teams chat today</span>
+        </div>
+        <ul className="grid gap-3 md:grid-cols-2">
+          {resources.tips?.map((t) => (
+            <li key={t.tip} className="rounded-xl border-l-2 border-amber-glow/50 bg-navy-900/50 px-4 py-3">
+              <div className="font-semibold text-ink-100">{t.tip}</div>
+              <p className="mt-1 text-sm leading-relaxed text-ink-400">{t.detail}</p>
+            </li>
+          ))}
+        </ul>
+      </section>
+
+      <section>
         <h2 className="mb-4 text-xl font-bold text-ink-100">FAQ</h2>
         <ul className="space-y-2">
           {resources.faq.map((f) => (
