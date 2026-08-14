@@ -311,6 +311,23 @@
           "mode": "Virtual"
         }
       ]
+    },
+    {
+      "letter": "Q",
+      "name": "KB Queens",
+      "room": "Team Q",
+      "mode": "All Virtual",
+      "memberCount": 2,
+      "members": [
+        {
+          "name": "Kylee Durant",
+          "mode": "Virtual"
+        },
+        {
+          "name": "Cody Benedict",
+          "mode": "Virtual"
+        }
+      ]
     }
   ]
 }
