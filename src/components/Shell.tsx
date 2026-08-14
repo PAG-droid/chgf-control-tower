@@ -10,6 +10,7 @@ const NAV = [
   { to: '/judging', label: 'Judging' },
   { to: '/resources', label: 'Resources' },
   { to: '/monitor', label: 'Submissions' },
+  { to: '/gallery', label: 'Gallery' },
 ]
 
 function LiveBadge() {
@@ -30,7 +31,6 @@ export default function Shell({ children }: { children: ReactNode }) {
   const { pathname } = useLocation()
   const unlisted: Record<string, string> = {
     '/ops': 'Organiser view — unlisted, not linked publicly',
-    '/gallery': 'Event gallery — unlisted, share by direct link only',
   }
   const unlistedNote = unlisted[pathname]
 
