@@ -5,10 +5,11 @@
     {
       "letter": "A",
       "deck": null,
-      "repo": null,
+      "repo": "https://github.com/gatesfoundation/eba-claude-hackathon",
       "video": null,
       "presenters": null,
-      "note": null
+      "note": "Project repo: eba-claude-hackathon (internal). Submitted folder: The-Green-Donuts.",
+      "share": "https://github.com/gatesfoundation/gf-claude-hackathon-2026/tree/main/The-Green-Donuts"
     },
     {
       "letter": "C",
@@ -116,11 +117,12 @@
     },
     {
       "letter": "P",
-      "deck": null,
-      "repo": null,
+      "deck": "p-team-rocket/reclass-intake.pdf",
+      "repo": "https://github.com/gatesfoundation/gf-claude-hackathon-2026/tree/main/reclass-intake",
       "video": null,
-      "presenters": null,
-      "note": null
+      "presenters": "Casey Dobrowolski · Caleb Chung",
+      "note": null,
+      "title": "Reclass-Intake"
     },
     {
       "letter": "Q",
@@ -136,7 +138,7 @@
     {
       "letter": "R",
       "deck": null,
-      "repo": null,
+      "repo": "https://github.com/aka-aaron-brown/claude-hackathon",
       "video": null,
       "presenters": null,
       "note": null
