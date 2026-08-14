@@ -8,6 +8,8 @@ type Slot = {
   deck?: string | null
   repo?: string | null
   video?: string | null
+  /** SharePoint / OneDrive folder a team shared instead of a file. */
+  share?: string | null
   presenters?: string | null
   note?: string | null
 }
@@ -169,8 +171,18 @@ function Presenter({ index, onClose, onJump }: { index: number; onClose: () => v
             <p className="max-w-md text-ink-500">
               {slot.note ?? 'No slides for this team — they are presenting from their own screen.'}
             </p>
-            {(slot.repo || slot.video) && (
-              <div className="flex gap-3">
+            {(slot.repo || slot.video || slot.share) && (
+              <div className="flex flex-wrap justify-center gap-3">
+                {slot.share && (
+                  <a
+                    href={slot.share}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="rounded-lg bg-amber-deep px-4 py-2 text-sm font-semibold text-navy-950 hover:bg-amber-glow"
+                  >
+                    Open shared folder →
+                  </a>
+                )}
                 {slot.repo && (
                   <a
                     href={slot.repo}
@@ -275,6 +287,7 @@ export default function Demos() {
               </span>
               <span className="flex shrink-0 gap-1.5">
                 <Pill label="Deck" got={Boolean(slot.deck)} />
+                <Pill label="Files" got={Boolean(slot.share)} />
                 <Pill label="Repo" got={Boolean(slot.repo)} />
                 <Pill label="Video" got={Boolean(slot.video)} />
               </span>

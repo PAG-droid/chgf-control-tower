@@ -2,18 +2,24 @@
 //
 //   node scripts/extract-logos-from-sheet.mjs <sheet.png> [outDir] [cellsPerRow]
 //
-// Segments by finding rows and columns that are entirely background, which
-// copes with uneven grids. Where neighbouring marks touch and merge into one
-// run, pass the expected cells per row (e.g. "3,3,4") and the merged run is
-// split at its lowest-occupancy columns. Each cell is cropped, padded to square
-// on the sheet's own background colour, and written at 640px.
+//   node scripts/extract-logos-from-sheet.mjs ~/Downloads/logos.png \
+//     public/team-logos/illustrated 3,3,4
+//
+// Rows are found from horizontal bands of pure background. Within a row,
+// columns are split the same way — but marks drawn tangent to each other merge
+// into one run, so passing the expected cells per row ("3,3,4") splits a merged
+// run at its emptiest columns. Each split is then snapped to the true local
+// minimum, and every cell is finally cropped to its own tight ink bounds, so a
+// neighbour's border never bleeds in and a mark's own border never gets shaved.
 
 import { mkdir, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 import sharp from 'sharp';
 
 const sheetPath = process.argv[2];
-const outDir = process.argv[3] ?? path.resolve(import.meta.dirname, '..', 'public', 'team-logos', 'illustrated');
+const outDir =
+  process.argv[3] ?? path.resolve(import.meta.dirname, '..', 'public', 'team-logos', 'illustrated');
+const expected = process.argv[4]?.split(',').map(Number);
 
 // Reading order of the sheet, left to right, top to bottom.
 const NAMES = [
@@ -32,8 +38,8 @@ const NAMES = [
 const OUT = 640;
 const TOL = 18; // channel distance from background that counts as ink
 const MIN_RUN = 60; // ignore specks
-const PAD = 8;
-const BLEED = 12; // marks sitting tangent to each other get their borders shaved otherwise
+const PAD = 10; // breathing room inside the square
+const SNAP = 28; // window for refining a split to its true local minimum
 
 const img = sharp(sheetPath).removeAlpha();
 const { width, height } = await img.metadata();
@@ -53,7 +59,6 @@ const isInk = (x, y) => {
   );
 };
 
-// Contiguous runs of occupied indices, given a per-index occupancy count.
 const runs = (counts, minCount) => {
   const out = [];
   let start = null;
@@ -77,13 +82,11 @@ const rowCounts = Array.from({ length: height }, (_, y) => {
 const bands = runs(rowCounts, 3);
 console.log(`${bands.length} row bands: ${bands.map((b) => b.join('-')).join(', ')}`);
 
-const expected = process.argv[4]?.split(',').map(Number);
-
-// Split one run into k parts at the k-1 emptiest columns, keeping splits well
-// clear of each other and of the run's edges.
+// Split a run into k parts at its emptiest columns, then nudge each split to
+// the true local minimum nearby — a broad shallow dip otherwise puts the wall
+// slightly inside one of the neighbours and shaves its border.
 const splitRun = ([left, right], k, colCounts) => {
-  const span = right - left + 1;
-  const minSep = Math.floor(span / (k * 2));
+  const minSep = Math.floor((right - left + 1) / (k * 2));
   const chosen = [];
   for (let n = 0; n < k - 1; n++) {
     let best = -1;
@@ -96,8 +99,13 @@ const splitRun = ([left, right], k, colCounts) => {
       }
     }
     if (best < 0) break;
-    chosen.push(best);
-    console.log(`  split at x=${best} (occupancy ${bestCount})`);
+
+    let snapped = best;
+    for (let x = Math.max(left, best - SNAP); x <= Math.min(right, best + SNAP); x++) {
+      if (colCounts[x] < colCounts[snapped]) snapped = x;
+    }
+    console.log(`  split at x=${snapped} (occupancy ${colCounts[snapped]}, from ${best})`);
+    chosen.push(snapped);
   }
   chosen.sort((a, b) => a - b);
   const edges = [left, ...chosen, right];
@@ -105,27 +113,42 @@ const splitRun = ([left, right], k, colCounts) => {
 };
 
 const boxes = [];
-bands.forEach(([top, bottom], bandIndex) => {
+bands.forEach(([bandTop, bandBottom], bandIndex) => {
   const colCounts = Array.from({ length: width }, (_, x) => {
     let n = 0;
-    for (let y = top; y <= bottom; y++) if (isInk(x, y)) n++;
+    for (let y = bandTop; y <= bandBottom; y++) if (isInk(x, y)) n++;
     return n;
   });
 
-  let cells = runs(colCounts, 3);
+  let cells = runs(colCounts, 1);
   const want = expected?.[bandIndex];
   if (want && cells.length < want) {
-    // Grow the widest run until the band yields the expected number of cells.
     const widest = cells.reduce((a, b) => (b[1] - b[0] > a[1] - a[0] ? b : a));
     const k = want - cells.length + 1;
-    console.log(`band ${bandIndex + 1}: ${cells.length} runs, want ${want} — splitting widest into ${k}`);
+    console.log(`band ${bandIndex + 1}: ${cells.length} run(s), want ${want} — splitting widest into ${k}`);
     cells = cells.flatMap((run) => (run === widest ? splitRun(run, k, colCounts) : [run]));
   }
 
-  for (const [left, right] of cells) boxes.push({ left, top, right, bottom });
+  // Tight ink bounds within each cell's own column range.
+  for (const [cl, cr] of cells) {
+    let left = Infinity;
+    let right = -1;
+    let top = Infinity;
+    let bottom = -1;
+    for (let y = bandTop; y <= bandBottom; y++) {
+      for (let x = cl; x <= cr; x++) {
+        if (!isInk(x, y)) continue;
+        if (x < left) left = x;
+        if (x > right) right = x;
+        if (y < top) top = y;
+        if (y > bottom) bottom = y;
+      }
+    }
+    if (right > 0) boxes.push({ left, top, right, bottom });
+  }
 });
-console.log(`${boxes.length} cells found`);
 
+console.log(`${boxes.length} cells found`);
 if (boxes.length !== NAMES.length) {
   console.warn(`WARNING: ${boxes.length} cells but ${NAMES.length} names — check the mapping.`);
 }
@@ -134,19 +157,16 @@ await mkdir(outDir, { recursive: true });
 const hex = `#${bg.map((c) => c.toString(16).padStart(2, '0')).join('')}`;
 
 const tiles = [];
-const clamp = (v, lo, hi) => Math.min(hi, Math.max(lo, v));
-
 for (let i = 0; i < boxes.length; i++) {
-  const left = clamp(boxes[i].left - BLEED, 0, width - 1);
-  const top = clamp(boxes[i].top - BLEED, 0, height - 1);
-  const right = clamp(boxes[i].right + BLEED, 0, width - 1);
-  const bottom = clamp(boxes[i].bottom + BLEED, 0, height - 1);
+  const { left, top, right, bottom } = boxes[i];
   const w = right - left + 1;
   const h = bottom - top + 1;
   const side = Math.max(w, h) + PAD * 2;
   const name = NAMES[i] ?? `cell-${i + 1}`;
 
-  const cell = await sharp(sheetPath)
+  // Two passes on purpose: sharp applies extend *after* resize within a single
+  // pipeline, which would squash the crop to OUT square and then pad it.
+  const padded = await sharp(sheetPath)
     .removeAlpha()
     .extract({ left, top, width: w, height: h })
     .extend({
@@ -156,10 +176,10 @@ for (let i = 0; i < boxes.length; i++) {
       right: Math.ceil((side - w) / 2),
       background: hex,
     })
-    .resize(OUT, OUT)
     .png()
     .toBuffer();
 
+  const cell = await sharp(padded).resize(OUT, OUT).png().toBuffer();
   await writeFile(path.join(outDir, `${name}.png`), cell);
   tiles.push(await sharp(cell).resize(220, 220).png().toBuffer());
   console.log(`${name}  ${w}x${h} at ${left},${top}`);
@@ -174,7 +194,9 @@ await sharp({
     background: '#ffffff',
   },
 })
-  .composite(tiles.map((input, i) => ({ input, left: (i % COLS) * 220, top: Math.floor(i / COLS) * 220 })))
+  .composite(
+    tiles.map((input, i) => ({ input, left: (i % COLS) * 220, top: Math.floor(i / COLS) * 220 })),
+  )
   .png()
   .toFile(path.join(outDir, 'contact-sheet.png'));
 

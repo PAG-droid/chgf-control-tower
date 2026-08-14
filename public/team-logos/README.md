@@ -20,6 +20,41 @@ Teams F, G, H, I, J, K, L and N have `name: null` in
 [`src/data/teams.json`](../../src/data/teams.json), so they have no logo yet.
 Name them, add a brief to `PROMPTS.md`, draw an SVG into `svg/`, re-render.
 
+## Two sets
+
+There are two parallel sets in here. Pick one for the site rather than mixing
+them — their background creams differ (`#F1EBE0` vs `#FCF9F0`).
+
+- **`illustrated/`** — raster, cut out of an image-model sheet generated from
+  the first-generation briefs. Warmer and more characterful, but PNG only, so
+  it won't scale like the vectors, and four of the ten have clipped borders
+  (see below).
+- **everything else** — the hand-authored vector system described further down.
+
+### illustrated/
+
+Extracted from a 1254×1254 contact sheet with:
+
+```bash
+node scripts/extract-logos-from-sheet.mjs ~/Downloads/logos.png \
+  public/team-logos/illustrated 3,3,4
+```
+
+The trailing `3,3,4` is the expected number of logos per row; the sheet's
+bottom row holds four, and neighbouring marks there are drawn tangent, so the
+script needs to be told how many to split a merged run into.
+
+**A, C, D, E, M and O came out clean** — complete circular borders, 640×640.
+
+**P, Q, R and S have clipped borders.** The generator squeezed four marks into
+the width of three on the bottom row, so those ovals are squashed and their
+rings run off the row edges *in the source image*. No crop recovers them. The
+illustrations themselves are intact; only the decorative rings are cut. Fix by
+regenerating those four as individual square images rather than as a sheet.
+
+Other things to know: `BLAME` in the Git Blame mark has malformed letterforms,
+and none of the ten has a monochrome or small-size variant.
+
 ## Layout
 
 - `svg/` — source of truth. Hand-authored, 256×256 viewBox. Edit these only.
