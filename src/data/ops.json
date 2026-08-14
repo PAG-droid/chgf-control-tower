@@ -95,6 +95,12 @@
   ],
   "openItems": [
     {
+      "item": "Garin Wedeking (Team B) is now a solo participant — pair him with another team or point him at the solo-friendly task list. Neil owns that backup plan, and no floor helper has been named.",
+      "owner": "Neil Hausmann",
+      "priority": "high",
+      "status": "open"
+    },
+    {
       "item": "Confirm the four proposed day-of roles (AV/room lead, MC, timekeeper, registration desk) and name a floor helper",
       "owner": "Philippe-Alexandre Gilbert",
       "priority": "high",
@@ -283,6 +289,11 @@
     "The judging rubric artifact created by Xiaoxue Du on 2026-08-07 has never been filed in the project repository."
   ],
   "decisions": [
+    {
+      "date": "2026-08-14",
+      "decision": "Team B dissolved on the day; Garin Wedeking attends as its only representative and now runs as a solo team.",
+      "rationale": "Mackenzie Zimmerman, Kim Mehta and Brian Munn did not attend. Garin is in person and continues under Team B."
+    },
     {
       "date": "2026-08-14",
       "decision": "Isa Ellis withdrew on the morning of the event; Team K reduced to 3 (Jamie McKee, Kathleen Walsh, Carrie Douglass).",

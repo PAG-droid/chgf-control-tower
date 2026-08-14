@@ -30,21 +30,9 @@
       "letter": "B",
       "name": null,
       "room": "Team B",
-      "mode": "Mixed",
-      "memberCount": 4,
+      "mode": "All In-Person",
+      "memberCount": 1,
       "members": [
-        {
-          "name": "Mackenzie Zimmerman",
-          "mode": "In-person"
-        },
-        {
-          "name": "Kim Mehta",
-          "mode": "Virtual"
-        },
-        {
-          "name": "Brian Munn",
-          "mode": "In-person"
-        },
         {
           "name": "Garin Wedeking",
           "mode": "In-person"
