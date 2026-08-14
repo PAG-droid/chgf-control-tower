@@ -1,5 +1,54 @@
 {
   "title": "Memories",
-  "intro": "The day as it happened. Drop image files into public/gallery/ and add an entry below — no code changes needed.",
-  "photos": []
+  "intro": "The day as it happened.",
+  "photos": [
+    {
+      "file": "install-reminder.webp",
+      "caption": "Did you install your Claude Code already?",
+      "credit": "Pre-event promo",
+      "time": "Aug 13"
+    },
+    {
+      "file": "final-countdown.webp",
+      "caption": "The final countdown to something epic — 968 minutes to go",
+      "credit": "Pre-event promo",
+      "time": "Aug 13"
+    },
+    {
+      "file": "poster-02.webp",
+      "caption": "Claude Code Hackathon",
+      "credit": "Promo",
+      "time": "Aug 14"
+    },
+    {
+      "file": "poster-04.webp",
+      "caption": "Claude Code Hackathon",
+      "credit": "Promo",
+      "time": "Aug 14"
+    },
+    {
+      "file": "poster-05.webp",
+      "caption": "Claude Code Hackathon",
+      "credit": "Promo",
+      "time": "Aug 14"
+    },
+    {
+      "file": "vibe-coding.webp",
+      "caption": "Vibe coding — code, collaborate, impact",
+      "credit": "Build sprint 1",
+      "time": "Aug 14"
+    },
+    {
+      "file": "poster-07.webp",
+      "caption": "Claude Code Hackathon",
+      "credit": "Promo",
+      "time": "Aug 14"
+    },
+    {
+      "file": "sprint-2-countdown.webp",
+      "caption": "10 minutes before Sprint 2 — focus, build, impact",
+      "credit": "Lunch break",
+      "time": "12:35 PM"
+    }
+  ]
 }
