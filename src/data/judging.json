@@ -98,5 +98,37 @@
     "demos": "2:15 PM",
     "judgingHuddle": "2:45 PM",
     "awards": "3:05 PM"
+  },
+  "toolkit": {
+    "author": "Neil Hausmann",
+    "intro": "Built on the day to support the judging huddle. The design goal running through all four pieces: turn judgment into something that can be questioned. Every band, every award and every superlative points at a slide number, a commit SHA or a measured number rather than a recollection.",
+    "quote": "The presentation is the submission's claim. The commits are its behaviour. Most mis-scoring is one of two errors: a polished deck reading as execution, or a strong commit history going unscored because the deck never showed it. Score the two channels separately and report where they disagree — that disagreement is usually the most informative thing about a submission.",
+    "readmeUrl": "https://github.com/PAG-droid/chgf-control-tower/blob/main/docs/judging-toolkit/README.md",
+    "items": [
+      {
+        "name": "collect_evidence.py",
+        "url": "https://github.com/PAG-droid/chgf-control-tower/blob/main/docs/judging-toolkit/collect_evidence.py",
+        "role": "Evidence",
+        "description": "Reads a team's deck and their local git repos and emits one JSON evidence file. Scores nothing — it produces only citable facts: slide numbers, commit SHAs, file paths. Anything it cannot observe is emitted as null rather than guessed."
+      },
+      {
+        "name": "hackathon-judge skill",
+        "url": "https://github.com/PAG-droid/chgf-control-tower/blob/main/docs/judging-toolkit/hackathon-judge-SKILL.md",
+        "role": "Scoring",
+        "description": "The Claude skill that scores a submission from its presentation and its git history together, on the Judge Scorecard 1-10 across four criteria, with the legacy 1-3 bands as the evidence anchor. Emits cited rationale and a confidence per score."
+      },
+      {
+        "name": "assign_awards.py",
+        "url": "https://github.com/PAG-droid/chgf-control-tower/blob/main/docs/judging-toolkit/assign_awards.py",
+        "role": "Awards",
+        "description": "Assigns the superlative awards so every team gets exactly one, deterministically. Ranks teams on each metric and maximises how distinctive each team is on the award it receives, so no citation is a vibe. Carries ~28 alternative prizes; rubric winners are excluded by default."
+      },
+      {
+        "name": "fetch_control_tower.py",
+        "url": "https://github.com/PAG-droid/chgf-control-tower/blob/main/docs/judging-toolkit/fetch_control_tower.py",
+        "role": "Live feed",
+        "description": "Polls this Control Tower for the roster and submissions and reports what changed since the last poll — which team just attached a deck, a repo or a video. Has a watch mode for use during the event."
+      }
+    ]
   }
 }

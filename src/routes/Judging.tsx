@@ -98,6 +98,51 @@ export default function Judging() {
         </summary>
         <p className="mt-3 text-sm leading-relaxed text-ink-400">{judging.scoring.notes}</p>
       </details>
+
+      {judging.toolkit && (
+        <section>
+          <div className="mb-4 flex flex-wrap items-baseline justify-between gap-3">
+            <h2 className="text-xl font-bold text-ink-100">Judging toolkit</h2>
+            <span className="text-xs text-ink-500">Built by {judging.toolkit.author} on the day</span>
+          </div>
+
+          <p className="mb-5 max-w-3xl text-sm leading-relaxed text-ink-400">{judging.toolkit.intro}</p>
+
+          <blockquote className="mb-5 border-l-2 border-amber-glow/50 bg-navy-900/50 px-5 py-4 text-sm leading-relaxed text-ink-300 italic">
+            {judging.toolkit.quote}
+          </blockquote>
+
+          <ul className="grid gap-4 md:grid-cols-2">
+            {judging.toolkit.items.map((t) => (
+              <li key={t.name} className="rounded-xl border border-navy-800 bg-navy-900/50 p-5">
+                <div className="flex items-start justify-between gap-3">
+                  <a
+                    href={t.url}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="font-mono text-sm font-bold text-sky-300 hover:underline"
+                  >
+                    {t.name} ↗
+                  </a>
+                  <span className="shrink-0 rounded-md border border-navy-600 bg-navy-800 px-2 py-0.5 text-[10px] font-semibold tracking-wide text-ink-400 uppercase">
+                    {t.role}
+                  </span>
+                </div>
+                <p className="mt-2.5 text-sm leading-relaxed text-ink-400">{t.description}</p>
+              </li>
+            ))}
+          </ul>
+
+          <a
+            href={judging.toolkit.readmeUrl}
+            target="_blank"
+            rel="noreferrer"
+            className="mt-4 inline-block rounded-lg bg-navy-700 px-4 py-2 text-sm font-semibold text-ink-100 hover:bg-navy-600"
+          >
+            Read the toolkit notes →
+          </a>
+        </section>
+      )}
     </div>
   )
 }
