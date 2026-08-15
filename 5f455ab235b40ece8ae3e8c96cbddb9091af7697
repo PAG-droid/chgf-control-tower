@@ -1,0 +1,16 @@
+This commit's subject describes about a third of what it contains.
+
+It was made with a blanket `git add -A` while a second agent was working in the
+same tree, so it also swept in that agent's unrelated, in-progress work:
+
+  - inbox/ intake folder, its README and .gitignore rules
+  - Team D and Team K decks, found on unrecorded branches of
+    gf-claude-hackathon-2026 and converted to PDF
+  - scripts/check-links.mjs (new, and captured mid-edit — its nav check was
+    still broken here and was fixed in ec27979)
+  - scripts/convert-decks.ps1: recursion into per-team folders, plus a parse
+    fix for an em-dash that PowerShell 5.1 read as a string terminator
+  - src/data/demos.json entries for D, K, Q and R
+
+The clock and archive-view changes named in the subject are real; they are just
+not the whole commit.
