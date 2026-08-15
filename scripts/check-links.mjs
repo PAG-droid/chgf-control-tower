@@ -66,6 +66,11 @@ function checkLocalAssets() {
   const demos = readJson('demos.json')
   for (const slot of demos.order ?? []) {
     if (slot.deck) checkAsset(`demos[${slot.letter}].deck`, join('decks', slot.deck), { mustBePdf: true })
+    // A video is either an external URL (checked in the external pass) or a
+    // file we ship, in which case it has to actually be there.
+    if (slot.video && !/^https?:\/\//.test(slot.video)) {
+      checkAsset(`demos[${slot.letter}].video`, slot.video)
+    }
   }
 
   const gallery = readJson('gallery.json')

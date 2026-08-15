@@ -150,7 +150,7 @@
       "letter": "R",
       "deck": "r-the-leftovers/whiteboard-to-sprint.pdf",
       "repo": null,
-      "video": null,
+      "video": "videos/whiteboard-to-sprint-demo.mp4",
       "presenters": "Zeyad Taqiaddin · Aaron Brown · Stephen Pope",
       "note": "Aaron Brown's repo github.com/aka-aaron-brown/claude-hackathon returns 404 for foundation accounts — it is on his personal account and not visible to us. Link pulled from the board rather than serve a dead one. Ask him to make it internal or move it into gatesfoundation/gf-claude-hackathon-2026.",
       "title": "whiteboard → sprint",

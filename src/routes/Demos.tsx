@@ -218,7 +218,7 @@ function Presenter({ index, onClose, onJump }: { index: number; onClose: () => v
                 )}
                 {slot.video && (
                   <a
-                    href={slot.video}
+                    href={mediaUrl(slot.video)}
                     target="_blank"
                     rel="noreferrer"
                     className="rounded-lg bg-navy-700 px-4 py-2 text-sm font-semibold hover:bg-navy-600"
@@ -318,7 +318,7 @@ export default function Demos() {
               <Pill label="Deck" href={slot.deck ? `${import.meta.env.BASE_URL}decks/${slot.deck}` : null} />
               <Pill label="Files" href={slot.share} />
               <Pill label="Repo" href={slot.repo} />
-              <Pill label="Video" href={slot.video} />
+              <Pill label="Video" href={slot.video ? mediaUrl(slot.video) : null} />
             </span>
           </li>
         ))}
