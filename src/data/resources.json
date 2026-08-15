@@ -315,5 +315,21 @@
       "tip": "Upload a whiteboard photo",
       "detail": "Give Claude a picture of your architecture sketch and ask for a design plan."
     }
+  ],
+  "sessionMaterials": [
+    {
+      "title": "Claude Code Quickstart",
+      "presenter": "Li-Tal Mashiach, Anthropic",
+      "session": "10:05 AM · 30 min",
+      "file": "learning/cc-quickstart-li-tal.pdf",
+      "description": "The condensed live primer that opened the build. Run through it if you were not in the room, or want the walkthrough again."
+    },
+    {
+      "title": "CC Foundations for Champions",
+      "presenter": "Event deck",
+      "session": "Kickoff",
+      "file": "learning/cc-foundations-for-champions.pdf",
+      "description": "The framing deck for the day: format, judging criteria and award categories."
+    }
   ]
 }
