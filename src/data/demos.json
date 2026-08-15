@@ -83,13 +83,13 @@
     },
     {
       "letter": "K",
-      "deck": "k-ctrl-f-strategy/ctrlf-strategy.pdf",
+      "deck": null,
       "repo": "https://github.com/gatesfoundation/gf-claude-hackathon-2026/tree/strategy-explorer-build/ctrl-F-Strategy",
       "video": null,
       "presenters": "Jamie McKee",
-      "note": "strategy-explorer-build is a shared integration branch — it also carries The-Green-Donuts and reclass-intake. Team K's work is the ctrl-F-Strategy folder, which the repo link points at directly.",
+      "note": "Deck withheld 2026-08-15: slide 4 names a body of work with its internal impact/execution rating and lifetime approved/paid figures, taken from a real SIP extract. This site is world-readable. Deck is in inbox/_withheld/ pending redaction.",
       "title": "Strategy Explorer — a defensible strategy briefing, generated on demand",
-      "summary": "A generation engine that queries the Strategic Intelligence Platform graph and renders a self-contained static HTML briefing across all 15 U.S. Program strategies — 334 bodies of work, 5,518 investments, 2,027 organizations. Deliberately not interactive: every figure comes from a query a person reviewed, and inferred or proxied values stay visually distinguishable from retrieved fact, so the artifact survives the first reviewer who knows the portfolio."
+      "summary": "A generation engine that queries the Strategic Intelligence Platform graph and renders a self-contained static HTML briefing across the full US Program strategy set. Deliberately not interactive: every figure comes from a query a person reviewed, and inferred or proxied values stay visually distinguishable from retrieved fact, so the artifact survives the first reviewer who knows the portfolio."
     },
     {
       "letter": "L",
@@ -119,12 +119,12 @@
     },
     {
       "letter": "O",
-      "deck": "o-bleeding-edge/stakeholder-reporting-redesign.pdf",
+      "deck": null,
       "repo": "https://github.com/gatesfoundation/814-Testing-EDGE",
       "video": null,
       "presenters": null,
-      "note": null,
-      "share": "https://bmgf-my.sharepoint.com/:p:/r/personal/garin_wedeking_gatesfoundation_org/Documents/Stakeholder%20reporting%20and%20data%20updating%20redesign.pptx?d=wb3f312bb03a041bf89568969982d0be2&e=4%3a05e19ef917824dfd8b67d6474374415f&sharingv2=true&fromShare=true&at=9",
+      "note": "Deck and shared-folder link both withheld 2026-08-15. Slide 3 of the deck is an unredacted export of the EDGE project tracker: named external grantees with Invest IDs, grant amounts and internal PTRS scores, plus programme-officer first names. Slide 8 carries a live Databricks app URL. The share link was a personal OneDrive capability URL whose path disclosed a staff email address and which carried sharing tokens. This site is world-readable. Deck is in inbox/_withheld/ pending redaction.",
+      "share": null,
       "title": "Stakeholder reporting and data updating redesign"
     },
     {
@@ -143,8 +143,8 @@
       "repo": null,
       "video": null,
       "presenters": "Kylee Durant · Cody Benedict",
-      "note": "Deck received via Teams and converted. No repo yet — the code lives in the shared folder linked below.",
-      "share": "https://bmgf-my.sharepoint.com/shared?listurl=https%3A%2F%2Fbmgf%2Dmy%2Esharepoint%2Ecom%2Fpersonal%2Fkylee%5Fdurant%5Fgatesfoundation%5Forg%2FDocuments&id=%2Fpersonal%2Fkylee%5Fdurant%5Fgatesfoundation%5Forg%2FDocuments%2FDocuments%2Fkb%2Darticle%2Dgenerator&ct=1786740478559&or=Teams%2DHL&shareLink=1&ga=1",
+      "note": "Deck received via Teams and converted. Shared-folder link removed 2026-08-15: it was a personal OneDrive capability URL whose path disclosed a staff email address and which carried sharing tokens, on a world-readable site. No repo yet.",
+      "share": null,
       "title": "KB Queens — an AI Knowledge-Base generator for INVEST and Salesforce Support",
       "summary": "Support teams sit on a goldmine of failure data — Jira stories, linked bugs, QA defects, Salesforce metadata. Writing KB articles from it by hand takes hours per feature and quality depends on who wrote it. This mines that evidence automatically and drafts articles in a consistent format in minutes, walking a 14-category failure taxonomy and citing a Jira key or metadata component for every step. Draft only: everything goes to SME review before an agent sees it."
     },
@@ -154,7 +154,7 @@
       "repo": null,
       "video": "videos/whiteboard-to-sprint-demo.mp4",
       "presenters": "Zeyad Taqiaddin · Aaron Brown · Stephen Pope",
-      "note": "Aaron Brown's repo github.com/aka-aaron-brown/claude-hackathon returns 404 for foundation accounts — it is on his personal account and not visible to us. Link pulled from the board rather than serve a dead one. Ask him to make it internal or move it into gatesfoundation/gf-claude-hackathon-2026.",
+      "note": "Repo not accessible: the submitted link points at a personal account and returns 404 for foundation accounts. Pulled from the board rather than serve a dead link. Needs re-submitting into gatesfoundation/gf-claude-hackathon-2026.",
       "title": "whiteboard → sprint",
       "summary": "Turns whiteboard photos and meeting transcripts into Jira issues — but interrogates the ambiguities before writing anything. Sprint notes are full of shorthand that only made sense in the room: an arrow between two boxes, \"someone should look at it\", a name with no due date. This reads the photo or transcript, asks the specific questions a PM would ask before filing anything ambiguous, and only then writes tickets — sized, with acceptance criteria — straight to Jira. .NET 10 / C# 14 backend, React and Vite frontend."
     },
