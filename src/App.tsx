@@ -9,6 +9,7 @@ import People from './routes/People'
 import Learning from './routes/Learning'
 import Demos from './routes/Demos'
 import Gallery from './routes/Gallery'
+import Photos from './routes/Photos'
 import Ops from './routes/Ops'
 import NotFound from './routes/NotFound'
 
@@ -27,6 +28,7 @@ export default function App() {
         {/* Unlisted, like /ops — shared by direct link, not in the nav. */}
         <Route path="/demos" element={<Demos />} />
         <Route path="/gallery" element={<Gallery />} />
+        <Route path="/photos" element={<Photos />} />
         <Route path="/ops" element={<Ops />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
