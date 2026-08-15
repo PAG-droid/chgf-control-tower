@@ -1,0 +1,13 @@
+Same blanket `git add -A` problem as 5f455ab. Beyond the People/Learning tabs
+named in the subject, this commit also contains:
+
+  - Team A, O and R decks, converted to PDF
+  - removal of source .pptx from public/decks (2.2 MB of PowerPoint had been
+    shipping to every visitor; the site only ever renders PDF)
+  - scripts/check-intake.mjs (new) and the nav fix for check-links.mjs
+  - src/data/demos.json entries for A, O and R
+  - README intake section and package.json script entries
+
+It ALSO dropped the project-whiteboard-to-sprint.webp entry from gallery.json
+without removing the file, leaving 176 KB shipping in the bundle that nothing
+displays. check-links.mjs now reports orphans like this.
