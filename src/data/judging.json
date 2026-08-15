@@ -130,5 +130,253 @@
         "description": "Polls this Control Tower for the roster and submissions and reports what changed since the last poll — which team just attached a deck, a repo or a video. Has a watch mode for use during the event."
       }
     ]
+  },
+  "results": {
+    "source": "Judge card from Neil Hausmann, produced with the judging toolkit below.",
+    "caveat": "This is ONE judge's scorecard, not the tallied panel result. It ranks awards by how well the evidence supports them: ranks 1-6 were put forward as decided, 7-9 went to the huddle as open questions. Ceremony order deliberately differed, running the prestige awards last.",
+    "scale": "1-10 per criterion across four criteria, maximum 40. The legacy 1-3 band view (max 12) is kept alongside as the evidence anchor.",
+    "slate": [
+      {
+        "rank": 1,
+        "award": "The Novelist",
+        "letter": "D",
+        "team": "Git Blame (It's always HR)",
+        "basis": "1,751-char commit message (z=1.70)",
+        "confidence": "HIGH",
+        "why": "The longest commit message in the field at 1,751 characters - from the team named Git Blame. The joke lands because it inverts their own name: instead of blame being a mystery you have to excavate, they wrote the explanation directly into the history. They lead the field by 1.7 standard deviations.",
+        "challenge": "None. Measured from the commit log, unique leader, independently re-runnable.",
+        "status": "decided"
+      },
+      {
+        "rank": 2,
+        "award": "The Deliberate Refusal",
+        "letter": "R",
+        "team": "The Leftovers",
+        "basis": "'The best tools know when to stop'",
+        "confidence": "HIGH",
+        "why": "Their tool's headline feature is declining to act. It turns whiteboard photos and meeting transcripts into Jira tickets and REFUSES to write the vague ones - asking at most three questions, ranked by blast radius, and holding a ticket as a ghost until the ambiguity blocking it is resolved. 'A held ticket is an output, not a failure.' The guardrails are deterministic C#, deliberately not entrusted to model output. No other submission is designed around a refusal.",
+        "challenge": "None. Verbatim from their own deck; no other submission is refusal-first.",
+        "status": "decided"
+      },
+      {
+        "rank": 3,
+        "award": "Claude Code Wizardry",
+        "letter": "P",
+        "team": "Team Rocket",
+        "basis": "Craft 9/10, margin +1",
+        "confidence": "MEDIUM",
+        "why": "The richest harness in the field, and the only one whose gates I could actually execute. Four subagents with exclusive file ownership working against contracts frozen by a PreToolUse hook that BLOCKS rather than advises; post-edit hooks that re-run the rule tests and a data-invariant check after every single edit; and a project-specific /add-rule skill so someone who is not the original author can add rule seventeen. Their documented before/after is unflattering and therefore credible: a secret scanner that passed FALSELY on Windows (decoding nine files as empty) was replaced with assertions about the data itself. I ran their suite - 308 tests pass - and their invariant gate green.",
+        "challenge": "'Why not A or Journey at 8?' P is the only harness I could EXECUTE. Repo-channel citations only, so not HIGH.",
+        "status": "decided"
+      },
+      {
+        "rank": 4,
+        "award": "Impact in Action",
+        "letter": "S",
+        "team": "Prereq-uisites",
+        "basis": "Impact 9/10, margin +1",
+        "confidence": "MEDIUM",
+        "why": "The clearest and most carefully-bounded statement of value in the field. An affordability map for prospective students, built around undocumented and mixed-status students: no account, no email, no SSN, and it never asks immigration status, birthplace or address - a constraint sourced to NILC, ACLU and the Presidents' Alliance. Skipping any question WIDENS the estimate rather than blocking you. And it refuses to oversell itself: real sourced aid rules are separated from illustrative dollar placeholders, and an unsettled Texas in-state tuition case is surfaced as uncertainty rather than guessed.",
+        "challenge": "Advocacy-guidance citation is unverifiable (the design choices ARE directly observed in the code). COI: Xiaoxue Du is on this team and is principal judge - recusal required on record.",
+        "status": "decided"
+      },
+      {
+        "rank": 5,
+        "award": "Best Real-World Scenario",
+        "letter": "K",
+        "team": "Ctrl+F Strategy",
+        "basis": "Provenance-footnoted worked example",
+        "confidence": "MEDIUM",
+        "why": "The only deck that footnoted its own numbers. It answers a question a real person actually asks - 'where does Math Pathways show up in A&SI, and what are the outcomes and dollars?' - with $26.9M approved / $24.1M paid across 17 investments (8 active, 9 closed), and then states the provenance on the slide: 'SIP snapshot 2026-08-13, inbound budget (FundsToBoW) + lifetime investment totals, PRI excluded.' Naming the snapshot date and the exclusion rule is what separates a scenario that is compelling from one that is merely plausible.",
+        "challenge": "Judged category with three plausible claimants (K, S, R). K's discriminator - footnoting its own snapshot date and exclusion rule - is observed and rare.",
+        "status": "decided"
+      },
+      {
+        "rank": 6,
+        "award": "Most Likely to Ship",
+        "letter": "C",
+        "team": "MCP Hammer",
+        "basis": "Two LIVE integrations + 8 test files",
+        "confidence": "MEDIUM",
+        "why": "Two of its integrations are already real rather than mocked: it pulls new AI Engagement records from the live Airtable tracker (additive only, never overwriting prior imports), and accepting a connector request creates an actual Ardoq Connector Technology Service component with an initial 'Evaluating' lifecycle phase, linking requesting and providing systems where an unambiguous match already exists. Eight test files back it. Everything else is deliberately mocked so nothing leaves the machine - the boundary is drawn honestly and documented.",
+        "challenge": "'Isn't O more likely to ship - it is already deployed?' Yes. O is excluded because it holds Built to Last. Policy, not evidence.",
+        "status": "decided"
+      },
+      {
+        "rank": 7,
+        "award": "Best in Show",
+        "letter": "A",
+        "team": "The Green Donuts",
+        "basis": "30/40",
+        "confidence": "LOW-MED",
+        "why": "The broadest submission in the field - the only one with no weak criterion (8/8/8/6). A daily Gearset triage agent that reads the failure card from Teams, opens the Jira bug BEFORE any analysis so a failure always leaves a tracked ticket rather than nothing, root-causes merge-aware, and stops at a draft PR. Its problem statement is measured and dated rather than asserted: 28% of recent commits are merges and 9% are bot commits, so blame lands on noise instead of the change that broke the test - and the agent's merge-aware design answers exactly that finding. It ships in REPORT_ONLY with a stated ramp to full autonomy only after its reports earn trust.",
+        "challenge": "'P scored 31.' A holds it only because P took Wizardry. A's 30 is also the score revised most (17 -> 30, after finding their deck in Assets/ and skill in .claude/) and the least re-verified.",
+        "status": "open"
+      },
+      {
+        "rank": 8,
+        "award": "Boldest Idea",
+        "letter": "Q",
+        "team": "KB Queens",
+        "basis": "Mine the failure data you already have",
+        "confidence": "LOW",
+        "why": "The insight is that support teams already own the data that predicts their own failures - Jira stories, linked bugs, QA defects, Salesforce metadata - and nobody mines it. Rather than writing knowledge-base articles from scratch, it drafts from failures that have ALREADY occurred, walks 14 failure categories and explicitly rules one out rather than skipping it silently, and enforces 'cite or don't write it' so every step traces to a Jira key or metadata component with no invented UI. Draft-only: every output goes to SME review before it reaches an agent.",
+        "challenge": "Near coin-flip against R, whose refuse-to-write is arguably bolder. Two deck-only submissions, no discriminating evidence.",
+        "status": "open"
+      },
+      {
+        "rank": 9,
+        "award": "Built to Last",
+        "letter": "O",
+        "team": "Bleeding Edge",
+        "basis": "Staying 8/10, margin 0",
+        "confidence": "LOW",
+        "why": "The only submission already deployed and independently verified - I confirmed in the workspace that the app is ACTIVE and was updated at 21:33Z during the event, by a member of this team. It is built to outlive the demo: a numbered SQL migration (001_create_schema.sql), app.yaml, .env.example, a seed-data loader, and most importantly an on-behalf-of auth model that uses the caller's own OAuth token from x-forwarded-access-token rather than service-principal credentials. That means row-level permissions follow the real user, and a colleague can use it tomorrow with no credentials of their own.",
+        "challenge": "Four-way tie at 8; two excluded; O vs Journey have equal confidence, comparable corroboration and IDENTICAL totals (28). Stated tiebreaks all exhausted - decided on judgment alone.",
+        "status": "open"
+      }
+    ],
+    "scores": [
+      {
+        "letter": "P",
+        "team": "Team Rocket",
+        "project": "reclass-intake",
+        "impact": 7,
+        "staying": 8,
+        "craft": 9,
+        "execution": 7,
+        "total": 31,
+        "band": 12,
+        "confidence": "med-high",
+        "award": "Claude Code Wizardry",
+        "notes": null
+      },
+      {
+        "letter": "A",
+        "team": "The Green Donuts",
+        "project": "Gearset triage agent",
+        "impact": 8,
+        "staying": 8,
+        "craft": 8,
+        "execution": 6,
+        "total": 30,
+        "band": 11,
+        "confidence": "medium",
+        "award": "Best in Show",
+        "notes": "Revised 17 -> 30 after finding the deck in Assets/ and a full skill in .claude/"
+      },
+      {
+        "letter": "C",
+        "team": "Journey (AI Navigator)",
+        "project": "builder requirements engine",
+        "impact": 6,
+        "staying": 8,
+        "craft": 8,
+        "execution": 6,
+        "total": 28,
+        "band": 10,
+        "confidence": "medium",
+        "award": "- (folded into Team C)",
+        "notes": "Second workstream of Team C, on branch kevin-ai-navigator"
+      },
+      {
+        "letter": "O",
+        "team": "Bleeding Edge",
+        "project": "EDGE Dx stage-gate app",
+        "impact": 7,
+        "staying": 8,
+        "craft": 6,
+        "execution": 7,
+        "total": 28,
+        "band": 11,
+        "confidence": "medium",
+        "award": "Built to Last",
+        "notes": "Databricks app VERIFIED ACTIVE, updated 21:33Z mid-event"
+      },
+      {
+        "letter": "R",
+        "team": "The Leftovers",
+        "project": "whiteboard -> sprint",
+        "impact": 8,
+        "staying": 6,
+        "craft": 6,
+        "execution": 6,
+        "total": 26,
+        "band": 9,
+        "confidence": "low-med",
+        "award": "The Deliberate Refusal",
+        "notes": "3 of 4 scores CAPPED at 6 - repo 404s. With repo access plausibly 31+"
+      },
+      {
+        "letter": "S",
+        "team": "Prereq-uisites",
+        "project": "What Can I Actually Afford?",
+        "impact": 9,
+        "staying": 5,
+        "craft": 5,
+        "execution": 6,
+        "total": 25,
+        "band": 9,
+        "confidence": "low-med",
+        "award": "Impact in Action",
+        "notes": "Craft ESTIMATED from artifact complexity - no repo"
+      },
+      {
+        "letter": "C",
+        "team": "MCP Hammer",
+        "project": "IT AI intake agent",
+        "impact": 7,
+        "staying": 6,
+        "craft": 5,
+        "execution": 6,
+        "total": 24,
+        "band": 9,
+        "confidence": "medium",
+        "award": "Most Likely to Ship",
+        "notes": null
+      },
+      {
+        "letter": "K",
+        "team": "Ctrl+F Strategy",
+        "project": "Strategy Explorer",
+        "impact": 7,
+        "staying": 5,
+        "craft": 6,
+        "execution": 5,
+        "total": 23,
+        "band": 9,
+        "confidence": "low",
+        "award": "Best Real-World Scenario",
+        "notes": "Craft ESTIMATED - deck only, no repo"
+      },
+      {
+        "letter": "D",
+        "team": "Git Blame (It's always HR)",
+        "project": "Org Impact Simulator",
+        "impact": 6,
+        "staying": 6,
+        "craft": 4,
+        "execution": 6,
+        "total": 22,
+        "band": 8,
+        "confidence": "medium",
+        "award": "The Novelist",
+        "notes": "Found on unregistered branch lamar-org-impact-simulator"
+      },
+      {
+        "letter": "Q",
+        "team": "KB Queens",
+        "project": "KB generator",
+        "impact": 6,
+        "staying": 4,
+        "craft": 5,
+        "execution": 3,
+        "total": 18,
+        "band": 7,
+        "confidence": "low",
+        "award": "Boldest Idea",
+        "notes": "Staying + Craft ESTIMATED - deck only, no repo"
+      }
+    ]
   }
 }

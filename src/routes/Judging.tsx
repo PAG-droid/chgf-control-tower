@@ -12,6 +12,115 @@ export default function Judging() {
         </p>
       </header>
 
+      {judging.results && (
+        <section>
+          <div className="mb-2 flex flex-wrap items-baseline justify-between gap-3">
+            <h2 className="text-xl font-bold text-ink-100">Award slate</h2>
+            <span className="text-xs text-ink-500">{judging.results.source}</span>
+          </div>
+          <p className="mb-5 max-w-3xl text-sm leading-relaxed text-ink-400">{judging.results.caveat}</p>
+
+          <ul className="space-y-3">
+            {judging.results.slate.map((s) => (
+              <li
+                key={s.award}
+                className={[
+                  'rounded-xl border p-5',
+                  s.status === 'decided' ? 'border-navy-700 bg-navy-900/60' : 'border-navy-800 bg-navy-900/30',
+                ].join(' ')}
+              >
+                <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1">
+                  <span className="tnum text-sm font-bold text-ink-500">#{s.rank}</span>
+                  <h3 className="text-lg font-bold text-amber-glow">{s.award}</h3>
+                  <span className="font-semibold text-ink-100">
+                    <span className="mr-1.5 text-amber-glow">{s.letter}</span>
+                    {s.team}
+                  </span>
+                  <span className="ml-auto flex gap-1.5">
+                    <span className="rounded-md border border-navy-600 bg-navy-800 px-2 py-0.5 text-[10px] font-semibold tracking-wide text-ink-400 uppercase">
+                      {s.confidence}
+                    </span>
+                    <span
+                      className={[
+                        'rounded-md border px-2 py-0.5 text-[10px] font-semibold tracking-wide uppercase',
+                        s.status === 'decided'
+                          ? 'border-emerald-400/30 bg-emerald-400/10 text-emerald-300'
+                          : 'border-sky-400/30 bg-sky-400/10 text-sky-300',
+                      ].join(' ')}
+                    >
+                      {s.status === 'decided' ? 'Decided' : 'To the huddle'}
+                    </span>
+                  </span>
+                </div>
+
+                <div className="mt-1.5 text-xs text-ink-500">Deciding basis: {s.basis}</div>
+                <p className="mt-3 text-sm leading-relaxed text-ink-300">{s.why}</p>
+                {s.challenge && s.challenge !== 'None.' && (
+                  <p className="mt-3 border-l-2 border-navy-600 pl-3 text-xs leading-relaxed text-ink-500">
+                    <span className="font-semibold text-ink-400">Must survive: </span>
+                    {s.challenge}
+                  </p>
+                )}
+              </li>
+            ))}
+          </ul>
+        </section>
+      )}
+
+      {judging.results && (
+        <section>
+          <div className="mb-4 flex flex-wrap items-baseline justify-between gap-3">
+            <h2 className="text-xl font-bold text-ink-100">Scorecard</h2>
+            <span className="text-xs text-ink-500">{judging.results.scale}</span>
+          </div>
+          <div className="overflow-x-auto rounded-xl border border-navy-800">
+            <table className="w-full min-w-[52rem] text-sm">
+              <thead>
+                <tr className="bg-navy-800/60 text-left text-[10px] tracking-wide text-ink-400 uppercase">
+                  <th className="px-3 py-2.5">Team</th>
+                  <th className="px-3 py-2.5">Project</th>
+                  <th className="px-3 py-2.5 text-right">Impact</th>
+                  <th className="px-3 py-2.5 text-right">Staying</th>
+                  <th className="px-3 py-2.5 text-right">Craft</th>
+                  <th className="px-3 py-2.5 text-right">Demo</th>
+                  <th className="px-3 py-2.5 text-right">Total</th>
+                  <th className="px-3 py-2.5">Confidence</th>
+                </tr>
+              </thead>
+              <tbody>
+                {judging.results.scores.map((s, i) => (
+                  <tr key={`${s.letter}-${s.project}`} className={i % 2 ? 'bg-navy-900/30' : ''}>
+                    <td className="px-3 py-2.5 font-semibold text-ink-100">
+                      <span className="mr-1.5 text-amber-glow">{s.letter}</span>
+                      {s.team}
+                    </td>
+                    <td className="px-3 py-2.5 text-ink-400">{s.project}</td>
+                    <td className="tnum px-3 py-2.5 text-right text-ink-300">{s.impact}</td>
+                    <td className="tnum px-3 py-2.5 text-right text-ink-300">{s.staying}</td>
+                    <td className="tnum px-3 py-2.5 text-right text-ink-300">{s.craft}</td>
+                    <td className="tnum px-3 py-2.5 text-right text-ink-300">{s.execution}</td>
+                    <td className="tnum px-3 py-2.5 text-right font-bold text-amber-glow">{s.total}</td>
+                    <td className="px-3 py-2.5 text-xs text-ink-500">{s.confidence}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <ul className="mt-3 space-y-1.5">
+            {judging.results.scores
+              .filter((s) => s.notes)
+              .map((s) => (
+                <li key={`${s.letter}-note`} className="text-xs leading-relaxed text-ink-500">
+                  <span className="font-semibold text-ink-400">
+                    {s.letter} {s.team}:{' '}
+                  </span>
+                  {s.notes}
+                </li>
+              ))}
+          </ul>
+        </section>
+      )}
+
       <section>
         <h2 className="mb-4 text-xs font-semibold tracking-[0.14em] text-amber-glow uppercase">Award categories</h2>
         <ul className="grid gap-4 sm:grid-cols-2">
