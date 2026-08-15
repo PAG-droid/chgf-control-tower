@@ -1,0 +1,11 @@
+Contains a 43.5 MB video that the subject does not mention.
+
+public/videos/whiteboard-to-sprint-demo.mp4 is The Leftovers' demo recording.
+It was committed here by a blanket `git add -A` while it was still being
+staged, so it landed with nothing referencing it — present in the repo and in
+the bundle, but unreachable from the site. It was wired up in c756b7b.
+
+The 11 lines added to src/routes/Demos.tsx here are the mediaUrl() helper from
+that same in-progress work, not part of the poster change.
+
+Anyone auditing repo size: this is where the 43.5 MB entered history.
