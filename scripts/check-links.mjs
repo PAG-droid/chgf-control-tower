@@ -93,10 +93,13 @@ function checkLocalAssets() {
 }
 
 /**
- * Anything anywhere in resources.json carrying a `file` key is a document we
- * ship — session slides on /learning, and whatever gets added next. Walking for
- * the key rather than naming the sections means a new one is covered the day it
- * lands, instead of the day someone remembers to update this script.
+ * Anything carrying a `file` key is a document we ship — session slides on
+ * /learning, the run of show on the agenda page, and whatever gets added next.
+ * Walking for the key rather than naming the sections means a new one is
+ * covered the day it lands, instead of the day someone remembers this script.
+ *
+ * The photo walls are handled separately because they also need the reverse
+ * check for unused files.
  */
 function checkShippedFiles() {
   const walk = (node, path) => {
@@ -110,7 +113,9 @@ function checkShippedFiles() {
       }
     }
   }
-  walk(readJson('resources.json'), 'resources')
+  for (const name of ['resources.json', 'agenda.json']) {
+    walk(readJson(name), name.replace('.json', ''))
+  }
 }
 
 /**

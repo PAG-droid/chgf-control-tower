@@ -42,6 +42,19 @@ function ArchiveHero() {
       <p className="mt-8 max-w-2xl text-sm text-ink-500">
         This is the record of the day as it actually ran. The schedule below is what happened, not a live countdown.
       </p>
+
+      {/* Content lives in agenda.json so the link checker can see it and nobody
+          has to edit a component to swap the file. Absent = no button. */}
+      {agenda.event.runOfShow?.file && (
+        <a
+          href={`${import.meta.env.BASE_URL}${agenda.event.runOfShow.file}`}
+          target="_blank"
+          rel="noreferrer"
+          className="mt-5 inline-flex items-center gap-2 rounded-lg border border-navy-700 bg-navy-800/60 px-4 py-2 text-sm font-semibold text-ink-200 transition-colors hover:border-amber-glow/50 hover:bg-navy-700 hover:text-ink-100"
+        >
+          {agenda.event.runOfShow.label ?? 'Run of show'} (PDF) ↗
+        </a>
+      )}
     </section>
   )
 }

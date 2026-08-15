@@ -10,7 +10,11 @@
     "format": "In-person + hybrid via Teams",
     "timezone": "America/Los_Angeles",
     "host": "Philippe-Alexandre Gilbert",
-    "questionsChannel": "Hackathon Teams channel"
+    "questionsChannel": "Hackathon Teams channel",
+    "runOfShow": {
+      "label": "Run of show",
+      "file": "agenda/run-of-show.pdf"
+    }
   },
   "sessions": [
     {

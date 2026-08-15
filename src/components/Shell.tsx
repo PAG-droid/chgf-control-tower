@@ -5,7 +5,8 @@ import { useClock } from '../lib/clock'
 import AnnouncementBanner from './AnnouncementBanner'
 
 const NAV = [
-  { to: '/', label: 'Live', end: true },
+  // 'Agenda', not 'Live' — the event is over and this page is now the record.
+  { to: '/', label: 'Agenda', end: true },
   { to: '/teams', label: 'Teams' },
   { to: '/people', label: 'People' },
   { to: '/demos', label: 'Demos' },
