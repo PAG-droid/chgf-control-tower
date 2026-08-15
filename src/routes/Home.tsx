@@ -1,4 +1,5 @@
 import agenda from '../data/agenda.json'
+import teams from '../data/teams.json'
 import { formatCountdown, to12h, useClock, type Session } from '../lib/clock'
 
 const KIND_STYLES: Record<string, string> = {
@@ -10,8 +11,45 @@ const KIND_STYLES: Record<string, string> = {
   judging: 'text-amber-glow border-amber-glow/30 bg-amber-glow/10',
 }
 
+function ArchiveHero() {
+  const teamCount = teams.teams.length
+  const builderCount = teams.teams.reduce((n, t) => n + t.members.length, 0)
+
+  return (
+    <section className="overflow-hidden rounded-2xl border border-navy-700/70 bg-gradient-to-br from-navy-900 via-navy-900 to-navy-800 p-7 sm:p-10">
+      <div className="text-xs font-semibold tracking-[0.16em] text-ink-500 uppercase">Event archive</div>
+      <h1 className="mt-3 text-4xl leading-tight font-bold tracking-tight text-ink-100 sm:text-5xl">
+        {agenda.event.title}
+      </h1>
+      <p className="mt-3 max-w-2xl text-base text-ink-300 sm:text-lg">
+        {agenda.event.subtitle} · {agenda.event.dateLabel} · {agenda.event.location}
+      </p>
+
+      <dl className="mt-8 flex flex-wrap gap-x-12 gap-y-5">
+        {[
+          ['Teams', String(teamCount)],
+          ['Builders', String(builderCount)],
+          ['Award categories', '4'],
+          ['Build time', '2h 45m'],
+        ].map(([label, value]) => (
+          <div key={label}>
+            <dd className="tnum text-3xl font-bold text-amber-glow">{value}</dd>
+            <dt className="mt-0.5 text-[11px] tracking-[0.12em] text-ink-500 uppercase">{label}</dt>
+          </div>
+        ))}
+      </dl>
+
+      <p className="mt-8 max-w-2xl text-sm text-ink-500">
+        This is the record of the day as it actually ran. The schedule below is what happened, not a live countdown.
+      </p>
+    </section>
+  )
+}
+
 function Hero() {
   const { current, next, secondsToTransition, phase } = useClock()
+
+  if (phase === 'archive') return <ArchiveHero />
 
   const headline =
     phase === 'before'
@@ -66,7 +104,7 @@ function Hero() {
   )
 }
 
-function Row({ session, state }: { session: Session; state: 'past' | 'now' | 'future' }) {
+function Row({ session, state }: { session: Session; state: 'past' | 'now' | 'future' | 'archive' }) {
   const kind = KIND_STYLES[session.kind] ?? KIND_STYLES.logistics
 
   return (
@@ -85,6 +123,7 @@ function Row({ session, state }: { session: Session; state: 'past' | 'now' | 'fu
         <span className={state === 'now' ? 'font-bold text-amber-glow' : 'font-semibold text-ink-300'}>
           {to12h(session.start)}
         </span>
+
       </div>
 
       <div className="min-w-0 flex-1">
@@ -122,7 +161,8 @@ function InfoCard({ title, items }: { title: string; items: string[] }) {
 }
 
 export default function Home() {
-  const { current, secondsOfDay } = useClock()
+  const { current, secondsOfDay, phase } = useClock()
+  const archived = phase === 'archive'
 
   return (
     <div className="space-y-10">
@@ -130,7 +170,7 @@ export default function Home() {
 
       <section>
         <div className="mb-4 flex items-baseline justify-between gap-4">
-          <h2 className="text-xl font-bold text-ink-100">Run of show</h2>
+          <h2 className="text-xl font-bold text-ink-100">{archived ? 'How the day ran' : 'Run of show'}</h2>
           <span className="text-xs text-ink-500">{agenda.event.timeLabel}</span>
         </div>
 
@@ -138,7 +178,8 @@ export default function Home() {
           {agenda.sessions.map((s) => {
             const [h, m] = s.end.split(':').map(Number)
             const ended = secondsOfDay >= h * 3600 + m * 60
-            const state = current?.id === s.id ? 'now' : ended ? 'past' : 'future'
+            // In the archive every session reads equally; nothing is "now" or dimmed as past.
+            const state = archived ? 'archive' : current?.id === s.id ? 'now' : ended ? 'past' : 'future'
             return <Row key={s.id} session={s} state={state} />
           })}
         </ul>

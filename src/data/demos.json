@@ -24,11 +24,13 @@
     },
     {
       "letter": "D",
-      "deck": null,
-      "repo": null,
+      "deck": "d-git-blame-it-s-always-hr/org-impact-simulator.pdf",
+      "repo": "https://github.com/gatesfoundation/gf-claude-hackathon-2026/tree/lamar-org-impact-simulator",
       "video": null,
-      "presenters": null,
-      "note": null
+      "presenters": "Lamar Foster · Reese McGillie",
+      "note": "Submitted on the lamar-org-impact-simulator branch, not a main folder. Deck was committed into the repo root as OrgImpactSimulator-hackathon-pitch.pptx.",
+      "title": "Org Impact Simulator — workforce scenario planning you can interrogate",
+      "summary": "Pose an external shift — a 20% cut to grant funding lands next quarter — and get a projection grounded in the foundation's own talent history. The reasoning, sample sizes and evidence base are exposed rather than buried, so a headcount planner can challenge the number instead of trusting it. Ships as one self-contained HTML file: no server, no install, no network. A placebo test is built in to show where the method stops holding."
     },
     {
       "letter": "E",
@@ -80,11 +82,13 @@
     },
     {
       "letter": "K",
-      "deck": null,
-      "repo": null,
+      "deck": "k-ctrl-f-strategy/ctrlf-strategy.pdf",
+      "repo": "https://github.com/gatesfoundation/gf-claude-hackathon-2026/tree/strategy-explorer-build/ctrl-F-Strategy",
       "video": null,
-      "presenters": null,
-      "note": null
+      "presenters": "Jamie McKee",
+      "note": "strategy-explorer-build is a shared integration branch — it also carries The-Green-Donuts and reclass-intake. Team K's work is the ctrl-F-Strategy folder, which the repo link points at directly.",
+      "title": "Strategy Explorer — a defensible strategy briefing, generated on demand",
+      "summary": "A generation engine that queries the Strategic Intelligence Platform graph and renders a self-contained static HTML briefing across all 15 U.S. Program strategies — 334 bodies of work, 5,518 investments, 2,027 organizations. Deliberately not interactive: every figure comes from a query a person reviewed, and inferred or proxied values stay visually distinguishable from retrieved fact, so the artifact survives the first reviewer who knows the portfolio."
     },
     {
       "letter": "L",
@@ -132,11 +136,11 @@
     },
     {
       "letter": "Q",
-      "deck": null,
+      "deck": "q-kb-queens/kb-queens.pdf",
       "repo": null,
       "video": null,
       "presenters": "Kylee Durant · Cody Benedict",
-      "note": "Deck: KB_Queens_presentation 8.14.26.pptx — in Teams chat files, needs saving into public/decks/q-kb-queens/",
+      "note": "Deck received via Teams and converted. No repo yet — the code lives in the shared folder linked below.",
       "share": "https://bmgf-my.sharepoint.com/shared?listurl=https%3A%2F%2Fbmgf%2Dmy%2Esharepoint%2Ecom%2Fpersonal%2Fkylee%5Fdurant%5Fgatesfoundation%5Forg%2FDocuments&id=%2Fpersonal%2Fkylee%5Fdurant%5Fgatesfoundation%5Forg%2FDocuments%2FDocuments%2Fkb%2Darticle%2Dgenerator&ct=1786740478559&or=Teams%2DHL&shareLink=1&ga=1",
       "title": "KB Queens — an AI Knowledge-Base generator for INVEST and Salesforce Support",
       "summary": "Support teams sit on a goldmine of failure data — Jira stories, linked bugs, QA defects, Salesforce metadata. Writing KB articles from it by hand takes hours per feature and quality depends on who wrote it. This mines that evidence automatically and drafts articles in a consistent format in minutes, walking a 14-category failure taxonomy and citing a Jira key or metadata component for every step. Draft only: everything goes to SME review before an agent sees it."
@@ -144,10 +148,10 @@
     {
       "letter": "R",
       "deck": null,
-      "repo": "https://github.com/aka-aaron-brown/claude-hackathon",
+      "repo": null,
       "video": null,
       "presenters": null,
-      "note": null
+      "note": "Aaron Brown's repo github.com/aka-aaron-brown/claude-hackathon returns 404 for foundation accounts — it is on his personal account and not visible to us. Link pulled from the board rather than serve a dead one. Ask him to make it internal or move it into gatesfoundation/gf-claude-hackathon-2026."
     },
     {
       "letter": "S",

@@ -11,3 +11,12 @@ Thumbs.db
 *.tmp.png
 *.tmp.mjs
 public/gallery/*.html
+
+# Raw presenter uploads. Material is filed into public/ and src/data/ by hand,
+# so the drop folder itself never ships — but keep the instructions and the
+# processed-marker folder tracked so the convention survives a fresh clone.
+inbox/*
+!inbox/README.md
+!inbox/_processed/
+inbox/_processed/*
+!inbox/_processed/.gitkeep

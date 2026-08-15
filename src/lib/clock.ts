@@ -10,10 +10,35 @@ export type ClockState = {
   next: Session | null
   /** Seconds until the current session ends, or until the next one starts. */
   secondsToTransition: number | null
-  phase: 'before' | 'during' | 'between' | 'after'
+  /** `archive` on any day that is not the event day — the schedule is history, not a countdown. */
+  phase: 'before' | 'during' | 'between' | 'after' | 'archive'
 }
 
 const TZ = agenda.event.timezone
+
+/** Today's date in event-local time, as YYYY-MM-DD. */
+export function dateInEventTz(now: Date): string {
+  const parts = new Intl.DateTimeFormat('en-CA', {
+    timeZone: TZ,
+    year: 'numeric',
+    month: '2-digit',
+    day: '2-digit',
+  }).formatToParts(now)
+  const get = (t: string) => parts.find((p) => p.type === t)?.value ?? ''
+  return `${get('year')}-${get('month')}-${get('day')}`
+}
+
+/**
+ * The clock only runs live on the day itself. Without this the site replays the
+ * agenda every morning, telling visitors the kickoff is happening right now.
+ * `?live=1` forces live mode for rehearsal or a repeat run.
+ */
+export function isEventDay(now: Date = new Date()): boolean {
+  if (typeof window !== 'undefined' && new URLSearchParams(window.location.search).get('live') === '1') {
+    return true
+  }
+  return dateInEventTz(now) === agenda.event.date
+}
 
 /**
  * Everyone sees the same clock. Virtual attendees may be in any timezone, so the
@@ -66,8 +91,12 @@ function readTimeOverride(): number | null {
   return parseHm(raw)
 }
 
-export function computeClock(secondsOfDay: number): ClockState {
+export function computeClock(secondsOfDay: number, live = true): ClockState {
   const sessions = agenda.sessions
+
+  if (!live) {
+    return { secondsOfDay, current: null, next: null, secondsToTransition: null, phase: 'archive' }
+  }
   let current: Session | null = null
   let next: Session | null = null
 
@@ -96,17 +125,19 @@ export function computeClock(secondsOfDay: number): ClockState {
 
 export function useClock(): ClockState {
   const override = readTimeOverride()
+  // A `?t=` override is an explicit request to see the schedule running.
+  const live = isEventDay() || override !== null
   const [state, setState] = useState<ClockState>(() =>
-    computeClock(override ?? secondsOfDayInEventTz(new Date())),
+    computeClock(override ?? secondsOfDayInEventTz(new Date()), live),
   )
 
   useEffect(() => {
-    if (override !== null) return
-    const tick = () => setState(computeClock(secondsOfDayInEventTz(new Date())))
+    if (!live || override !== null) return
+    const tick = () => setState(computeClock(secondsOfDayInEventTz(new Date()), true))
     tick()
     const id = window.setInterval(tick, 1000)
     return () => window.clearInterval(id)
-  }, [override])
+  }, [override, live])
 
   return state
 }

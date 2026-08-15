@@ -16,14 +16,35 @@ const NAV = [
 
 function LiveBadge() {
   const { current, phase } = useClock()
+  const archived = phase === 'archive'
 
-  const label =
-    phase === 'before' ? 'Starting soon' : phase === 'after' ? "That's a wrap" : (current?.title ?? 'Between sessions')
+  const label = archived
+    ? 'Event archive'
+    : phase === 'before'
+      ? 'Starting soon'
+      : phase === 'after'
+        ? "That's a wrap"
+        : (current?.title ?? 'Between sessions')
 
   return (
-    <div className="flex items-center gap-2 rounded-full border border-amber-glow/30 bg-amber-glow/10 px-3 py-1.5">
-      <span className="live-dot size-2 rounded-full bg-amber-glow" aria-hidden="true" />
-      <span className="text-xs font-semibold tracking-wide text-amber-glow uppercase">{label}</span>
+    <div
+      className={[
+        'flex items-center gap-2 rounded-full border px-3 py-1.5',
+        archived ? 'border-navy-700 bg-navy-800/60' : 'border-amber-glow/30 bg-amber-glow/10',
+      ].join(' ')}
+    >
+      <span
+        className={['size-2 rounded-full', archived ? 'bg-ink-500' : 'live-dot bg-amber-glow'].join(' ')}
+        aria-hidden="true"
+      />
+      <span
+        className={[
+          'text-xs font-semibold tracking-wide uppercase',
+          archived ? 'text-ink-400' : 'text-amber-glow',
+        ].join(' ')}
+      >
+        {label}
+      </span>
     </div>
   )
 }

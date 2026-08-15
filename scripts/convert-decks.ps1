@@ -7,9 +7,15 @@
 $ErrorActionPreference = 'Stop'
 $deckDir = Join-Path $PSScriptRoot '..\public\decks' | Resolve-Path
 
-$decks = Get-ChildItem -Path $deckDir -Include *.pptx, *.ppt -File -Recurse:$false -ErrorAction SilentlyContinue
+# Recurse: decks live in per-team folders (public\decks\q-kb-queens\...), not at
+# the top level. -Include only filters when the path is a wildcard or -Recurse
+# is on, so the two must stay together.
+$decks = Get-ChildItem -Path $deckDir -Include *.pptx, *.ppt -File -Recurse -ErrorAction SilentlyContinue
 if (-not $decks) {
-    Write-Host "No .pptx/.ppt files in $deckDir — nothing to convert."
+    # ASCII only below this line. This file has no BOM, so PowerShell 5.1 reads
+    # it as ANSI: a UTF-8 em-dash decodes to a smart quote and silently
+    # terminates the string, breaking the parse of everything after it.
+    Write-Host "No .pptx/.ppt files in $deckDir - nothing to convert."
     exit 0
 }
 
@@ -36,6 +42,8 @@ finally {
 }
 
 Write-Host "Done. PDFs are in $deckDir"
-Get-ChildItem -Path $deckDir -Filter *.pdf | ForEach-Object {
-    "  {0}  ({1:N0} KB)" -f $_.Name, ($_.Length / 1KB)
+# Recurse here too, or the summary silently omits every per-team folder.
+Get-ChildItem -Path $deckDir -Filter *.pdf -Recurse | ForEach-Object {
+    $rel = $_.FullName.Substring($deckDir.Path.Length + 1) -replace '\\', '/'
+    "  {0}  ({1:N0} KB)" -f $rel, ($_.Length / 1KB)
 }
