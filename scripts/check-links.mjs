@@ -88,6 +88,29 @@ function checkLocalAssets() {
   for (const team of teams.teams ?? []) {
     if (team.logo) checkAsset(`teams[${team.letter}].logo`, team.logo)
   }
+
+  checkShippedFiles()
+}
+
+/**
+ * Anything anywhere in resources.json carrying a `file` key is a document we
+ * ship — session slides on /learning, and whatever gets added next. Walking for
+ * the key rather than naming the sections means a new one is covered the day it
+ * lands, instead of the day someone remembers to update this script.
+ */
+function checkShippedFiles() {
+  const walk = (node, path) => {
+    if (Array.isArray(node)) return node.forEach((v, i) => walk(v, `${path}[${i}]`))
+    if (!node || typeof node !== 'object') return
+    for (const [k, v] of Object.entries(node)) {
+      if (k === 'file' && typeof v === 'string' && !/^https?:\/\//.test(v)) {
+        checkAsset(`${path}.file`, v)
+      } else {
+        walk(v, `${path}.${k}`)
+      }
+    }
+  }
+  walk(readJson('resources.json'), 'resources')
 }
 
 /**
