@@ -10,7 +10,7 @@
 // verify from here (SharePoint, anything needing a login) are reported and
 // never fail the run, because calling them broken would be a guess.
 
-import { readFileSync, existsSync, statSync } from 'node:fs'
+import { readFileSync, existsSync, statSync, readdirSync } from 'node:fs'
 import { execFileSync } from 'node:child_process'
 import { dirname, resolve, join } from 'node:path'
 import { fileURLToPath } from 'node:url'
@@ -25,6 +25,7 @@ const TIMEOUT_MS = 15000
 
 const problems = []   // proven broken -> exit 1
 const unverified = [] // needs credentials we do not have here
+const notices = []    // nothing is broken, but something is wasteful
 const ok = []
 
 const red = (s) => `\x1b[31m${s}\x1b[0m`
@@ -81,6 +82,26 @@ function checkLocalAssets() {
   const teams = readJson('teams.json')
   for (const team of teams.teams ?? []) {
     if (team.logo) checkAsset(`teams[${team.letter}].logo`, team.logo)
+  }
+
+  checkGalleryOrphans(gallery)
+}
+
+/**
+ * The mirror image of a missing file: an image that ships in the bundle but is
+ * listed nowhere, so every visitor downloads it and nobody ever sees it. This
+ * happens when an entry is dropped from gallery.json without removing the file.
+ * Reported, never fatal — an unused file breaks nothing, it just costs bandwidth.
+ */
+function checkGalleryOrphans(gallery) {
+  const listed = new Set((gallery.photos ?? []).map((p) => p.file))
+  const dir = join(PUBLIC, 'gallery')
+  if (!existsSync(dir)) return
+  for (const file of readdirSync(dir)) {
+    if (!/\.(webp|png|jpe?g|gif|avif)$/i.test(file)) continue
+    if (listed.has(file)) continue
+    const kb = Math.round(statSync(join(dir, file)).size / 1024)
+    notices.push(`public/gallery/${file} (${kb} KB) ships but no gallery.json entry shows it`)
   }
 }
 
@@ -256,6 +277,13 @@ if (unverified.length) {
   console.log(`\n${yellow(`  ${unverified.length} link(s) could not be verified from here`)}`)
   console.log(dim('  These need a signed-in browser. Not counted as failures.\n'))
   for (const item of unverified) console.log(yellow(`    ? ${item}\n`))
+}
+
+if (notices.length) {
+  console.log(`\n${yellow(`  ${notices.length} unused asset(s)`)}`)
+  console.log(dim('  Nothing is broken; these just ship for no reason.\n'))
+  for (const item of notices) console.log(yellow(`    · ${item}`))
+  console.log('')
 }
 
 if (problems.length) {
