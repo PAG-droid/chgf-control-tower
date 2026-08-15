@@ -179,24 +179,40 @@
   ],
   "quickstart": [
     {
-      "label": "Claude Code docs",
-      "url": "https://docs.claude.com/en/docs/claude-code",
-      "description": "The main documentation hub for Claude Code."
+      "label": "Claude Code in Action",
+      "url": "https://anthropic.skilljar.com/claude-code-in-action",
+      "description": "Anthropic's own structured course. The best place to start if you want to go properly from zero.",
+      "kind": "Course"
     },
     {
-      "label": "Claude Code quickstart",
-      "url": "https://docs.claude.com/en/docs/claude-code/quickstart",
-      "description": "Install, authenticate, and run your first session in a few minutes."
+      "label": "Claude Code documentation",
+      "url": "https://code.claude.com/docs/en/overview",
+      "description": "The canonical Claude Code docs — install, CLI, configuration, hooks, skills, MCP.",
+      "kind": "Docs"
+    },
+    {
+      "label": "Claude Developer Platform",
+      "url": "https://platform.claude.com/docs/en/home",
+      "description": "The wider platform: the API, models, pricing, agent tooling and everything beyond the CLI.",
+      "kind": "Docs"
+    },
+    {
+      "label": "learn-claude-code",
+      "url": "https://github.com/shareAI-lab/learn-claude-code",
+      "description": "Community-maintained deep dive into how Claude Code works internally. Not official, and useful precisely because of that.",
+      "kind": "Community"
     },
     {
       "label": "Agent Skills",
       "url": "https://docs.claude.com/en/docs/claude-code/skills",
-      "description": "How to package repeatable expertise as a reusable Skill - the format most likely to outlive the day."
+      "description": "How to write skills — the mechanism behind the judging toolkit on this site.",
+      "kind": "Docs"
     },
     {
       "label": "MCP connectors",
       "url": "https://docs.claude.com/en/docs/claude-code/mcp",
-      "description": "Connect Claude Code to real systems and data through Model Context Protocol servers."
+      "description": "Connecting Claude Code to external systems. Two teams built on this.",
+      "kind": "Docs"
     }
   ],
   "survey": {

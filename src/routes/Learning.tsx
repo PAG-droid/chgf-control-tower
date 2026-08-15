@@ -82,14 +82,24 @@ export default function Learning() {
       </section>
 
       <section>
-        <h2 className="mb-4 text-xl font-bold text-ink-100">Documentation</h2>
+        <div className="mb-4 flex flex-wrap items-baseline justify-between gap-3">
+          <h2 className="text-xl font-bold text-ink-100">Keep learning</h2>
+          <span className="text-xs text-ink-500">Courses, docs and community references</span>
+        </div>
         <ul className="grid gap-3 sm:grid-cols-2">
           {quickstart.map((q) => (
             <li key={q.url} className="rounded-xl border border-navy-800 bg-navy-900/50 p-4">
-              <a href={q.url} target="_blank" rel="noreferrer" className="font-semibold text-sky-300 hover:underline">
-                {q.label} →
-              </a>
-              <p className="mt-1 text-sm text-ink-500">{q.description}</p>
+              <div className="flex items-start justify-between gap-3">
+                <a href={q.url} target="_blank" rel="noreferrer" className="font-semibold text-sky-300 hover:underline">
+                  {q.label} ↗
+                </a>
+                {'kind' in q && typeof q.kind === 'string' && (
+                  <span className="shrink-0 rounded-md border border-navy-600 bg-navy-800 px-2 py-0.5 text-[10px] font-semibold tracking-wide text-ink-400 uppercase">
+                    {q.kind}
+                  </span>
+                )}
+              </div>
+              <p className="mt-1.5 text-sm leading-relaxed text-ink-500">{q.description}</p>
             </li>
           ))}
         </ul>
