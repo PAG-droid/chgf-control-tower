@@ -104,8 +104,10 @@
       "deck": null,
       "repo": null,
       "video": null,
-      "presenters": null,
-      "note": null
+      "presenters": "Keiko Valente · Angela Bahng · Jason Chau",
+      "note": "Deliverables are real partner documents naming a grantee, its finances and an open integrity question. This site is world-readable, so they are deliberately NOT published — they are held in inbox/ (gitignored). The summary below describes the tool without disclosing anything from them.",
+      "title": "Partner meeting prep, drafted from the record",
+      "summary": "Preparing for a partner meeting means reading across portfolio records and years of accumulated documents in a shared folder, and the details that matter most — a finance function that has stalled, a figure that disagrees with itself between two records, a document promised and never delivered — are exactly the ones that get missed. This drafts three artifacts from those two sources: a program officer brief with the questions to ask ranked by importance, a leadership update, and a partner-facing brief. Every claim cites the record or filename it came from, and it states plainly what it did not read, so the gaps are visible rather than silent."
     },
     {
       "letter": "N",
