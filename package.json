@@ -8,7 +8,11 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "decks": "powershell -ExecutionPolicy Bypass -File scripts/convert-decks.ps1",
+    "check:links": "node scripts/check-links.mjs",
+    "check:links:all": "node scripts/check-links.mjs --external",
+    "check:intake": "node scripts/check-intake.mjs"
   },
   "dependencies": {
     "react": "^19.0.0",

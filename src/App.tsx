@@ -5,6 +5,8 @@ import Teams from './routes/Teams'
 import Judging from './routes/Judging'
 import Resources from './routes/Resources'
 import Monitor from './routes/Monitor'
+import People from './routes/People'
+import Learning from './routes/Learning'
 import Demos from './routes/Demos'
 import Gallery from './routes/Gallery'
 import Ops from './routes/Ops'
@@ -18,6 +20,9 @@ export default function App() {
         <Route path="/teams" element={<Teams />} />
         <Route path="/judging" element={<Judging />} />
         <Route path="/resources" element={<Resources />} />
+        <Route path="/people" element={<People />} />
+        <Route path="/learning" element={<Learning />} />
+        {/* Unlisted: the live submission monitor, kept for the record. */}
         <Route path="/monitor" element={<Monitor />} />
         {/* Unlisted, like /ops — shared by direct link, not in the nav. */}
         <Route path="/demos" element={<Demos />} />

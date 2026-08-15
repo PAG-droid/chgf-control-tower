@@ -86,7 +86,12 @@ function checkRoutes() {
   const app = readText('src/App.tsx')
   const routes = new Set([...app.matchAll(/<Route\s+path="([^"]+)"/g)].map((m) => m[1]))
   const shell = readText('src/components/Shell.tsx')
-  const targets = [...shell.matchAll(/\bto="(\/[^"]*)"/g)].map((m) => m[1])
+  // Two shapes to catch: the NAV array (to: '/teams') and inline JSX (to="/").
+  const targets = [
+    ...[...shell.matchAll(/\bto:\s*'([^']+)'/g)].map((m) => m[1]),
+    ...[...shell.matchAll(/\bto="(\/[^"]*)"/g)].map((m) => m[1]),
+  ]
+  if (targets.length === 0) problems.push('found no nav targets in Shell.tsx — the route check is not looking at the right thing')
 
   for (const target of new Set(targets)) {
     if (routes.has(target) || routes.has('*')) ok.push(`nav ${target} -> routed`)

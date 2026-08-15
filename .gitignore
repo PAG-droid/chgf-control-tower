@@ -12,6 +12,12 @@ Thumbs.db
 *.tmp.mjs
 public/gallery/*.html
 
+# Source PowerPoint. The site only ever serves the converted PDF, so shipping
+# the .pptx alongside it just adds megabytes to every visitor's bundle. Sources
+# are kept in inbox/_processed/ instead.
+public/decks/**/*.pptx
+public/decks/**/*.ppt
+
 # Raw presenter uploads. Material is filed into public/ and src/data/ by hand,
 # so the drop folder itself never ships — but keep the instructions and the
 # processed-marker folder tracked so the convention survives a fresh clone.

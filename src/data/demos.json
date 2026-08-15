@@ -4,7 +4,8 @@
   "order": [
     {
       "letter": "A",
-      "deck": null,
+      "deck": "a-the-green-donuts/gearset-triage-agent.pdf",
+      "title": "Gearset Triage Agent",
       "repo": "https://github.com/gatesfoundation/eba-claude-hackathon",
       "video": null,
       "presenters": null,
@@ -116,7 +117,7 @@
     },
     {
       "letter": "O",
-      "deck": null,
+      "deck": "o-bleeding-edge/stakeholder-reporting-redesign.pdf",
       "repo": "https://github.com/gatesfoundation/814-Testing-EDGE",
       "video": null,
       "presenters": null,
@@ -147,11 +148,13 @@
     },
     {
       "letter": "R",
-      "deck": null,
+      "deck": "r-the-leftovers/whiteboard-to-sprint.pdf",
       "repo": null,
       "video": null,
-      "presenters": null,
-      "note": "Aaron Brown's repo github.com/aka-aaron-brown/claude-hackathon returns 404 for foundation accounts — it is on his personal account and not visible to us. Link pulled from the board rather than serve a dead one. Ask him to make it internal or move it into gatesfoundation/gf-claude-hackathon-2026."
+      "presenters": "Zeyad Taqiaddin · Aaron Brown · Stephen Pope",
+      "note": "Aaron Brown's repo github.com/aka-aaron-brown/claude-hackathon returns 404 for foundation accounts — it is on his personal account and not visible to us. Link pulled from the board rather than serve a dead one. Ask him to make it internal or move it into gatesfoundation/gf-claude-hackathon-2026.",
+      "title": "whiteboard → sprint",
+      "summary": "Turns whiteboard photos and meeting transcripts into Jira issues — but interrogates the ambiguities before writing anything. Sprint notes are full of shorthand that only made sense in the room: an arrow between two boxes, \"someone should look at it\", a name with no due date. This reads the photo or transcript, asks the specific questions a PM would ask before filing anything ambiguous, and only then writes tickets — sized, with acceptance criteria — straight to Jira. .NET 10 / C# 14 backend, React and Vite frontend."
     },
     {
       "letter": "S",

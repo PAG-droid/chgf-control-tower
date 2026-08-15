@@ -7,10 +7,11 @@ import AnnouncementBanner from './AnnouncementBanner'
 const NAV = [
   { to: '/', label: 'Live', end: true },
   { to: '/teams', label: 'Teams' },
-  { to: '/judging', label: 'Judging' },
-  { to: '/resources', label: 'Resources' },
-  { to: '/monitor', label: 'Submissions' },
+  { to: '/people', label: 'People' },
   { to: '/demos', label: 'Demos' },
+  { to: '/judging', label: 'Judging' },
+  { to: '/learning', label: 'Learning' },
+  { to: '/resources', label: 'Resources' },
   { to: '/gallery', label: 'Gallery' },
 ]
 
@@ -53,6 +54,7 @@ export default function Shell({ children }: { children: ReactNode }) {
   const { pathname } = useLocation()
   const unlisted: Record<string, string> = {
     '/ops': 'Organiser view — unlisted, not linked publicly',
+    '/monitor': 'Live submission monitor — unlisted, kept as a record',
   }
   const unlistedNote = unlisted[pathname]
 

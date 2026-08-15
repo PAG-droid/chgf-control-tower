@@ -50,6 +50,28 @@ https://<site>/?t=12:15#/          # mid-lunch
 The clock always evaluates in event-local time (`America/Los_Angeles`), so
 virtual attendees in other timezones see the same schedule you do.
 
+## Collecting material from presenters
+
+Drop anything a team sends into `inbox/` — decks, screenshots, a text file with
+a repo URL pasted in, a forwarded email. Prefix with the team letter when you
+know it (`Q-deck.pptx`). See [inbox/README.md](inbox/README.md). The folder is
+gitignored, so raw uploads never ship.
+
+```bash
+npm run check:intake      # who has handed over what, and who to chase
+npm run decks             # convert every .pptx under public/decks/ to PDF
+npm run check:links       # local assets and nav routes resolve
+npm run check:links:all   # the above, plus probe every external URL
+```
+
+`check:links` fails only on links it can prove are broken. SharePoint links
+need a signed-in browser and are reported as unverifiable rather than failed.
+
+Every `gatesfoundation` repo linked from the site is **internal** visibility:
+those links work for foundation org members and 404 for everyone else. The
+link checker uses the `gh` CLI when it is installed so it reports what *you*
+would see, not what an anonymous visitor would.
+
 ## Local development
 
 ```bash
