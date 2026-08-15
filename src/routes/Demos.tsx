@@ -64,6 +64,17 @@ function deckUrl(file: string): string {
   return `${import.meta.env.BASE_URL}decks/${file}#toolbar=0&navpanes=0&view=FitH`
 }
 
+/**
+ * Videos are either a link somewhere else (Stream, SharePoint) or a file we
+ * ship in public/. A shipped file needs the deploy base in front of it, because
+ * GitHub Pages serves this site from /chgf-control-tower/ and a bare path would
+ * resolve against the domain root and 404.
+ */
+function mediaUrl(value: string): string {
+  if (/^https?:\/\//.test(value)) return value
+  return `${import.meta.env.BASE_URL}${value.replace(/^\//, '')}`
+}
+
 function mmss(s: number): string {
   const clamped = Math.max(0, s)
   return `${Math.floor(clamped / 60)}:${String(clamped % 60).padStart(2, '0')}`
