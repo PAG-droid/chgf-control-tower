@@ -74,34 +74,51 @@ function checkLocalAssets() {
     }
   }
 
-  const gallery = readJson('gallery.json')
-  for (const photo of gallery.photos ?? []) {
-    if (photo.file) checkAsset(`gallery[${photo.file}]`, join('gallery', photo.file))
+  // Every photo wall is the same shape: a JSON file listing filenames, and a
+  // public/ directory holding them. Keep this list in step with the <PhotoWall>
+  // routes — right now Gallery (dir="gallery") and Photos (dir="photos").
+  for (const [json, dir] of [
+    ['gallery.json', 'gallery'],
+    ['photos.json', 'photos'],
+  ]) {
+    checkPhotoWall(json, dir)
   }
 
   const teams = readJson('teams.json')
   for (const team of teams.teams ?? []) {
     if (team.logo) checkAsset(`teams[${team.letter}].logo`, team.logo)
   }
-
-  checkGalleryOrphans(gallery)
 }
 
 /**
- * The mirror image of a missing file: an image that ships in the bundle but is
- * listed nowhere, so every visitor downloads it and nobody ever sees it. This
- * happens when an entry is dropped from gallery.json without removing the file.
- * Reported, never fatal — an unused file breaks nothing, it just costs bandwidth.
+ * Checks a photo wall in both directions: every listed file exists (a missing
+ * one renders as a broken image), and every file present is listed (an unlisted
+ * one ships in the bundle and displays nowhere). The first is fatal, the second
+ * is only waste.
  */
-function checkGalleryOrphans(gallery) {
-  const listed = new Set((gallery.photos ?? []).map((p) => p.file))
-  const dir = join(PUBLIC, 'gallery')
+function checkPhotoWall(jsonName, dirName) {
+  let data
+  try {
+    data = readJson(jsonName)
+  } catch {
+    // A wall can be added to the site before its data file exists. Not an error.
+    return
+  }
+
+  const listed = new Set()
+  for (const photo of data.photos ?? []) {
+    if (!photo.file) continue
+    listed.add(photo.file)
+    checkAsset(`${dirName}[${photo.file}]`, join(dirName, photo.file))
+  }
+
+  const dir = join(PUBLIC, dirName)
   if (!existsSync(dir)) return
   for (const file of readdirSync(dir)) {
     if (!/\.(webp|png|jpe?g|gif|avif)$/i.test(file)) continue
     if (listed.has(file)) continue
     const kb = Math.round(statSync(join(dir, file)).size / 1024)
-    notices.push(`public/gallery/${file} (${kb} KB) ships but no gallery.json entry shows it`)
+    notices.push(`public/${dirName}/${file} (${kb} KB) ships but no ${jsonName} entry shows it`)
   }
 }
 
