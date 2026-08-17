@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-08-17T14:04:29.669Z",
+  "generatedAt": "2026-08-17T14:18:23.082Z",
   "repo": "gatesfoundation/gf-claude-hackathon-2026",
   "repoUrl": "https://github.com/gatesfoundation/gf-claude-hackathon-2026",
-  "status": "error",
-  "message": "GitHub API returned HTTP 504 for gatesfoundation/gf-claude-hackathon-2026.",
+  "status": "not-found",
+  "message": "Repository gatesfoundation/gf-claude-hackathon-2026 was not found, or the monitoring token cannot see it. If it is private, add a GH_MONITOR_TOKEN secret with read access.",
   "totals": {
     "submissions": 0,
     "commits": 0,
